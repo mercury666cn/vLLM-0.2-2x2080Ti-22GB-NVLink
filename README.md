@@ -1,7 +1,9 @@
-# vLLM 0.2 for 2x RTX 2080 Ti 22GB NVLink
+# vLLM-2080Ti-Definitive 0.2 for 2x RTX 2080 Ti 22GB NVLink
 
 > **先读这份。** 下面是本机在 2× RTX 2080 Ti 22GB + NVLink 上的实测结论和完整交叉对照。  
 > 官方原文在 [docs/upstream/](docs/upstream/)，我们的踩坑原文在 [docs/ours/](docs/ours/)，原始测速/评测文件在 [test_results/](test_results/)。
+
+**叫法：** 文中 **Definitive 0.2 / Definitive 0.1** 都是 [vLLM-2080Ti-Definitive](https://github.com/weicj/vLLM-2080Ti-Definitive) 的发布线，**不是** 官方 vLLM 的版本号。本机 0.2 钉标签 `v0.2.1-pre3`（引擎是上游 vLLM 0.27.1）；0.1 钉 `0.1.17`，不要部署。脚本 `start-v02`、镜像 `native/vllm-2080ti:v0.2.1-pre3-sm75` 都指向这条 0.2 线。
 
 姊妹仓：[FastLLM for 2x RTX 2080 Ti 22GB NVLink](https://github.com/mercury666cn/FastLLM-2x2080Ti-22GB-NVLink)。上游源码：[weicj/vLLM-2080Ti-Definitive](https://github.com/weicj/vLLM-2080Ti-Definitive) 的 `v0.2.1-pre3`。
 
@@ -9,23 +11,23 @@
 
 ## 1. 结论（先看这个）
 
-同一台对照机、同一套 Docker，**FP8 和 NVFP4 都测过**。2026-09-14 日常已切到姊妹仓 FastLLM（NVFP4 + FP16 KV + 240K + 关思考，**带图像**）。本仓仍是 **v0.2 部署说明**。
+同一台对照机、同一套 Docker，**FP8 和 NVFP4 都测过**。2026-09-14 日常已切到姊妹仓 FastLLM（NVFP4 + FP16 KV + 240K + 关思考，**带图像**）。本仓仍是 **vLLM-2080Ti-Definitive 0.2 部署说明**。
 
-**若部署 v0.2：用 NVFP4 + FP8 KV + MTP3 + 240K 文本档（`text-only`）。** 长输出仍比 FastLLM 稳，但这档不带图像。
+**若部署 Definitive 0.2：用 NVFP4 + FP8 KV + MTP3 + 240K 文本档（`text-only`）。** 长输出仍比 FastLLM 稳，但这档不带图像。
 
 | 路线 | 本机结果 |
 |---|---|
 | 官方 FP8 + 128K + FP16-KV | 空启动失败。KV 要约 4.64 GiB，实际只剩约 3.5–3.7 GiB |
-| v0.2 NVFP4 + FP8 KV + 240K **文本档** | `text-only`，不带图像；实跑过 245600 输入，200K 中文 decode 仍约 50 tok/s |
+| Definitive 0.2 NVFP4 + FP8 KV + 240K **文本档** | `text-only`，不带图像；实跑过 245600 输入，200K 中文 decode 仍约 50 tok/s |
 | FastLLM NVFP4 + FP16 KV + 240K（现网日常，见姊妹仓） | 完整权重，**带图像**；关思考 849 题 64.15%，NIAH 15/15；235K 会 OOM |
 
-不要把 v0.2 的文本档和 FastLLM 现网混成一回事。不要把 FP8 128K 改短再宣称「官方 128K 通过」。
+不要把 Definitive 0.2 的文本档和 FastLLM 现网混成一回事。不要把 FP8 128K 改短再宣称「官方 128K 通过」。
 
 质量不要和 9/12 的 48.14% / 49.15% 横比（开思考、打分只读 `content`）。9/14 关思考后 FastLLM 两套平手，找针 15/15。详见 [test_results/FP8FP8-vs-NVFP4FP16-20260914.md](test_results/FP8FP8-vs-NVFP4FP16-20260914.md)。
 
-v0.2 固定英文尺子上 NVFP4 decode 会比 FP8 慢（MTP 接受率更低）。建议 NVFP4 的主因是 **上下文能开到 240K 文本**，以及长 decode 比 FastLLM 稳，不是每把短尺子都更快。
+Definitive 0.2 固定英文尺子上 NVFP4 decode 会比 FP8 慢（MTP 接受率更低）。建议 NVFP4 的主因是 **上下文能开到 240K 文本**，以及长 decode 比 FastLLM 稳，不是每把短尺子都更快。
 
-**不要部署 v0.1。** NVFP4 加载失败（`lm_head.weight_scale`）；官方 128K FP16-KV 空启动失败；仓库宣传 100 tok/s 是参考机单核更强的短英文，本机 E5-2686 v4 同口径大约 **69.6**。详见 [docs/ours/runtime-v0.1.md](docs/ours/runtime-v0.1.md)。
+**不要部署 Definitive 0.1。** NVFP4 加载失败（`lm_head.weight_scale`）；官方 128K FP16-KV 空启动失败；仓库宣传 100 tok/s 是参考机单核更强的短英文，本机 E5-2686 v4 同口径大约 **69.6**。详见 [docs/ours/runtime-v0.1.md](docs/ours/runtime-v0.1.md)。
 
 ## 2. 对照机（本机实测配置）
 
@@ -43,8 +45,8 @@ v0.2 固定英文尺子上 NVFP4 decode 会比 FP8 慢（MTP 接受率更低）�
 | 方案 | 运行时 | CUDA / Python | 本机镜像 |
 |---|---|---|---|
 | FastLLM | 官方 `ftllm[all]` 0.1.8.2 wheel | 12.1 / 3.10 | `native/fastllm:official-wheel` |
-| v0.2 | fork `v0.2.1-pre3`，vLLM 0.27.1 | 13.0 / 3.12 | `native/vllm-2080ti:v0.2.1-pre3-sm75` |
-| v0.1（不要部署） | fork 0.1.17，vLLM 0.1.15 | 12.8 / 3.11 | `native/vllm-2080ti:v0.1.17` |
+| Definitive 0.2 | fork `v0.2.1-pre3`，vLLM 0.27.1 | 13.0 / 3.12 | `native/vllm-2080ti:v0.2.1-pre3-sm75` |
+| Definitive 0.1（不要部署） | fork 0.1.17，vLLM 0.1.15 | 12.8 / 3.11 | `native/vllm-2080ti:v0.1.17` |
 
 ## 3. 交叉速度对照（完整表）
 
@@ -54,15 +56,15 @@ v0.2 固定英文尺子上 NVFP4 decode 会比 FP8 慢（MTP 接受率更低）�
 
 | 运行时 / 模型 | 模式 | Prefill tok/s | Decode tok/s | TTFT |
 |---|---:|---:|---:|---:|
-| v0.1 FP8 | MTP3 | **1680.57** | 48.41 | 2.437s |
-| v0.1 NVFP4 | MTP3 | 不支持 | 不支持 | 权重加载失败 |
-| v0.2 FP8 | MTP3 | 1344.61 | 52.45 | 3.046s |
-| v0.2 NVFP4 | MTP3 | 1207.49 | 34.56 | 3.392s |
+| Definitive 0.1 FP8 | MTP3 | **1680.57** | 48.41 | 2.437s |
+| Definitive 0.1 NVFP4 | MTP3 | 不支持 | 不支持 | 权重加载失败 |
+| Definitive 0.2 FP8 | MTP3 | 1344.61 | 52.45 | 3.046s |
+| Definitive 0.2 NVFP4 | MTP3 | 1207.49 | 34.56 | 3.392s |
 | FastLLM FP8 | MTP3 | 1356.45 | 66.31 | 3.020s |
 | FastLLM NVFP4 | MTP3 | **1535.18** | **74.91** | **2.668s** |
 | FastLLM FP8 | DFlash7 | 1393.14 | 63.31 | 2.940s |
 
-- v0.2 FP8 对 v0.1 FP8：prefill **-20.0%**，decode **+8.3%**
+- Definitive 0.2 FP8 对 Definitive 0.1 FP8：prefill **-20.0%**，decode **+8.3%**
 - FastLLM NVFP4 对 FastLLM FP8：prefill **+13.2%**，decode **+13.0%**
 - FastLLM DFlash7 对 FastLLM FP8 MTP3：decode **-4.5%**（本机 DFlash 不是更快）
 
@@ -70,22 +72,22 @@ v0.2 固定英文尺子上 NVFP4 decode 会比 FP8 慢（MTP 接受率更低）�
 
 | 运行时 / 模型 | Prefill tok/s | Decode tok/s |
 |---|---:|---:|
-| v0.1 FP8 MTP3 | 1692.79 | 61.81 |
-| v0.2 FP8 MTP3 | 1359.79 | 76.19 |
-| v0.2 NVFP4 MTP3 | 1212.01 | 40.94 |
+| Definitive 0.1 FP8 MTP3 | 1692.79 | 61.81 |
+| Definitive 0.2 FP8 MTP3 | 1359.79 | 76.19 |
+| Definitive 0.2 NVFP4 MTP3 | 1212.01 | 40.94 |
 | FastLLM FP8 MTP3 | 1337.49 | 74.37 |
 | FastLLM NVFP4 MTP3 | 1537.38 | 78.79 |
 | FastLLM FP8 DFlash7 | 1381.83 | 63.62 |
 
-v0.2 MTP 接受率随提示词暴涨暴跌：FP8 约 53.3%–98.9%，NVFP4 约 42.3%–84.4%。不要拿一条提示词定终身。
+Definitive 0.2 MTP 接受率随提示词暴涨暴跌：FP8 约 53.3%–98.9%，NVFP4 约 42.3%–84.4%。不要拿一条提示词定终身。
 
 ### 3.3 长上下文真实请求（冒烟，出 32 token）
 
 | 方案 | 输入 / 输出 | 结果 | TTFT | Prefill |
 |---|---:|---|---:|---:|
-| v0.1 FP8 官方 128K | 启动 | 容量不足 | - | - |
-| v0.2 FP8 官方 128K | 启动 | 容量不足 | - | - |
-| v0.2 NVFP4 MTP3 官方 240K 文本 | 245600 / 32 | **通过** | 378.316s | 649.19 |
+| Definitive 0.1 FP8 官方 128K | 启动 | 容量不足 | - | - |
+| Definitive 0.2 FP8 官方 128K | 启动 | 容量不足 | - | - |
+| Definitive 0.2 NVFP4 MTP3 官方 240K 文本 | 245600 / 32 | **通过** | 378.316s | 649.19 |
 | FastLLM FP8 MTP3 128K | 130900 / 32 | **通过** | 167.969s | 779.31 |
 | FastLLM NVFP4 MTP3 128K | 130900 / 32 | **通过** | 157.263s | 832.36 |
 | FastLLM FP8 DFlash7 128K | 130900 / 32 | **通过** | 171.383s | 763.79 |
@@ -94,29 +96,29 @@ v0.2 MTP 接受率随提示词暴涨暴跌：FP8 约 53.3%–98.9%，NVFP4 约 4
 
 | 运行时 | 上下文 | Prefill | Decode | TTFT | 总耗时 |
 |---|---:|---:|---:|---:|---:|
-| v0.2 NVFP4 MTP3 | 64K | 563.52 | **55.07** | 116.3s | 118.6s |
+| Definitive 0.2 NVFP4 MTP3 | 64K | 563.52 | **55.07** | 116.3s | 118.6s |
 | FastLLM NVFP4 MTP3 | 64K | **1077.14** | 51.50 | **60.8s** | **63.3s** |
 | FastLLM FP8 DFlash3 | 64K | 964.89 | 45.90 | 67.9s | 70.7s |
 | FastLLM FP8 DFlash5 | 64K | 959.35 | 53.88 | 68.3s | 70.7s |
 | FastLLM FP8 DFlash7 | 64K | 967.13 | 53.62 | 67.8s | 70.1s |
-| v0.2 NVFP4 MTP3 | 128K | 780.38 | 47.24 | 168.0s | 170.6s |
+| Definitive 0.2 NVFP4 MTP3 | 128K | 780.38 | 47.24 | 168.0s | 170.6s |
 | FastLLM NVFP4 MTP3 | 128K | **822.70** | 36.53 | **159.3s** | **162.8s** |
 | FastLLM FP8 DFlash3 | 128K | 752.73 | 37.98 | 174.1s | 177.5s |
 | FastLLM FP8 DFlash5 | 128K | 755.54 | 45.78 | 173.5s | 176.3s |
 | FastLLM FP8 DFlash7 | 128K | 754.39 | **47.70** | 173.7s | 176.4s |
-| v0.2 NVFP4 MTP3 | 200K | 623.05 | **50.01** | 328.7s | 331.2s |
+| Definitive 0.2 NVFP4 MTP3 | 200K | 623.05 | **50.01** | 328.7s | 331.2s |
 | FastLLM NVFP4 MTP3 | 200K | **667.76** | 27.62 | **306.7s** | **311.3s** |
 | FastLLM FP8 DFlash3 | 200K | 629.16 | 32.42 | 325.5s | 329.4s |
 | FastLLM FP8 DFlash5 | 200K | 629.01 | 30.74 | 325.6s | 329.7s |
 | FastLLM FP8 DFlash7 | 200K | 627.60 | 35.18 | 326.3s | 329.9s |
 
-长输入端到端：FastLLM NVFP4 总耗时相对 v0.2 少约 46.6% / 4.6% / 6.0%。  
-长输出：v0.2 在 200K 仍约 50 tok/s，FastLLM 掉到约 28。  
+长输入端到端：FastLLM NVFP4 总耗时相对 Definitive 0.2 少约 46.6% / 4.6% / 6.0%。  
+长输出：Definitive 0.2 在 200K 仍约 50 tok/s，FastLLM 掉到约 28。  
 DFlash 三档用的是 **FP8 主模型**，不能写成 NVFP4+DFlash。
 
 ### 3.5 短答总耗时（出 128 token，50K 档）
 
-| 输入 | FastLLM 中文 | v0.2 中文 | FastLLM 英文 | v0.2 英文 |
+| 输入 | FastLLM 中文 | Definitive 0.2 中文 | FastLLM 英文 | Definitive 0.2 英文 |
 |---:|---:|---:|---:|---:|
 | 0.5K | **2.4** | 2.7 | 6.0（5K） | **2.2** |
 | 50K | **25.0** | 26.8 | **48.7** | 48.8 |
@@ -124,11 +126,11 @@ DFlash 三档用的是 **FP8 主模型**，不能写成 NVFP4+DFlash。
 | 150K | **99.0** | 108.5 | **195.7** | 214.1 |
 | 180K | **125.9** | 137.3 | **255.6** | 277.8 |
 
-50K 起 FastLLM 总耗时更短约 7–9%。中文大约比英文快一倍（词表，不是某一套引擎独有）。v0.2 的优势在长 decode，不在短答总时间。
+50K 起 FastLLM 总耗时更短约 7–9%。中文大约比英文快一倍（词表，不是某一套引擎独有）。Definitive 0.2 的优势在长 decode，不在短答总时间。
 
 ### 3.6 仓库宣传 100 tok/s
 
-本机同口径 v0.1 大约 **69.6**，不是 100。参考机单核更强。DFlash 英文短续写 + draft 5/7 可以到 147 / 201，中文思考仍是 50–64。日常中文对话不会变成 180。见 [test_results/对照-仓库100与官方尺子.md](test_results/对照-仓库100与官方尺子.md)。
+本机同口径 Definitive 0.1 大约 **69.6**，不是 100。参考机单核更强。DFlash 英文短续写 + draft 5/7 可以到 147 / 201，中文思考仍是 50–64。日常中文对话不会变成 180。见 [test_results/对照-仓库100与官方尺子.md](test_results/对照-仓库100与官方尺子.md)。
 
 ## 4. 质量交叉对照（FastLLM FP8 vs NVFP4，849 题）
 
@@ -154,7 +156,7 @@ DFlash 三档用的是 **FP8 主模型**，不能写成 NVFP4+DFlash。
 
 全量评测时 CPU 约 6.2% / 72 核，GPU 约 94%。**单并发别换 CPU。**
 
-v0.2 **没有**做同尺 849 题质量赛。质量结论只对 FastLLM 的 FP8 / NVFP4 负责。
+Definitive 0.2 **没有**做同尺 849 题质量赛。质量结论只对 FastLLM 的 FP8 / NVFP4 负责。
 
 ### 4.3 2026-09-14 关思考对打（FastLLM 日常留下 B）
 
@@ -190,7 +192,7 @@ ln -sfn /opt/venv /workspace/.venv
 | 路径 | 内容 |
 |---|---|
 | [README.md](README.md) | **我们的说明（本页）** |
-| [docs/ours/](docs/ours/) | 本机踩坑原文（FastLLM / v0.2 / v0.1） |
+| [docs/ours/](docs/ours/) | 本机踩坑原文（FastLLM / Definitive 0.2 / Definitive 0.1） |
 | [docs/upstream/](docs/upstream/) | 上游官方 README 原文，未改 |
 | [test_results/](test_results/) | 完整测速 JSON/CSV、质量 jsonl、失败栈、交叉对照 md |
 | [quality_eval/](quality_eval/) | 题集清单、基线（完整 12MB 题面 `suite.jsonl` 太大，不进仓） |
@@ -211,7 +213,7 @@ ln -sfn /opt/venv /workspace/.venv
 
 ## 7. 我们改了什么 / 没改什么
 
-不改推理源码，不转权重，不打兼容补丁。修的是能稳定对外服务的 Docker 跑法：FastLLM 只用官方 wheel；v0.2 烤 `libxcb1`、双缓存、`SERVICE_SCOPE=lan`、launcher 冒烟后 wait PID。详见 [docs/ours/](docs/ours/)。
+不改推理源码，不转权重，不打兼容补丁。修的是能稳定对外服务的 Docker 跑法：FastLLM 只用官方 wheel；Definitive 0.2 烤 `libxcb1`、双缓存、`SERVICE_SCOPE=lan`、launcher 冒烟后 wait PID。详见 [docs/ours/](docs/ours/)。
 
 ---
 

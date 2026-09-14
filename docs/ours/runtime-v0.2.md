@@ -1,4 +1,6 @@
-# v0.2 运行时踩坑
+# vLLM-2080Ti-Definitive 0.2 运行时踩坑
+
+这是 [vLLM-2080Ti-Definitive](https://github.com/weicj/vLLM-2080Ti-Definitive) 的 0.2 线，不是官方 vLLM 的 0.2。本机钉 `v0.2.1-pre3`。
 
 对照环境：2× RTX 2080 Ti 22GB（SM75，NVLink），TP=2，并发=1，纯文本。  
 镜像：`native/vllm-2080ti:v0.2.1-pre3-sm75`（约 42.7GB，CUDA 13.0，fork `v0.2.1-pre3`，运行时 vLLM 0.27.1）。  
@@ -85,8 +87,8 @@ ln -sfn /opt/venv /workspace/.venv
 
 - 启动后段可能连续打 `No available shared memory broadcast block found in 60 seconds`。随后 Health check / `/v1/models` 通了，当噪声。
 - MTP 接受率随提示词暴涨暴跌。日志里 FP8 大约 53%–99%，NVFP4 大约 42%–84%。同一套 NVFP4，固定英文尺子 decode 可以只有 34，测速页随机英文又能到 50+。**不要拿一条提示词定终身。**
-- 不能说“NVFP4 比 FP8 慢 10%”当常数。v0.2 上这条固定尺子：预填充慢约 10%，decode 慢约 34%；换 FastLLM，NVFP4 反而比 FP8 快约 13%。慢的是推测解码接受率，不是权重格式本身。
-- 长中文（精确 64K/128K/200K 输入，出 128 token）：64K 预填充大约 564 tok/s，当时 FastLLM 大约 1077，总耗时差近一倍。200K decode 仍能到约 50 tok/s，FastLLM 会掉到约 28。长输入等第一口，v0.2 不占优；长输出更稳。
+- 不能说“NVFP4 比 FP8 慢 10%”当常数。Definitive 0.2 上这条固定尺子：预填充慢约 10%，decode 慢约 34%；换 FastLLM，NVFP4 反而比 FP8 快约 13%。慢的是推测解码接受率，不是权重格式本身。
+- 长中文（精确 64K/128K/200K 输入，出 128 token）：64K 预填充大约 564 tok/s，当时 FastLLM 大约 1077，总耗时差近一倍。200K decode 仍能到约 50 tok/s，FastLLM 会掉到约 28。长输入等第一口，Definitive 0.2 不占优；长输出更稳。
 - 测速页默认英文词袋 + 英文写作后缀，不能代表中文生产。要看中文，用页面的「中文测试」。
 - 评测容器、旧候选容器会抢 GPU，看起来像生产崩了。用切换脚本，不要手搓漏停。
 
