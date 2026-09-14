@@ -1,0 +1,11 @@
+{
+  "model": "qwen27b-fastllm-dflash7-128k",
+  "target_prompt_tokens": 130900,
+  "prompt_tokens": 130900,
+  "completion_tokens": 32,
+  "chunks": 10,
+  "ttft_s": 171.383,
+  "prefill_tps": 763.79,
+  "decode_tps": 43.87,
+  "elapsed_s": 172.094
+}

@@ -1,0 +1,60 @@
+{
+  "captured_at": "2026-09-12T09:50:00+08:00",
+  "host": "<LAN_IP>",
+  "hardware": {
+    "cpu": "2x Intel Xeon E5-2686 v4",
+    "logical_cpus": 72,
+    "memory_gib": 125,
+    "gpus": "2x NVIDIA GeForce RTX 2080 Ti 22GB",
+    "tensor_parallel": "0,1"
+  },
+  "runtime": {
+    "image": "native/fastllm:official-wheel",
+    "image_digest": "sha256:471823d971eee135969ce94010507886ecd35c8259944e9e6b1f57171b38f0ae",
+    "ftllm": "0.1.8.2",
+    "transformers": "5.17.0",
+    "cuda": "12.1.0"
+  },
+  "common_args": {
+    "device": "cuda",
+    "tp": "0,1",
+    "max_batch": 1,
+    "gpu_mem_ratio": 0.95,
+    "tokens": 210000,
+    "max_context_length": 210000,
+    "kv_cache_dtype": "fp8_e4m3",
+    "prefix_cache": false,
+    "mtp": 3
+  },
+  "models": {
+    "fp8": {
+      "path": "$MODEL_ROOT/Qwen3.8-27B-FP8",
+      "size": "29G",
+      "config_sha256": "74227dd615bf1ea975aa676bdf355a0379858c12f394b5365cd9dfa5fc2c70bc",
+      "index_sha256": "f0838c766951bdfe76d6afbdb2771a8f67aaa2231dedb3d33cebd817729843a2"
+    },
+    "nvfp4": {
+      "path": "$MODEL_ROOT/Qwen3.8-27B-NVFP4",
+      "size": "22G",
+      "config_sha256": "1b3c71868d1299e52df6fc907deb202d5132b1ef0f72aae0ef6d15185dd53a5c",
+      "index_sha256": "429430e1b9e65b2cb98eff8cd10a06e70a09cee89c48487a3914684aeb6df57f"
+    }
+  },
+  "captured_service": {
+    "container": "fast-cn-nvfp4-api",
+    "port": 8001,
+    "model": "qwen38-fastllm-nvfp4-mtp3-cn-210k",
+    "restart": "unless-stopped",
+    "production_port_8000_state": "closed"
+  },
+  "evaluation_policy": {
+    "temperature": 0,
+    "concurrency": 1,
+    "same_runtime": true,
+    "same_prompt_order": true,
+    "model_conversion": false,
+    "compatibility_patches": false,
+    "large_downloads": false,
+    "small_packages_proxy": "<HTTP_PROXY>"
+  }
+}

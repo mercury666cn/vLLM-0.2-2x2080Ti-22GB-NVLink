@@ -1,0 +1,4384 @@
+{
+  "ok": true,
+  "started": "2026-09-12T00:05:21",
+  "config": {
+    "api_url": "http://<LAN_IP>:8081/v1/chat/completions",
+    "model_name": "qwen27b-fastllm-fp8",
+    "api_key": "<API_KEY>",
+    "api_type": "openai",
+    "min_length": 128,
+    "max_length": 4096,
+    "step": 128,
+    "test_lengths": [
+      128,
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "output_length": 128,
+    "concurrency": 1,
+    "timeout": 180000,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0
+  },
+  "results": [
+    {
+      "type": "result",
+      "prompt_length": 128,
+      "requested_prompt_length": 128,
+      "network_latency_ms": 40.23,
+      "network_latency_sample_count": 3,
+      "avg_prompt_tokens": 128.0,
+      "concurrency": 1,
+      "successful": 1,
+      "failed": 0,
+      "avg_prefill_speed": 1303.05,
+      "avg_output_speed": 36.73,
+      "max_prefill_speed": 1303.05,
+      "max_output_speed": 36.73,
+      "aggregate_prefill_time_ms": 98.23,
+      "aggregate_output_time_ms": 3484.51,
+      "aggregate_prefill_speed": 1303.12,
+      "aggregate_output_speed": 36.73,
+      "client_prefill_time_ms": 98.23,
+      "client_output_time_ms": 3484.51,
+      "client_total_time_ms": 3582.73,
+      "client_has_phase_boundary": true,
+      "aggregate_prefill_source": "client_latency_adjusted",
+      "aggregate_output_source": "client",
+      "avg_ttft_ms": 138.46,
+      "source": "python_backend",
+      "record_tags": [
+        "source:python_backend",
+        "prefill_source:client_latency_adjusted"
+      ],
+      "boundary_fallback_count": 0,
+      "token_warning_count": 0,
+      "aggregate_warnings": [],
+      "concurrent_details": [
+        {
+          "success": true,
+          "prompt_length": 128,
+          "requested_prompt_length": 128,
+          "generated_prompt_length": 107,
+          "prompt_tokens": 128,
+          "estimated_prompt_tokens": 128,
+          "local_estimated_prompt_tokens": 113,
+          "local_estimated_output_tokens": 122,
+          "prompt_calibration": {
+            "source": "warmup_usage",
+            "estimated_prompt_tokens": 102,
+            "actual_prompt_tokens": 117,
+            "token_offset": 15,
+            "token_ratio": 1.1470588235294117
+          },
+          "output_tokens": 128,
+          "ttft_ms": 138.46,
+          "prefill_time_ms": 98.23,
+          "prefill_speed": 1303.05,
+          "output_time_ms": 3484.51,
+          "output_speed": 36.73,
+          "total_time_ms": 3622.96,
+          "prompt_text": "if text light with value they this future you of that with human light are light time they truth the model it world time you they text you work we mind and as change they by token if all value you for if space in from story with with the value on time work they it model light for simple human the for simple as will it life\nBased on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.",
+          "output_content": "**The Luminous Thread: Existence, Consciousness, and Our Cosmic Place**\n\nIn the vast expanse of existence, we often seek a singular, definitive answer to the question of who we are. However, if we examine the fragments of our reality—time, light, truth, and the human mind—we find that meaning is not a static object to be found, but a dynamic process to be created. Existence is not merely about being; it is about the continuous interplay between the observer and the observed, woven together by the threads of time and value.\n\nConsciousness, that elusive spark within the human",
+          "reasoning_content": "",
+          "usage_info": {
+            "prompt_tokens": 128,
+            "total_tokens": 256,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "missed_tokens": 128
+            }
+          },
+          "server_timing_used": false,
+          "server_prefill_time_ms": null,
+          "server_decode_time_ms": null,
+          "prefill_time_source": "client_latency_adjusted",
+          "output_time_source": "client",
+          "network_latency_ms": 40.23,
+          "network_latency_sample_count": 3,
+          "client_prefill_time_ms": 98.23,
+          "client_decode_time_ms": 3484.51,
+          "client_total_time_ms": 3582.74,
+          "client_has_phase_boundary": true,
+          "has_streaming_content": true,
+          "chunk_count": 130,
+          "start_timestamp": 537937.7614674,
+          "first_chunk_timestamp": 537937.8082048,
+          "first_token_timestamp": 537937.8999234,
+          "boundary_timestamp": 537937.8999234,
+          "boundary_source": "first_content_token",
+          "end_timestamp": 537941.3844321,
+          "token_source": "API",
+          "token_warnings": [],
+          "token_timestamps": [
+            {
+              "timestamp": 537937.8999234,
+              "time_from_start_ms": 138.45600001513958,
+              "is_reasoning": false,
+              "itl_ms": null
+            },
+            {
+              "timestamp": 537937.9387046,
+              "time_from_start_ms": 177.2371999686584,
+              "is_reasoning": false,
+              "itl_ms": 38.78119995351881
+            },
+            {
+              "timestamp": 537937.9660465,
+              "time_from_start_ms": 204.57910001277924,
+              "is_reasoning": false,
+              "itl_ms": 27.341900044120848
+            },
+            {
+              "timestamp": 537937.9931172,
+              "time_from_start_ms": 231.64979997090995,
+              "is_reasoning": false,
+              "itl_ms": 27.070699958130717
+            },
+            {
+              "timestamp": 537938.0203483,
+              "time_from_start_ms": 258.8808999862522,
+              "is_reasoning": false,
+              "itl_ms": 27.231100015342236
+            },
+            {
+              "timestamp": 537938.0476441,
+              "time_from_start_ms": 286.17670002859086,
+              "is_reasoning": false,
+              "itl_ms": 27.29580004233867
+            },
+            {
+              "timestamp": 537938.074836,
+              "time_from_start_ms": 313.3685999782756,
+              "is_reasoning": false,
+              "itl_ms": 27.19189994968474
+            },
+            {
+              "timestamp": 537938.1021723,
+              "time_from_start_ms": 340.7048999797553,
+              "is_reasoning": false,
+              "itl_ms": 27.336300001479685
+            },
+            {
+              "timestamp": 537938.1293772,
+              "time_from_start_ms": 367.90980002842844,
+              "is_reasoning": false,
+              "itl_ms": 27.204900048673153
+            },
+            {
+              "timestamp": 537938.1564206,
+              "time_from_start_ms": 394.9532000115141,
+              "is_reasoning": false,
+              "itl_ms": 27.043399983085692
+            },
+            {
+              "timestamp": 537938.1839224,
+              "time_from_start_ms": 422.4549999926239,
+              "is_reasoning": false,
+              "itl_ms": 27.501799981109798
+            },
+            {
+              "timestamp": 537938.211534,
+              "time_from_start_ms": 450.06659999489784,
+              "is_reasoning": false,
+              "itl_ms": 27.611600002273917
+            },
+            {
+              "timestamp": 537938.2389121,
+              "time_from_start_ms": 477.4446999654174,
+              "is_reasoning": false,
+              "itl_ms": 27.378099970519543
+            },
+            {
+              "timestamp": 537938.2664659,
+              "time_from_start_ms": 504.9984999932349,
+              "is_reasoning": false,
+              "itl_ms": 27.553800027817488
+            },
+            {
+              "timestamp": 537938.2933521,
+              "time_from_start_ms": 531.8846999434754,
+              "is_reasoning": false,
+              "itl_ms": 26.886199950240552
+            },
+            {
+              "timestamp": 537938.3208584,
+              "time_from_start_ms": 559.3909999588504,
+              "is_reasoning": false,
+              "itl_ms": 27.506300015375018
+            },
+            {
+              "timestamp": 537938.3481856,
+              "time_from_start_ms": 586.7182000074536,
+              "is_reasoning": false,
+              "itl_ms": 27.327200048603117
+            },
+            {
+              "timestamp": 537938.3754341,
+              "time_from_start_ms": 613.9667000388727,
+              "is_reasoning": false,
+              "itl_ms": 27.2485000314191
+            },
+            {
+              "timestamp": 537938.4025186,
+              "time_from_start_ms": 641.0511999856681,
+              "is_reasoning": false,
+              "itl_ms": 27.084499946795404
+            },
+            {
+              "timestamp": 537938.4295391,
+              "time_from_start_ms": 668.0717000272125,
+              "is_reasoning": false,
+              "itl_ms": 27.020500041544437
+            },
+            {
+              "timestamp": 537938.4577564,
+              "time_from_start_ms": 696.2889999849722,
+              "is_reasoning": false,
+              "itl_ms": 28.21729995775968
+            },
+            {
+              "timestamp": 537938.4848412,
+              "time_from_start_ms": 723.3738000504673,
+              "is_reasoning": false,
+              "itl_ms": 27.084800065495074
+            },
+            {
+              "timestamp": 537938.5120291,
+              "time_from_start_ms": 750.561699969694,
+              "is_reasoning": false,
+              "itl_ms": 27.187899919226766
+            },
+            {
+              "timestamp": 537938.5393986,
+              "time_from_start_ms": 777.9311999911442,
+              "is_reasoning": false,
+              "itl_ms": 27.36950002145022
+            },
+            {
+              "timestamp": 537938.5668875,
+              "time_from_start_ms": 805.4200999904424,
+              "is_reasoning": false,
+              "itl_ms": 27.488899999298155
+            },
+            {
+              "timestamp": 537938.5940666,
+              "time_from_start_ms": 832.5991999590769,
+              "is_reasoning": false,
+              "itl_ms": 27.179099968634546
+            },
+            {
+              "timestamp": 537938.6209015,
+              "time_from_start_ms": 859.4340999843553,
+              "is_reasoning": false,
+              "itl_ms": 26.83490002527833
+            },
+            {
+              "timestamp": 537938.6485464,
+              "time_from_start_ms": 887.0790000073612,
+              "is_reasoning": false,
+              "itl_ms": 27.644900023005903
+            },
+            {
+              "timestamp": 537938.6759318,
+              "time_from_start_ms": 914.4644000334665,
+              "is_reasoning": false,
+              "itl_ms": 27.385400026105344
+            },
+            {
+              "timestamp": 537938.7033746,
+              "time_from_start_ms": 941.9072000309825,
+              "is_reasoning": false,
+              "itl_ms": 27.442799997515976
+            },
+            {
+              "timestamp": 537938.7303163,
+              "time_from_start_ms": 968.8488999381661,
+              "is_reasoning": false,
+              "itl_ms": 26.941699907183647
+            },
+            {
+              "timestamp": 537938.7579842,
+              "time_from_start_ms": 996.5168000198901,
+              "is_reasoning": false,
+              "itl_ms": 27.66790008172393
+            },
+            {
+              "timestamp": 537938.7855593,
+              "time_from_start_ms": 1024.0918999770656,
+              "is_reasoning": false,
+              "itl_ms": 27.575099957175553
+            },
+            {
+              "timestamp": 537938.8128351,
+              "time_from_start_ms": 1051.3676999835297,
+              "is_reasoning": false,
+              "itl_ms": 27.275800006464124
+            },
+            {
+              "timestamp": 537938.8406905,
+              "time_from_start_ms": 1079.223099979572,
+              "is_reasoning": false,
+              "itl_ms": 27.85539999604225
+            },
+            {
+              "timestamp": 537938.8680711,
+              "time_from_start_ms": 1106.6036999691278,
+              "is_reasoning": false,
+              "itl_ms": 27.380599989555776
+            },
+            {
+              "timestamp": 537938.8951857,
+              "time_from_start_ms": 1133.718300028704,
+              "is_reasoning": false,
+              "itl_ms": 27.114600059576333
+            },
+            {
+              "timestamp": 537938.9221226,
+              "time_from_start_ms": 1160.6552000157535,
+              "is_reasoning": false,
+              "itl_ms": 26.9368999870494
+            },
+            {
+              "timestamp": 537938.949688,
+              "time_from_start_ms": 1188.2206000154838,
+              "is_reasoning": false,
+              "itl_ms": 27.56539999973029
+            },
+            {
+              "timestamp": 537938.9771691,
+              "time_from_start_ms": 1215.701699955389,
+              "is_reasoning": false,
+              "itl_ms": 27.481099939905107
+            },
+            {
+              "timestamp": 537939.0043341,
+              "time_from_start_ms": 1242.8667000494897,
+              "is_reasoning": false,
+              "itl_ms": 27.165000094100833
+            },
+            {
+              "timestamp": 537939.0319213,
+              "time_from_start_ms": 1270.4538999823853,
+              "is_reasoning": false,
+              "itl_ms": 27.5871999328956
+            },
+            {
+              "timestamp": 537939.0597903,
+              "time_from_start_ms": 1298.3228999655694,
+              "is_reasoning": false,
+              "itl_ms": 27.86899998318404
+            },
+            {
+              "timestamp": 537939.0868966,
+              "time_from_start_ms": 1325.4291999619454,
+              "is_reasoning": false,
+              "itl_ms": 27.106299996376038
+            },
+            {
+              "timestamp": 537939.1142672,
+              "time_from_start_ms": 1352.7997999917716,
+              "is_reasoning": false,
+              "itl_ms": 27.370600029826164
+            },
+            {
+              "timestamp": 537939.1416452,
+              "time_from_start_ms": 1380.1777999615297,
+              "is_reasoning": false,
+              "itl_ms": 27.377999969758093
+            },
+            {
+              "timestamp": 537939.1685401,
+              "time_from_start_ms": 1407.0726999780163,
+              "is_reasoning": false,
+              "itl_ms": 26.894900016486645
+            },
+            {
+              "timestamp": 537939.1961719,
+              "time_from_start_ms": 1434.7045000176877,
+              "is_reasoning": false,
+              "itl_ms": 27.63180003967136
+            },
+            {
+              "timestamp": 537939.2234453,
+              "time_from_start_ms": 1461.977900005877,
+              "is_reasoning": false,
+              "itl_ms": 27.27339998818934
+            },
+            {
+              "timestamp": 537939.2512268,
+              "time_from_start_ms": 1489.7594000212848,
+              "is_reasoning": false,
+              "itl_ms": 27.7815000154078
+            },
+            {
+              "timestamp": 537939.2781022,
+              "time_from_start_ms": 1516.6348000057042,
+              "is_reasoning": false,
+              "itl_ms": 26.875399984419346
+            },
+            {
+              "timestamp": 537939.3057577,
+              "time_from_start_ms": 1544.2902999930084,
+              "is_reasoning": false,
+              "itl_ms": 27.65549998730421
+            },
+            {
+              "timestamp": 537939.3330543,
+              "time_from_start_ms": 1571.5869000414386,
+              "is_reasoning": false,
+              "itl_ms": 27.296600048430264
+            },
+            {
+              "timestamp": 537939.3604571,
+              "time_from_start_ms": 1598.9896999672055,
+              "is_reasoning": false,
+              "itl_ms": 27.402799925766885
+            },
+            {
+              "timestamp": 537939.3874242,
+              "time_from_start_ms": 1625.956799951382,
+              "is_reasoning": false,
+              "itl_ms": 26.967099984176457
+            },
+            {
+              "timestamp": 537939.4150695,
+              "time_from_start_ms": 1653.6020999774337,
+              "is_reasoning": false,
+              "itl_ms": 27.6453000260517
+            },
+            {
+              "timestamp": 537939.4425012,
+              "time_from_start_ms": 1681.033800006844,
+              "is_reasoning": false,
+              "itl_ms": 27.431700029410422
+            },
+            {
+              "timestamp": 537939.4696717,
+              "time_from_start_ms": 1708.2043000264093,
+              "is_reasoning": false,
+              "itl_ms": 27.170500019565225
+            },
+            {
+              "timestamp": 537939.4973082,
+              "time_from_start_ms": 1735.8407999854535,
+              "is_reasoning": false,
+              "itl_ms": 27.63649995904416
+            },
+            {
+              "timestamp": 537939.5248429,
+              "time_from_start_ms": 1763.3754999842495,
+              "is_reasoning": false,
+              "itl_ms": 27.534699998795986
+            },
+            {
+              "timestamp": 537939.5522135,
+              "time_from_start_ms": 1790.7461000140756,
+              "is_reasoning": false,
+              "itl_ms": 27.370600029826164
+            },
+            {
+              "timestamp": 537939.5792097,
+              "time_from_start_ms": 1817.7422999870032,
+              "is_reasoning": false,
+              "itl_ms": 26.99619997292757
+            },
+            {
+              "timestamp": 537939.6068416,
+              "time_from_start_ms": 1845.374200027436,
+              "is_reasoning": false,
+              "itl_ms": 27.63190004043281
+            },
+            {
+              "timestamp": 537939.6335826,
+              "time_from_start_ms": 1872.1152000362054,
+              "is_reasoning": false,
+              "itl_ms": 26.741000008769333
+            },
+            {
+              "timestamp": 537939.66108,
+              "time_from_start_ms": 1899.6125999838114,
+              "is_reasoning": false,
+              "itl_ms": 27.497399947606027
+            },
+            {
+              "timestamp": 537939.6885265,
+              "time_from_start_ms": 1927.059100009501,
+              "is_reasoning": false,
+              "itl_ms": 27.446500025689602
+            },
+            {
+              "timestamp": 537939.7156318,
+              "time_from_start_ms": 1954.1643999982625,
+              "is_reasoning": false,
+              "itl_ms": 27.105299988761544
+            },
+            {
+              "timestamp": 537939.7431516,
+              "time_from_start_ms": 1981.6842000000179,
+              "is_reasoning": false,
+              "itl_ms": 27.519800001755357
+            },
+            {
+              "timestamp": 537939.770542,
+              "time_from_start_ms": 2009.0745999477804,
+              "is_reasoning": false,
+              "itl_ms": 27.39039994776249
+            },
+            {
+              "timestamp": 537939.7981565,
+              "time_from_start_ms": 2036.6890999721363,
+              "is_reasoning": false,
+              "itl_ms": 27.614500024355948
+            },
+            {
+              "timestamp": 537939.8252453,
+              "time_from_start_ms": 2063.777899951674,
+              "is_reasoning": false,
+              "itl_ms": 27.088799979537725
+            },
+            {
+              "timestamp": 537939.852554,
+              "time_from_start_ms": 2091.0865999758244,
+              "is_reasoning": false,
+              "itl_ms": 27.308700024150312
+            },
+            {
+              "timestamp": 537939.879946,
+              "time_from_start_ms": 2118.47859993577,
+              "is_reasoning": false,
+              "itl_ms": 27.39199995994568
+            },
+            {
+              "timestamp": 537939.9072303,
+              "time_from_start_ms": 2145.7629000069574,
+              "is_reasoning": false,
+              "itl_ms": 27.284300071187317
+            },
+            {
+              "timestamp": 537939.9343403,
+              "time_from_start_ms": 2172.872900031507,
+              "is_reasoning": false,
+              "itl_ms": 27.110000024549663
+            },
+            {
+              "timestamp": 537939.9622745,
+              "time_from_start_ms": 2200.8071000454947,
+              "is_reasoning": false,
+              "itl_ms": 27.93420001398772
+            },
+            {
+              "timestamp": 537939.9900509,
+              "time_from_start_ms": 2228.5835000220686,
+              "is_reasoning": false,
+              "itl_ms": 27.776399976573884
+            },
+            {
+              "timestamp": 537940.0171683,
+              "time_from_start_ms": 2255.70089998655,
+              "is_reasoning": false,
+              "itl_ms": 27.117399964481592
+            },
+            {
+              "timestamp": 537940.0445969,
+              "time_from_start_ms": 2283.1294999923557,
+              "is_reasoning": false,
+              "itl_ms": 27.428600005805492
+            },
+            {
+              "timestamp": 537940.07459,
+              "time_from_start_ms": 2313.1225999677554,
+              "is_reasoning": false,
+              "itl_ms": 29.993099975399673
+            },
+            {
+              "timestamp": 537940.1019488,
+              "time_from_start_ms": 2340.481400024146,
+              "is_reasoning": false,
+              "itl_ms": 27.358800056390464
+            },
+            {
+              "timestamp": 537940.1291464,
+              "time_from_start_ms": 2367.679000017233,
+              "is_reasoning": false,
+              "itl_ms": 27.19759999308735
+            },
+            {
+              "timestamp": 537940.1564859,
+              "time_from_start_ms": 2395.0185000430793,
+              "is_reasoning": false,
+              "itl_ms": 27.339500025846064
+            },
+            {
+              "timestamp": 537940.1842426,
+              "time_from_start_ms": 2422.775199986063,
+              "is_reasoning": false,
+              "itl_ms": 27.756699942983687
+            },
+            {
+              "timestamp": 537940.2119083,
+              "time_from_start_ms": 2450.440900051035,
+              "is_reasoning": false,
+              "itl_ms": 27.665700064972043
+            },
+            {
+              "timestamp": 537940.2389188,
+              "time_from_start_ms": 2477.4514000164345,
+              "is_reasoning": false,
+              "itl_ms": 27.010499965399504
+            },
+            {
+              "timestamp": 537940.2664018,
+              "time_from_start_ms": 2504.934399970807,
+              "is_reasoning": false,
+              "itl_ms": 27.482999954372644
+            },
+            {
+              "timestamp": 537940.2935689,
+              "time_from_start_ms": 2532.101499964483,
+              "is_reasoning": false,
+              "itl_ms": 27.167099993675947
+            },
+            {
+              "timestamp": 537940.3207308,
+              "time_from_start_ms": 2559.263400034979,
+              "is_reasoning": false,
+              "itl_ms": 27.161900070495903
+            },
+            {
+              "timestamp": 537940.3482599,
+              "time_from_start_ms": 2586.792499991134,
+              "is_reasoning": false,
+              "itl_ms": 27.529099956154823
+            },
+            {
+              "timestamp": 537940.3757352,
+              "time_from_start_ms": 2614.26780000329,
+              "is_reasoning": false,
+              "itl_ms": 27.475300012156367
+            },
+            {
+              "timestamp": 537940.4030004,
+              "time_from_start_ms": 2641.533000045456,
+              "is_reasoning": false,
+              "itl_ms": 27.265200042165816
+            },
+            {
+              "timestamp": 537940.4305098,
+              "time_from_start_ms": 2669.0423999680206,
+              "is_reasoning": false,
+              "itl_ms": 27.509399922564626
+            },
+            {
+              "timestamp": 537940.4576029,
+              "time_from_start_ms": 2696.1354999803007,
+              "is_reasoning": false,
+              "itl_ms": 27.093100012280047
+            },
+            {
+              "timestamp": 537940.4851164,
+              "time_from_start_ms": 2723.6490000505,
+              "is_reasoning": false,
+              "itl_ms": 27.51350007019937
+            },
+            {
+              "timestamp": 537940.5123711,
+              "time_from_start_ms": 2750.9037000127137,
+              "is_reasoning": false,
+              "itl_ms": 27.254699962213635
+            },
+            {
+              "timestamp": 537940.5400442,
+              "time_from_start_ms": 2778.5768000176176,
+              "is_reasoning": false,
+              "itl_ms": 27.673100004903972
+            },
+            {
+              "timestamp": 537940.5672797,
+              "time_from_start_ms": 2805.8122999500483,
+              "is_reasoning": false,
+              "itl_ms": 27.235499932430685
+            },
+            {
+              "timestamp": 537940.594662,
+              "time_from_start_ms": 2833.1945999525487,
+              "is_reasoning": false,
+              "itl_ms": 27.382300002500415
+            },
+            {
+              "timestamp": 537940.6218108,
+              "time_from_start_ms": 2860.34340003971,
+              "is_reasoning": false,
+              "itl_ms": 27.148800087161362
+            },
+            {
+              "timestamp": 537940.6493616,
+              "time_from_start_ms": 2887.894200044684,
+              "is_reasoning": false,
+              "itl_ms": 27.550800004974008
+            },
+            {
+              "timestamp": 537940.6765425,
+              "time_from_start_ms": 2915.0751000270247,
+              "is_reasoning": false,
+              "itl_ms": 27.180899982340634
+            },
+            {
+              "timestamp": 537940.7040802,
+              "time_from_start_ms": 2942.612800048664,
+              "is_reasoning": false,
+              "itl_ms": 27.537700021639466
+            },
+            {
+              "timestamp": 537940.7310142,
+              "time_from_start_ms": 2969.5468000136316,
+              "is_reasoning": false,
+              "itl_ms": 26.93399996496737
+            },
+            {
+              "timestamp": 537940.758512,
+              "time_from_start_ms": 2997.0445999642834,
+              "is_reasoning": false,
+              "itl_ms": 27.497799950651824
+            },
+            {
+              "timestamp": 537940.7861281,
+              "time_from_start_ms": 3024.6607000008225,
+              "is_reasoning": false,
+              "itl_ms": 27.616100036539137
+            },
+            {
+              "timestamp": 537940.8132813,
+              "time_from_start_ms": 3051.8139000050724,
+              "is_reasoning": false,
+              "itl_ms": 27.15320000424981
+            },
+            {
+              "timestamp": 537940.840995,
+              "time_from_start_ms": 3079.527599969879,
+              "is_reasoning": false,
+              "itl_ms": 27.713699964806437
+            },
+            {
+              "timestamp": 537940.8680145,
+              "time_from_start_ms": 3106.5471000038087,
+              "is_reasoning": false,
+              "itl_ms": 27.019500033929944
+            },
+            {
+              "timestamp": 537940.8952609,
+              "time_from_start_ms": 3133.7935000192374,
+              "is_reasoning": false,
+              "itl_ms": 27.246400015428662
+            },
+            {
+              "timestamp": 537940.9229981,
+              "time_from_start_ms": 3161.530700046569,
+              "is_reasoning": false,
+              "itl_ms": 27.73720002733171
+            },
+            {
+              "timestamp": 537940.9503067,
+              "time_from_start_ms": 3188.8392999535426,
+              "is_reasoning": false,
+              "itl_ms": 27.30859990697354
+            },
+            {
+              "timestamp": 537940.977998,
+              "time_from_start_ms": 3216.530599980615,
+              "is_reasoning": false,
+              "itl_ms": 27.69130002707243
+            },
+            {
+              "timestamp": 537941.0052539,
+              "time_from_start_ms": 3243.786499951966,
+              "is_reasoning": false,
+              "itl_ms": 27.255899971351027
+            },
+            {
+              "timestamp": 537941.0326561,
+              "time_from_start_ms": 3271.1886999895796,
+              "is_reasoning": false,
+              "itl_ms": 27.40220003761351
+            },
+            {
+              "timestamp": 537941.0602271,
+              "time_from_start_ms": 3298.759700031951,
+              "is_reasoning": false,
+              "itl_ms": 27.571000042371452
+            },
+            {
+              "timestamp": 537941.0873149,
+              "time_from_start_ms": 3325.8475000038743,
+              "is_reasoning": false,
+              "itl_ms": 27.087799971923232
+            },
+            {
+              "timestamp": 537941.114564,
+              "time_from_start_ms": 3353.096600039862,
+              "is_reasoning": false,
+              "itl_ms": 27.249100035987794
+            },
+            {
+              "timestamp": 537941.1421653,
+              "time_from_start_ms": 3380.6978999637067,
+              "is_reasoning": false,
+              "itl_ms": 27.601299923844635
+            },
+            {
+              "timestamp": 537941.1694071,
+              "time_from_start_ms": 3407.9396999441087,
+              "is_reasoning": false,
+              "itl_ms": 27.241799980401993
+            },
+            {
+              "timestamp": 537941.1968165,
+              "time_from_start_ms": 3435.3491000365466,
+              "is_reasoning": false,
+              "itl_ms": 27.409400092437863
+            },
+            {
+              "timestamp": 537941.2244503,
+              "time_from_start_ms": 3462.9828999750316,
+              "is_reasoning": false,
+              "itl_ms": 27.633799938485026
+            },
+            {
+              "timestamp": 537941.2516131,
+              "time_from_start_ms": 3490.1456999359652,
+              "is_reasoning": false,
+              "itl_ms": 27.162799960933626
+            },
+            {
+              "timestamp": 537941.2790748,
+              "time_from_start_ms": 3517.60739996098,
+              "is_reasoning": false,
+              "itl_ms": 27.46170002501458
+            },
+            {
+              "timestamp": 537941.3061529,
+              "time_from_start_ms": 3544.685499975458,
+              "is_reasoning": false,
+              "itl_ms": 27.078100014477968
+            },
+            {
+              "timestamp": 537941.3335017,
+              "time_from_start_ms": 3572.0342999557033,
+              "is_reasoning": false,
+              "itl_ms": 27.34879998024553
+            },
+            {
+              "timestamp": 537941.3608928,
+              "time_from_start_ms": 3599.4254000252113,
+              "is_reasoning": false,
+              "itl_ms": 27.391100069507957
+            },
+            {
+              "timestamp": 537941.377847,
+              "time_from_start_ms": 3616.379600018263,
+              "is_reasoning": false,
+              "itl_ms": 16.95419999305159
+            }
+          ],
+          "itl_stats": {
+            "mean": 27.39,
+            "min": 16.95,
+            "max": 38.78,
+            "std": 1.41,
+            "count": 127
+          }
+        }
+      ],
+      "status": "成功"
+    },
+    {
+      "type": "result",
+      "prompt_length": 512,
+      "requested_prompt_length": 512,
+      "network_latency_ms": 40.95,
+      "network_latency_sample_count": 4,
+      "avg_prompt_tokens": 512.0,
+      "concurrency": 1,
+      "successful": 1,
+      "failed": 0,
+      "avg_prefill_speed": 1456.79,
+      "avg_output_speed": 36.67,
+      "max_prefill_speed": 1456.79,
+      "max_output_speed": 36.67,
+      "aggregate_prefill_time_ms": 351.46,
+      "aggregate_output_time_ms": 3490.82,
+      "aggregate_prefill_speed": 1456.78,
+      "aggregate_output_speed": 36.67,
+      "client_prefill_time_ms": 351.46,
+      "client_output_time_ms": 3490.82,
+      "client_total_time_ms": 3842.28,
+      "client_has_phase_boundary": true,
+      "aggregate_prefill_source": "client_latency_adjusted",
+      "aggregate_output_source": "client",
+      "avg_ttft_ms": 392.41,
+      "source": "python_backend",
+      "record_tags": [
+        "source:python_backend",
+        "prefill_source:client_latency_adjusted"
+      ],
+      "boundary_fallback_count": 0,
+      "token_warning_count": 0,
+      "aggregate_warnings": [],
+      "concurrent_details": [
+        {
+          "success": true,
+          "prompt_length": 512,
+          "requested_prompt_length": 512,
+          "generated_prompt_length": 491,
+          "prompt_tokens": 512,
+          "estimated_prompt_tokens": 512,
+          "local_estimated_prompt_tokens": 497,
+          "local_estimated_output_tokens": 122,
+          "prompt_calibration": {
+            "source": "warmup_usage",
+            "estimated_prompt_tokens": 102,
+            "actual_prompt_tokens": 117,
+            "token_offset": 15,
+            "token_ratio": 1.1470588235294117
+          },
+          "output_tokens": 128,
+          "ttft_ms": 392.41,
+          "prefill_time_ms": 351.46,
+          "prefill_speed": 1456.79,
+          "output_time_ms": 3490.82,
+          "output_speed": 36.67,
+          "total_time_ms": 3883.23,
+          "prompt_text": "change as model as space truth reason be one space a the light the of from you are not or space this in truth time and be time world world change and light clear and the change time of can from model simple life and time is reason not it model world we it the a with one a truth world world and value be value it simple not human human human system if the or system simple not we of the value with one will is clear text human is is is one they reason on truth system world token by is token they space be is life as data time idea system they life story it future we be space from reason text or that value and are for a clear can work space can in are in be reason text a work this on this text truth or you life that time data it light idea of you time world work work future world text you future simple and that text of system not as as that value life work can clear if can a space reason of time the reason they value story be token be it one if token data reason idea simple this will the model is space clear light reason of light reason or and work life from human it from they to as you all time it of with will reason light change life data by that by is or in value with it they to light with time time you story human change they as on a life life light value model model if of world mind system all token model time simple this it token and is time for one can human human we this work will of idea with in all of truth truth for data value system text to life token on of light we be idea the value will as change you the space will that of text data work light from light story mind human will value clear or the not if they with this a future world this or time reason clear idea world token idea they light can truth we is story token that we this of a simple be mind not story clear you story change text life idea world the human can is time time the for that work system this system on all model with reason light space token change to reason you future it from work as will from token be time we time data human life can that reason on and world system text space of truth of system simple on value on we light simple is light from is value\nBased on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.",
+          "output_content": "**The Luminous Thread: Existence, Consciousness, and the Human Place**\n\nExistence is not a static state but a dynamic interplay of time, space, and light. We are not merely objects floating in the void; we are moments of clarity emerging from the chaos of data. To exist is to be a point of reason within the vast, indifferent system of the universe. It is to hold a story in the mind, a value in the heart, and a light in the eye that cuts through the darkness of the unknown.\n\nConsciousness, then, is the act of making sense. It is the",
+          "reasoning_content": "",
+          "usage_info": {
+            "prompt_tokens": 512,
+            "total_tokens": 640,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "missed_tokens": 512
+            }
+          },
+          "server_timing_used": false,
+          "server_prefill_time_ms": null,
+          "server_decode_time_ms": null,
+          "prefill_time_source": "client_latency_adjusted",
+          "output_time_source": "client",
+          "network_latency_ms": 40.95,
+          "network_latency_sample_count": 4,
+          "client_prefill_time_ms": 351.46,
+          "client_decode_time_ms": 3490.82,
+          "client_total_time_ms": 3842.27,
+          "client_has_phase_boundary": true,
+          "has_streaming_content": true,
+          "chunk_count": 130,
+          "start_timestamp": 537942.9349638,
+          "first_chunk_timestamp": 537942.9863899,
+          "first_token_timestamp": 537943.3273745,
+          "boundary_timestamp": 537943.3273745,
+          "boundary_source": "first_content_token",
+          "end_timestamp": 537946.81819,
+          "token_source": "API",
+          "token_warnings": [],
+          "token_timestamps": [
+            {
+              "timestamp": 537943.3273745,
+              "time_from_start_ms": 392.41069997660816,
+              "is_reasoning": false,
+              "itl_ms": null
+            },
+            {
+              "timestamp": 537943.3660975,
+              "time_from_start_ms": 431.13369995262474,
+              "is_reasoning": false,
+              "itl_ms": 38.72299997601658
+            },
+            {
+              "timestamp": 537943.393276,
+              "time_from_start_ms": 458.3122000331059,
+              "is_reasoning": false,
+              "itl_ms": 27.17850008048117
+            },
+            {
+              "timestamp": 537943.4207882,
+              "time_from_start_ms": 485.8243999769911,
+              "is_reasoning": false,
+              "itl_ms": 27.512199943885207
+            },
+            {
+              "timestamp": 537943.4484851,
+              "time_from_start_ms": 513.5212999302894,
+              "is_reasoning": false,
+              "itl_ms": 27.69689995329827
+            },
+            {
+              "timestamp": 537943.4755718,
+              "time_from_start_ms": 540.608000010252,
+              "is_reasoning": false,
+              "itl_ms": 27.08670007996261
+            },
+            {
+              "timestamp": 537943.5028681,
+              "time_from_start_ms": 567.9042999399826,
+              "is_reasoning": false,
+              "itl_ms": 27.296299929730594
+            },
+            {
+              "timestamp": 537943.5301133,
+              "time_from_start_ms": 595.1494999462739,
+              "is_reasoning": false,
+              "itl_ms": 27.24520000629127
+            },
+            {
+              "timestamp": 537943.5576731,
+              "time_from_start_ms": 622.7093000197783,
+              "is_reasoning": false,
+              "itl_ms": 27.559800073504448
+            },
+            {
+              "timestamp": 537943.5849726,
+              "time_from_start_ms": 650.0087999738753,
+              "is_reasoning": false,
+              "itl_ms": 27.299499954096973
+            },
+            {
+              "timestamp": 537943.6126748,
+              "time_from_start_ms": 677.7109999675304,
+              "is_reasoning": false,
+              "itl_ms": 27.702199993655086
+            },
+            {
+              "timestamp": 537943.6397821,
+              "time_from_start_ms": 704.8182999715209,
+              "is_reasoning": false,
+              "itl_ms": 27.10730000399053
+            },
+            {
+              "timestamp": 537943.6672952,
+              "time_from_start_ms": 732.3314000386745,
+              "is_reasoning": false,
+              "itl_ms": 27.513100067153573
+            },
+            {
+              "timestamp": 537943.694666,
+              "time_from_start_ms": 759.7021999536082,
+              "is_reasoning": false,
+              "itl_ms": 27.37079991493374
+            },
+            {
+              "timestamp": 537943.7218869,
+              "time_from_start_ms": 786.9231000076979,
+              "is_reasoning": false,
+              "itl_ms": 27.220900054089725
+            },
+            {
+              "timestamp": 537943.7494491,
+              "time_from_start_ms": 814.4852999830619,
+              "is_reasoning": false,
+              "itl_ms": 27.56219997536391
+            },
+            {
+              "timestamp": 537943.7769103,
+              "time_from_start_ms": 841.9465000042692,
+              "is_reasoning": false,
+              "itl_ms": 27.461200021207333
+            },
+            {
+              "timestamp": 537943.8050319,
+              "time_from_start_ms": 870.0680999318138,
+              "is_reasoning": false,
+              "itl_ms": 28.121599927544594
+            },
+            {
+              "timestamp": 537943.8322797,
+              "time_from_start_ms": 897.3158999579027,
+              "is_reasoning": false,
+              "itl_ms": 27.247800026088953
+            },
+            {
+              "timestamp": 537943.8596246,
+              "time_from_start_ms": 924.6608000248671,
+              "is_reasoning": false,
+              "itl_ms": 27.34490006696433
+            },
+            {
+              "timestamp": 537943.8868383,
+              "time_from_start_ms": 951.8745000241324,
+              "is_reasoning": false,
+              "itl_ms": 27.213699999265373
+            },
+            {
+              "timestamp": 537943.9142445,
+              "time_from_start_ms": 979.2806999757886,
+              "is_reasoning": false,
+              "itl_ms": 27.406199951656163
+            },
+            {
+              "timestamp": 537943.9415001,
+              "time_from_start_ms": 1006.5362999448553,
+              "is_reasoning": false,
+              "itl_ms": 27.25559996906668
+            },
+            {
+              "timestamp": 537943.9692457,
+              "time_from_start_ms": 1034.2819000361487,
+              "is_reasoning": false,
+              "itl_ms": 27.745600091293454
+            },
+            {
+              "timestamp": 537943.9966377,
+              "time_from_start_ms": 1061.6738999960944,
+              "is_reasoning": false,
+              "itl_ms": 27.39199995994568
+            },
+            {
+              "timestamp": 537944.0239835,
+              "time_from_start_ms": 1089.0196999534965,
+              "is_reasoning": false,
+              "itl_ms": 27.34579995740205
+            },
+            {
+              "timestamp": 537944.0512725,
+              "time_from_start_ms": 1116.3086999440566,
+              "is_reasoning": false,
+              "itl_ms": 27.288999990560114
+            },
+            {
+              "timestamp": 537944.0785975,
+              "time_from_start_ms": 1143.6336999759078,
+              "is_reasoning": false,
+              "itl_ms": 27.325000031851232
+            },
+            {
+              "timestamp": 537944.106014,
+              "time_from_start_ms": 1171.0502000059932,
+              "is_reasoning": false,
+              "itl_ms": 27.416500030085444
+            },
+            {
+              "timestamp": 537944.133498,
+              "time_from_start_ms": 1198.5341999679804,
+              "is_reasoning": false,
+              "itl_ms": 27.483999961987138
+            },
+            {
+              "timestamp": 537944.1608051,
+              "time_from_start_ms": 1225.8412999799475,
+              "is_reasoning": false,
+              "itl_ms": 27.307100011967123
+            },
+            {
+              "timestamp": 537944.1885525,
+              "time_from_start_ms": 1253.5886999685317,
+              "is_reasoning": false,
+              "itl_ms": 27.74739998858422
+            },
+            {
+              "timestamp": 537944.2157666,
+              "time_from_start_ms": 1280.802799970843,
+              "is_reasoning": false,
+              "itl_ms": 27.21410000231117
+            },
+            {
+              "timestamp": 537944.2432858,
+              "time_from_start_ms": 1308.3219999680296,
+              "is_reasoning": false,
+              "itl_ms": 27.51919999718666
+            },
+            {
+              "timestamp": 537944.2705148,
+              "time_from_start_ms": 1335.5509999673814,
+              "is_reasoning": false,
+              "itl_ms": 27.2289999993518
+            },
+            {
+              "timestamp": 537944.2981084,
+              "time_from_start_ms": 1363.1445999490097,
+              "is_reasoning": false,
+              "itl_ms": 27.59359998162836
+            },
+            {
+              "timestamp": 537944.3254737,
+              "time_from_start_ms": 1390.509899938479,
+              "is_reasoning": false,
+              "itl_ms": 27.36529998946935
+            },
+            {
+              "timestamp": 537944.3527809,
+              "time_from_start_ms": 1417.8170999512076,
+              "is_reasoning": false,
+              "itl_ms": 27.307200012728572
+            },
+            {
+              "timestamp": 537944.3803108,
+              "time_from_start_ms": 1445.3470000298694,
+              "is_reasoning": false,
+              "itl_ms": 27.52990007866174
+            },
+            {
+              "timestamp": 537944.4081198,
+              "time_from_start_ms": 1473.156000021845,
+              "is_reasoning": false,
+              "itl_ms": 27.808999991975725
+            },
+            {
+              "timestamp": 537944.4350469,
+              "time_from_start_ms": 1500.0830999342725,
+              "is_reasoning": false,
+              "itl_ms": 26.927099912427366
+            },
+            {
+              "timestamp": 537944.4626822,
+              "time_from_start_ms": 1527.7184000005946,
+              "is_reasoning": false,
+              "itl_ms": 27.63530006632209
+            },
+            {
+              "timestamp": 537944.4900721,
+              "time_from_start_ms": 1555.1082999445498,
+              "is_reasoning": false,
+              "itl_ms": 27.389899943955243
+            },
+            {
+              "timestamp": 537944.5175393,
+              "time_from_start_ms": 1582.575500011444,
+              "is_reasoning": false,
+              "itl_ms": 27.467200066894293
+            },
+            {
+              "timestamp": 537944.5448622,
+              "time_from_start_ms": 1609.898400027305,
+              "is_reasoning": false,
+              "itl_ms": 27.322900015860796
+            },
+            {
+              "timestamp": 537944.5723623,
+              "time_from_start_ms": 1637.39849999547,
+              "is_reasoning": false,
+              "itl_ms": 27.50009996816516
+            },
+            {
+              "timestamp": 537944.600117,
+              "time_from_start_ms": 1665.15320003964,
+              "is_reasoning": false,
+              "itl_ms": 27.754700044170022
+            },
+            {
+              "timestamp": 537944.6268864,
+              "time_from_start_ms": 1691.9226000318304,
+              "is_reasoning": false,
+              "itl_ms": 26.7693999921903
+            },
+            {
+              "timestamp": 537944.6544,
+              "time_from_start_ms": 1719.4361999863759,
+              "is_reasoning": false,
+              "itl_ms": 27.513599954545498
+            },
+            {
+              "timestamp": 537944.6822366,
+              "time_from_start_ms": 1747.272799955681,
+              "is_reasoning": false,
+              "itl_ms": 27.836599969305098
+            },
+            {
+              "timestamp": 537944.7094855,
+              "time_from_start_ms": 1774.5216999901459,
+              "is_reasoning": false,
+              "itl_ms": 27.248900034464896
+            },
+            {
+              "timestamp": 537944.7371841,
+              "time_from_start_ms": 1802.2202999563888,
+              "is_reasoning": false,
+              "itl_ms": 27.69859996624291
+            },
+            {
+              "timestamp": 537944.7642601,
+              "time_from_start_ms": 1829.2962999548763,
+              "is_reasoning": false,
+              "itl_ms": 27.075999998487532
+            },
+            {
+              "timestamp": 537944.7918938,
+              "time_from_start_ms": 1856.9300000090152,
+              "is_reasoning": false,
+              "itl_ms": 27.6337000541389
+            },
+            {
+              "timestamp": 537944.8196659,
+              "time_from_start_ms": 1884.7020999528468,
+              "is_reasoning": false,
+              "itl_ms": 27.772099943831563
+            },
+            {
+              "timestamp": 537944.8470076,
+              "time_from_start_ms": 1912.0437999954447,
+              "is_reasoning": false,
+              "itl_ms": 27.34170004259795
+            },
+            {
+              "timestamp": 537944.8748646,
+              "time_from_start_ms": 1939.9008000036702,
+              "is_reasoning": false,
+              "itl_ms": 27.85700000822544
+            },
+            {
+              "timestamp": 537944.901735,
+              "time_from_start_ms": 1966.771199950017,
+              "is_reasoning": false,
+              "itl_ms": 26.87039994634688
+            },
+            {
+              "timestamp": 537944.9292927,
+              "time_from_start_ms": 1994.328900007531,
+              "is_reasoning": false,
+              "itl_ms": 27.557700057514012
+            },
+            {
+              "timestamp": 537944.9565163,
+              "time_from_start_ms": 2021.5524999657646,
+              "is_reasoning": false,
+              "itl_ms": 27.223599958233535
+            },
+            {
+              "timestamp": 537944.9839351,
+              "time_from_start_ms": 2048.9713000133634,
+              "is_reasoning": false,
+              "itl_ms": 27.41880004759878
+            },
+            {
+              "timestamp": 537945.0113096,
+              "time_from_start_ms": 2076.3457999564707,
+              "is_reasoning": false,
+              "itl_ms": 27.374499943107367
+            },
+            {
+              "timestamp": 537945.0392435,
+              "time_from_start_ms": 2104.279699968174,
+              "is_reasoning": false,
+              "itl_ms": 27.933900011703372
+            },
+            {
+              "timestamp": 537945.0664276,
+              "time_from_start_ms": 2131.463799974881,
+              "is_reasoning": false,
+              "itl_ms": 27.184100006707013
+            },
+            {
+              "timestamp": 537945.0940409,
+              "time_from_start_ms": 2159.0770999900997,
+              "is_reasoning": false,
+              "itl_ms": 27.613300015218556
+            },
+            {
+              "timestamp": 537945.1211315,
+              "time_from_start_ms": 2186.1676999833435,
+              "is_reasoning": false,
+              "itl_ms": 27.090599993243814
+            },
+            {
+              "timestamp": 537945.1485405,
+              "time_from_start_ms": 2213.57669995632,
+              "is_reasoning": false,
+              "itl_ms": 27.408999972976744
+            },
+            {
+              "timestamp": 537945.1763349,
+              "time_from_start_ms": 2241.3710999535397,
+              "is_reasoning": false,
+              "itl_ms": 27.794399997219443
+            },
+            {
+              "timestamp": 537945.2034634,
+              "time_from_start_ms": 2268.499600002542,
+              "is_reasoning": false,
+              "itl_ms": 27.12850004900247
+            },
+            {
+              "timestamp": 537945.231124,
+              "time_from_start_ms": 2296.1602000286803,
+              "is_reasoning": false,
+              "itl_ms": 27.660600026138127
+            },
+            {
+              "timestamp": 537945.258875,
+              "time_from_start_ms": 2323.9112000446767,
+              "is_reasoning": false,
+              "itl_ms": 27.751000015996397
+            },
+            {
+              "timestamp": 537945.2858136,
+              "time_from_start_ms": 2350.8498000446707,
+              "is_reasoning": false,
+              "itl_ms": 26.93859999999404
+            },
+            {
+              "timestamp": 537945.3130365,
+              "time_from_start_ms": 2378.072699997574,
+              "is_reasoning": false,
+              "itl_ms": 27.22289995290339
+            },
+            {
+              "timestamp": 537945.3408013,
+              "time_from_start_ms": 2405.837500002235,
+              "is_reasoning": false,
+              "itl_ms": 27.764800004661083
+            },
+            {
+              "timestamp": 537945.368109,
+              "time_from_start_ms": 2433.145200018771,
+              "is_reasoning": false,
+              "itl_ms": 27.30770001653582
+            },
+            {
+              "timestamp": 537945.3955054,
+              "time_from_start_ms": 2460.5416000122204,
+              "is_reasoning": false,
+              "itl_ms": 27.39639999344945
+            },
+            {
+              "timestamp": 537945.4229529,
+              "time_from_start_ms": 2487.989099929109,
+              "is_reasoning": false,
+              "itl_ms": 27.447499916888773
+            },
+            {
+              "timestamp": 537945.4502491,
+              "time_from_start_ms": 2515.2852999744937,
+              "is_reasoning": false,
+              "itl_ms": 27.296200045384467
+            },
+            {
+              "timestamp": 537945.4778606,
+              "time_from_start_ms": 2542.896799976006,
+              "is_reasoning": false,
+              "itl_ms": 27.611500001512468
+            },
+            {
+              "timestamp": 537945.5050591,
+              "time_from_start_ms": 2570.0952999759465,
+              "is_reasoning": false,
+              "itl_ms": 27.198499999940395
+            },
+            {
+              "timestamp": 537945.5328102,
+              "time_from_start_ms": 2597.8463999927044,
+              "is_reasoning": false,
+              "itl_ms": 27.751100016757846
+            },
+            {
+              "timestamp": 537945.5602379,
+              "time_from_start_ms": 2625.274099991657,
+              "is_reasoning": false,
+              "itl_ms": 27.42769999895245
+            },
+            {
+              "timestamp": 537945.5874322,
+              "time_from_start_ms": 2652.4683999596164,
+              "is_reasoning": false,
+              "itl_ms": 27.194299967959523
+            },
+            {
+              "timestamp": 537945.6151497,
+              "time_from_start_ms": 2680.185899953358,
+              "is_reasoning": false,
+              "itl_ms": 27.717499993741512
+            },
+            {
+              "timestamp": 537945.6424069,
+              "time_from_start_ms": 2707.4430999346077,
+              "is_reasoning": false,
+              "itl_ms": 27.25719998124987
+            },
+            {
+              "timestamp": 537945.6696919,
+              "time_from_start_ms": 2734.728100011125,
+              "is_reasoning": false,
+              "itl_ms": 27.285000076517463
+            },
+            {
+              "timestamp": 537945.6970429,
+              "time_from_start_ms": 2762.0791000081226,
+              "is_reasoning": false,
+              "itl_ms": 27.350999996997416
+            },
+            {
+              "timestamp": 537945.7248063,
+              "time_from_start_ms": 2789.8425000021234,
+              "is_reasoning": false,
+              "itl_ms": 27.763399994000793
+            },
+            {
+              "timestamp": 537945.7522563,
+              "time_from_start_ms": 2817.2924999380484,
+              "is_reasoning": false,
+              "itl_ms": 27.449999935925007
+            },
+            {
+              "timestamp": 537945.7792992,
+              "time_from_start_ms": 2844.335400033742,
+              "is_reasoning": false,
+              "itl_ms": 27.042900095693767
+            },
+            {
+              "timestamp": 537945.8065502,
+              "time_from_start_ms": 2871.586399967782,
+              "is_reasoning": false,
+              "itl_ms": 27.25099993404001
+            },
+            {
+              "timestamp": 537945.8343406,
+              "time_from_start_ms": 2899.3767999345437,
+              "is_reasoning": false,
+              "itl_ms": 27.79039996676147
+            },
+            {
+              "timestamp": 537945.8615303,
+              "time_from_start_ms": 2926.566499983892,
+              "is_reasoning": false,
+              "itl_ms": 27.189700049348176
+            },
+            {
+              "timestamp": 537945.8890746,
+              "time_from_start_ms": 2954.1107999393716,
+              "is_reasoning": false,
+              "itl_ms": 27.5442999554798
+            },
+            {
+              "timestamp": 537945.9170517,
+              "time_from_start_ms": 2982.087899930775,
+              "is_reasoning": false,
+              "itl_ms": 27.97709999140352
+            },
+            {
+              "timestamp": 537945.9440771,
+              "time_from_start_ms": 3009.1133000096306,
+              "is_reasoning": false,
+              "itl_ms": 27.025400078855455
+            },
+            {
+              "timestamp": 537945.9716394,
+              "time_from_start_ms": 3036.675599985756,
+              "is_reasoning": false,
+              "itl_ms": 27.56229997612536
+            },
+            {
+              "timestamp": 537945.9991184,
+              "time_from_start_ms": 3064.154600026086,
+              "is_reasoning": false,
+              "itl_ms": 27.479000040329993
+            },
+            {
+              "timestamp": 537946.0264448,
+              "time_from_start_ms": 3091.480999952182,
+              "is_reasoning": false,
+              "itl_ms": 27.3263999260962
+            },
+            {
+              "timestamp": 537946.0537056,
+              "time_from_start_ms": 3118.741799960844,
+              "is_reasoning": false,
+              "itl_ms": 27.260800008662045
+            },
+            {
+              "timestamp": 537946.0812191,
+              "time_from_start_ms": 3146.2553000310436,
+              "is_reasoning": false,
+              "itl_ms": 27.51350007019937
+            },
+            {
+              "timestamp": 537946.108766,
+              "time_from_start_ms": 3173.802200006321,
+              "is_reasoning": false,
+              "itl_ms": 27.546899975277483
+            },
+            {
+              "timestamp": 537946.1362866,
+              "time_from_start_ms": 3201.322800014168,
+              "is_reasoning": false,
+              "itl_ms": 27.52060000784695
+            },
+            {
+              "timestamp": 537946.1637018,
+              "time_from_start_ms": 3228.7380000343546,
+              "is_reasoning": false,
+              "itl_ms": 27.415200020186603
+            },
+            {
+              "timestamp": 537946.1909614,
+              "time_from_start_ms": 3255.9976000338793,
+              "is_reasoning": false,
+              "itl_ms": 27.259599999524653
+            },
+            {
+              "timestamp": 537946.218622,
+              "time_from_start_ms": 3283.658199943602,
+              "is_reasoning": false,
+              "itl_ms": 27.660599909722805
+            },
+            {
+              "timestamp": 537946.2463124,
+              "time_from_start_ms": 3311.3485999638215,
+              "is_reasoning": false,
+              "itl_ms": 27.690400020219386
+            },
+            {
+              "timestamp": 537946.2732935,
+              "time_from_start_ms": 3338.3296999381855,
+              "is_reasoning": false,
+              "itl_ms": 26.981099974364042
+            },
+            {
+              "timestamp": 537946.3006759,
+              "time_from_start_ms": 3365.7120999414474,
+              "is_reasoning": false,
+              "itl_ms": 27.382400003261864
+            },
+            {
+              "timestamp": 537946.3285276,
+              "time_from_start_ms": 3393.5638000257313,
+              "is_reasoning": false,
+              "itl_ms": 27.851700084283948
+            },
+            {
+              "timestamp": 537946.3559859,
+              "time_from_start_ms": 3421.0221000248566,
+              "is_reasoning": false,
+              "itl_ms": 27.458299999125302
+            },
+            {
+              "timestamp": 537946.3830249,
+              "time_from_start_ms": 3448.0610999744385,
+              "is_reasoning": false,
+              "itl_ms": 27.03899994958192
+            },
+            {
+              "timestamp": 537946.4120256,
+              "time_from_start_ms": 3477.061799960211,
+              "is_reasoning": false,
+              "itl_ms": 29.00069998577237
+            },
+            {
+              "timestamp": 537946.4378513,
+              "time_from_start_ms": 3502.887499984354,
+              "is_reasoning": false,
+              "itl_ms": 25.82570002414286
+            },
+            {
+              "timestamp": 537946.4654419,
+              "time_from_start_ms": 3530.4780999431387,
+              "is_reasoning": false,
+              "itl_ms": 27.59059995878488
+            },
+            {
+              "timestamp": 537946.4924386,
+              "time_from_start_ms": 3557.474800036289,
+              "is_reasoning": false,
+              "itl_ms": 26.99670009315014
+            },
+            {
+              "timestamp": 537946.5203581,
+              "time_from_start_ms": 3585.3942999383435,
+              "is_reasoning": false,
+              "itl_ms": 27.919499902054667
+            },
+            {
+              "timestamp": 537946.5485902,
+              "time_from_start_ms": 3613.6264000087976,
+              "is_reasoning": false,
+              "itl_ms": 28.23210007045418
+            },
+            {
+              "timestamp": 537946.5754712,
+              "time_from_start_ms": 3640.507400035858,
+              "is_reasoning": false,
+              "itl_ms": 26.88100002706051
+            },
+            {
+              "timestamp": 537946.6028526,
+              "time_from_start_ms": 3667.8888000315055,
+              "is_reasoning": false,
+              "itl_ms": 27.38139999564737
+            },
+            {
+              "timestamp": 537946.6304641,
+              "time_from_start_ms": 3695.500300033018,
+              "is_reasoning": false,
+              "itl_ms": 27.611500001512468
+            },
+            {
+              "timestamp": 537946.6577729,
+              "time_from_start_ms": 3722.8090999415144,
+              "is_reasoning": false,
+              "itl_ms": 27.30879990849644
+            },
+            {
+              "timestamp": 537946.6850844,
+              "time_from_start_ms": 3750.1205999869853,
+              "is_reasoning": false,
+              "itl_ms": 27.311500045470893
+            },
+            {
+              "timestamp": 537946.7126246,
+              "time_from_start_ms": 3777.660800027661,
+              "is_reasoning": false,
+              "itl_ms": 27.5402000406757
+            },
+            {
+              "timestamp": 537946.7400826,
+              "time_from_start_ms": 3805.118800024502,
+              "is_reasoning": false,
+              "itl_ms": 27.457999996840954
+            },
+            {
+              "timestamp": 537946.7671477,
+              "time_from_start_ms": 3832.1838999399915,
+              "is_reasoning": false,
+              "itl_ms": 27.065099915489554
+            },
+            {
+              "timestamp": 537946.7950338,
+              "time_from_start_ms": 3860.069999936968,
+              "is_reasoning": false,
+              "itl_ms": 27.886099996976554
+            },
+            {
+              "timestamp": 537946.8118976,
+              "time_from_start_ms": 3876.9337999401614,
+              "is_reasoning": false,
+              "itl_ms": 16.86380000319332
+            }
+          ],
+          "itl_stats": {
+            "mean": 27.44,
+            "min": 16.86,
+            "max": 38.72,
+            "std": 1.41,
+            "count": 127
+          }
+        }
+      ],
+      "status": "成功"
+    },
+    {
+      "type": "result",
+      "prompt_length": 1024,
+      "requested_prompt_length": 1024,
+      "network_latency_ms": 41.28,
+      "network_latency_sample_count": 5,
+      "avg_prompt_tokens": 1024.0,
+      "concurrency": 1,
+      "successful": 1,
+      "failed": 0,
+      "avg_prefill_speed": 1465.41,
+      "avg_output_speed": 36.64,
+      "max_prefill_speed": 1465.41,
+      "max_output_speed": 36.64,
+      "aggregate_prefill_time_ms": 698.78,
+      "aggregate_output_time_ms": 3493.07,
+      "aggregate_prefill_speed": 1465.4,
+      "aggregate_output_speed": 36.64,
+      "client_prefill_time_ms": 698.78,
+      "client_output_time_ms": 3493.07,
+      "client_total_time_ms": 4191.85,
+      "client_has_phase_boundary": true,
+      "aggregate_prefill_source": "client_latency_adjusted",
+      "aggregate_output_source": "client",
+      "avg_ttft_ms": 740.06,
+      "source": "python_backend",
+      "record_tags": [
+        "source:python_backend",
+        "prefill_source:client_latency_adjusted"
+      ],
+      "boundary_fallback_count": 0,
+      "token_warning_count": 0,
+      "aggregate_warnings": [],
+      "concurrent_details": [
+        {
+          "success": true,
+          "prompt_length": 1024,
+          "requested_prompt_length": 1024,
+          "generated_prompt_length": 1003,
+          "prompt_tokens": 1024,
+          "estimated_prompt_tokens": 1024,
+          "local_estimated_prompt_tokens": 1009,
+          "local_estimated_output_tokens": 127,
+          "prompt_calibration": {
+            "source": "warmup_usage",
+            "estimated_prompt_tokens": 102,
+            "actual_prompt_tokens": 117,
+            "token_offset": 15,
+            "token_ratio": 1.1470588235294117
+          },
+          "output_tokens": 128,
+          "ttft_ms": 740.06,
+          "prefill_time_ms": 698.78,
+          "prefill_speed": 1465.41,
+          "output_time_ms": 3493.07,
+          "output_speed": 36.64,
+          "total_time_ms": 4233.13,
+          "prompt_text": "model that token from text reason life or truth we for is life reason human truth time you value for this world future token they you be or by work change a time to story truth time not will reason token can and text are on can if that if clear value on work token token this space value token that space the space on text this with a human truth as future time can future mind clear not story all all can on one work as on a as light mind this one can future by it not for work time light system a clear mind the can will can as reason simple mind work reason idea clear life it model reason reason human as or it can if token that in we simple all time model work life of mind mind one one time can not this it all on that light it work time change are a data all it human it all from life life life you text change mind a simple for token work by that on text simple or and text of system all one story human story time model for value as system world of it that a is all not mind text time in truth truth as for this the truth on we text it from story system are reason value in be on or life human work system be world reason can not reason token this of it we they they in this and model human from token in from life human in are text idea from from model space be text not story or work this they data with the human text on not in we with text by light clear idea space are all model be reason can you if that mind are value that if text of work can you to or will change are can on future life of not on all future token value from idea world a idea or text idea future token simple you reason clear time a a to reason can system value time simple the they model truth the on system they on idea to or it mind with text to a future all light to or human this with by reason human data change world of that world life this text can that idea if change one is not if and are can future we that are truth that they all text is world human story world to are will simple not space a not from clear work not will this reason truth we as they human by mind system reason one simple model time in story and if light token story light with by model or this world can of token change value clear data a with time they idea you as token all or simple we can light for text the be if story will it of is if is from as and and from can of as from work is that all by future will human work you by life future can one work mind change you a can one on from from story from on will space we as life data and are if data mind token will story and we this change by that is be token we time world in model data life token in by time space value as one a of mind can a world as token will it human will change they to text time to life data to story change reason human truth truth all to you reason by mind model on it and with we be for model of a mind by clear this text data it simple can not life clear light of and as are change if model clear future we all one text one one life or of idea story future future the they they clear from they you the is reason work model story light by truth change they be they human truth text clear we life and idea world value future space work you on not it one it all a will and system they can and idea not to are text to time life it the story are change mind can clear if truth time they with mind change by life and to future reason model light story data mind it for you can that world it reason and to light space story it one they be text be life change or idea on data will as for that you change reason text world can simple from is a reason truth life data if work future text reason or truth truth reason this for system all space token the are by story idea system if are that time clear are token token time of the that this are and token life and value the from not and that token as are are is is human light work clear mind time the mind system mind time of of world is reason for from or we work that as clear story work system all with simple clear for time clear that work value simple they reason by will as system from change all for will not idea time can simple on work not can if from world text system work not future are simple by if reason we the truth one space future token truth to one clear life token they or as with for be by or time are not token from story text world it light reason text light work life work that future clear to time if data system change from the clear data mind data system for can of we reason value be work you be they we we work value mind work text or future\nBased on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.",
+          "output_content": "**The Architecture of Meaning: Consciousness in a Digital Age**\n\nThe provided text is a chaotic stream of keywords—*token, truth, mind, light, system, time, human, work*—that, when stripped of their syntactic disorder, reveals a profound anxiety about the intersection of human consciousness and artificial intelligence. It suggests a world where meaning is no longer inherent but must be constructed, token by token, through the interplay of human reason and digital systems.\n\n**The Meaning of Existence in a Tokenized World**\n\nIn traditional philosophy, existence is often tied to essence—what a thing *is*. However",
+          "reasoning_content": "",
+          "usage_info": {
+            "prompt_tokens": 1024,
+            "total_tokens": 1152,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "missed_tokens": 1024
+            }
+          },
+          "server_timing_used": false,
+          "server_prefill_time_ms": null,
+          "server_decode_time_ms": null,
+          "prefill_time_source": "client_latency_adjusted",
+          "output_time_source": "client",
+          "network_latency_ms": 41.28,
+          "network_latency_sample_count": 5,
+          "client_prefill_time_ms": 698.78,
+          "client_decode_time_ms": 3493.07,
+          "client_total_time_ms": 4191.85,
+          "client_has_phase_boundary": true,
+          "has_streaming_content": true,
+          "chunk_count": 130,
+          "start_timestamp": 537948.3800683,
+          "first_chunk_timestamp": 537948.4391456,
+          "first_token_timestamp": 537949.1201327,
+          "boundary_timestamp": 537949.1201327,
+          "boundary_source": "first_content_token",
+          "end_timestamp": 537952.6132023,
+          "token_source": "API",
+          "token_warnings": [],
+          "token_timestamps": [
+            {
+              "timestamp": 537949.1201327,
+              "time_from_start_ms": 740.0644000153989,
+              "is_reasoning": false,
+              "itl_ms": null
+            },
+            {
+              "timestamp": 537949.1585348,
+              "time_from_start_ms": 778.4665001090616,
+              "is_reasoning": false,
+              "itl_ms": 38.40210009366274
+            },
+            {
+              "timestamp": 537949.1858072,
+              "time_from_start_ms": 805.7389000896364,
+              "is_reasoning": false,
+              "itl_ms": 27.272399980574846
+            },
+            {
+              "timestamp": 537949.2133672,
+              "time_from_start_ms": 833.2989000482485,
+              "is_reasoning": false,
+              "itl_ms": 27.559999958612025
+            },
+            {
+              "timestamp": 537949.2406969,
+              "time_from_start_ms": 860.6285999994725,
+              "is_reasoning": false,
+              "itl_ms": 27.32969995122403
+            },
+            {
+              "timestamp": 537949.2682531,
+              "time_from_start_ms": 888.1848000455648,
+              "is_reasoning": false,
+              "itl_ms": 27.556200046092272
+            },
+            {
+              "timestamp": 537949.2958495,
+              "time_from_start_ms": 915.7812000485137,
+              "is_reasoning": false,
+              "itl_ms": 27.59640000294894
+            },
+            {
+              "timestamp": 537949.3230995,
+              "time_from_start_ms": 943.0312000913545,
+              "is_reasoning": false,
+              "itl_ms": 27.25000004284084
+            },
+            {
+              "timestamp": 537949.3508503,
+              "time_from_start_ms": 970.782000105828,
+              "is_reasoning": false,
+              "itl_ms": 27.750800014473498
+            },
+            {
+              "timestamp": 537949.3784131,
+              "time_from_start_ms": 998.3448000857607,
+              "is_reasoning": false,
+              "itl_ms": 27.562799979932606
+            },
+            {
+              "timestamp": 537949.4055836,
+              "time_from_start_ms": 1025.5153001053259,
+              "is_reasoning": false,
+              "itl_ms": 27.170500019565225
+            },
+            {
+              "timestamp": 537949.4332592,
+              "time_from_start_ms": 1053.1909000128508,
+              "is_reasoning": false,
+              "itl_ms": 27.675599907524884
+            },
+            {
+              "timestamp": 537949.4605947,
+              "time_from_start_ms": 1080.5264000082389,
+              "is_reasoning": false,
+              "itl_ms": 27.33549999538809
+            },
+            {
+              "timestamp": 537949.4881694,
+              "time_from_start_ms": 1108.101100078784,
+              "is_reasoning": false,
+              "itl_ms": 27.574700070545077
+            },
+            {
+              "timestamp": 537949.5157228,
+              "time_from_start_ms": 1135.6545001035556,
+              "is_reasoning": false,
+              "itl_ms": 27.55340002477169
+            },
+            {
+              "timestamp": 537949.5429873,
+              "time_from_start_ms": 1162.919000023976,
+              "is_reasoning": false,
+              "itl_ms": 27.26449992042035
+            },
+            {
+              "timestamp": 537949.5703561,
+              "time_from_start_ms": 1190.287800040096,
+              "is_reasoning": false,
+              "itl_ms": 27.368800016120076
+            },
+            {
+              "timestamp": 537949.5976718,
+              "time_from_start_ms": 1217.6035000011325,
+              "is_reasoning": false,
+              "itl_ms": 27.315699961036444
+            },
+            {
+              "timestamp": 537949.6252307,
+              "time_from_start_ms": 1245.162400067784,
+              "is_reasoning": false,
+              "itl_ms": 27.558900066651404
+            },
+            {
+              "timestamp": 537949.6526039,
+              "time_from_start_ms": 1272.5356000009924,
+              "is_reasoning": false,
+              "itl_ms": 27.373199933208525
+            },
+            {
+              "timestamp": 537949.6800717,
+              "time_from_start_ms": 1300.0034000724554,
+              "is_reasoning": false,
+              "itl_ms": 27.46780007146299
+            },
+            {
+              "timestamp": 537949.7073852,
+              "time_from_start_ms": 1327.31690001674,
+              "is_reasoning": false,
+              "itl_ms": 27.31349994428456
+            },
+            {
+              "timestamp": 537949.7351248,
+              "time_from_start_ms": 1355.0565000623465,
+              "is_reasoning": false,
+              "itl_ms": 27.739600045606494
+            },
+            {
+              "timestamp": 537949.7625188,
+              "time_from_start_ms": 1382.4505000375211,
+              "is_reasoning": false,
+              "itl_ms": 27.393999975174665
+            },
+            {
+              "timestamp": 537949.7899531,
+              "time_from_start_ms": 1409.8848000867292,
+              "is_reasoning": false,
+              "itl_ms": 27.434300049208105
+            },
+            {
+              "timestamp": 537949.8172489,
+              "time_from_start_ms": 1437.1806000126526,
+              "is_reasoning": false,
+              "itl_ms": 27.295799925923347
+            },
+            {
+              "timestamp": 537949.8446822,
+              "time_from_start_ms": 1464.6139000542462,
+              "is_reasoning": false,
+              "itl_ms": 27.43330004159361
+            },
+            {
+              "timestamp": 537949.8720909,
+              "time_from_start_ms": 1492.0226000249386,
+              "is_reasoning": false,
+              "itl_ms": 27.408699970692396
+            },
+            {
+              "timestamp": 537949.8997037,
+              "time_from_start_ms": 1519.63540003635,
+              "is_reasoning": false,
+              "itl_ms": 27.61280001141131
+            },
+            {
+              "timestamp": 537949.927463,
+              "time_from_start_ms": 1547.3947001155466,
+              "is_reasoning": false,
+              "itl_ms": 27.75930007919669
+            },
+            {
+              "timestamp": 537949.9545516,
+              "time_from_start_ms": 1574.4833000935614,
+              "is_reasoning": false,
+              "itl_ms": 27.088599978014827
+            },
+            {
+              "timestamp": 537949.9822477,
+              "time_from_start_ms": 1602.179400040768,
+              "is_reasoning": false,
+              "itl_ms": 27.696099947206676
+            },
+            {
+              "timestamp": 537950.0094134,
+              "time_from_start_ms": 1629.3451000237837,
+              "is_reasoning": false,
+              "itl_ms": 27.165699983015656
+            },
+            {
+              "timestamp": 537950.0370186,
+              "time_from_start_ms": 1656.9503000937402,
+              "is_reasoning": false,
+              "itl_ms": 27.60520006995648
+            },
+            {
+              "timestamp": 537950.0649436,
+              "time_from_start_ms": 1684.8753000376746,
+              "is_reasoning": false,
+              "itl_ms": 27.92499994393438
+            },
+            {
+              "timestamp": 537950.092531,
+              "time_from_start_ms": 1712.4627000885084,
+              "is_reasoning": false,
+              "itl_ms": 27.58740005083382
+            },
+            {
+              "timestamp": 537950.1201918,
+              "time_from_start_ms": 1740.1234999997541,
+              "is_reasoning": false,
+              "itl_ms": 27.660799911245704
+            },
+            {
+              "timestamp": 537950.147268,
+              "time_from_start_ms": 1767.1996999997646,
+              "is_reasoning": false,
+              "itl_ms": 27.07620000001043
+            },
+            {
+              "timestamp": 537950.1748639,
+              "time_from_start_ms": 1794.7956001153216,
+              "is_reasoning": false,
+              "itl_ms": 27.595900115557015
+            },
+            {
+              "timestamp": 537950.2020082,
+              "time_from_start_ms": 1821.9399000518024,
+              "is_reasoning": false,
+              "itl_ms": 27.14429993648082
+            },
+            {
+              "timestamp": 537950.2298006,
+              "time_from_start_ms": 1849.7323000337929,
+              "is_reasoning": false,
+              "itl_ms": 27.792399981990457
+            },
+            {
+              "timestamp": 537950.2570198,
+              "time_from_start_ms": 1876.951500074938,
+              "is_reasoning": false,
+              "itl_ms": 27.219200041145086
+            },
+            {
+              "timestamp": 537950.28442,
+              "time_from_start_ms": 1904.3517000973225,
+              "is_reasoning": false,
+              "itl_ms": 27.400200022384524
+            },
+            {
+              "timestamp": 537950.311764,
+              "time_from_start_ms": 1931.6957000410184,
+              "is_reasoning": false,
+              "itl_ms": 27.343999943695962
+            },
+            {
+              "timestamp": 537950.3393279,
+              "time_from_start_ms": 1959.259600029327,
+              "is_reasoning": false,
+              "itl_ms": 27.56389998830855
+            },
+            {
+              "timestamp": 537950.3665406,
+              "time_from_start_ms": 1986.4723000209779,
+              "is_reasoning": false,
+              "itl_ms": 27.21269999165088
+            },
+            {
+              "timestamp": 537950.3941442,
+              "time_from_start_ms": 2014.0759000787511,
+              "is_reasoning": false,
+              "itl_ms": 27.603600057773292
+            },
+            {
+              "timestamp": 537950.4214572,
+              "time_from_start_ms": 2041.3889000192285,
+              "is_reasoning": false,
+              "itl_ms": 27.31299994047731
+            },
+            {
+              "timestamp": 537950.4490853,
+              "time_from_start_ms": 2069.017000030726,
+              "is_reasoning": false,
+              "itl_ms": 27.628100011497736
+            },
+            {
+              "timestamp": 537950.4766081,
+              "time_from_start_ms": 2096.539800055325,
+              "is_reasoning": false,
+              "itl_ms": 27.522800024598837
+            },
+            {
+              "timestamp": 537950.5040972,
+              "time_from_start_ms": 2124.028900056146,
+              "is_reasoning": false,
+              "itl_ms": 27.489100000821054
+            },
+            {
+              "timestamp": 537950.5316632,
+              "time_from_start_ms": 2151.594900060445,
+              "is_reasoning": false,
+              "itl_ms": 27.566000004298985
+            },
+            {
+              "timestamp": 537950.5591025,
+              "time_from_start_ms": 2179.0342000313103,
+              "is_reasoning": false,
+              "itl_ms": 27.43929997086525
+            },
+            {
+              "timestamp": 537950.5859362,
+              "time_from_start_ms": 2205.8679000474513,
+              "is_reasoning": false,
+              "itl_ms": 26.833700016140938
+            },
+            {
+              "timestamp": 537950.6139575,
+              "time_from_start_ms": 2233.8892000261694,
+              "is_reasoning": false,
+              "itl_ms": 28.02129997871816
+            },
+            {
+              "timestamp": 537950.6409905,
+              "time_from_start_ms": 2260.9222000464797,
+              "is_reasoning": false,
+              "itl_ms": 27.033000020310283
+            },
+            {
+              "timestamp": 537950.6684718,
+              "time_from_start_ms": 2288.403500104323,
+              "is_reasoning": false,
+              "itl_ms": 27.481300057843328
+            },
+            {
+              "timestamp": 537950.6964843,
+              "time_from_start_ms": 2316.4160000160336,
+              "is_reasoning": false,
+              "itl_ms": 28.01249991171062
+            },
+            {
+              "timestamp": 537950.7237367,
+              "time_from_start_ms": 2343.6684000771493,
+              "is_reasoning": false,
+              "itl_ms": 27.252400061115623
+            },
+            {
+              "timestamp": 537950.7515083,
+              "time_from_start_ms": 2371.4400000171736,
+              "is_reasoning": false,
+              "itl_ms": 27.771599940024316
+            },
+            {
+              "timestamp": 537950.7785654,
+              "time_from_start_ms": 2398.497100104578,
+              "is_reasoning": false,
+              "itl_ms": 27.05710008740425
+            },
+            {
+              "timestamp": 537950.8059464,
+              "time_from_start_ms": 2425.8781000971794,
+              "is_reasoning": false,
+              "itl_ms": 27.380999992601573
+            },
+            {
+              "timestamp": 537950.8333267,
+              "time_from_start_ms": 2453.258400084451,
+              "is_reasoning": false,
+              "itl_ms": 27.380299987271428
+            },
+            {
+              "timestamp": 537950.8606246,
+              "time_from_start_ms": 2480.5563000263646,
+              "is_reasoning": false,
+              "itl_ms": 27.297899941913784
+            },
+            {
+              "timestamp": 537950.8885996,
+              "time_from_start_ms": 2508.5313000017777,
+              "is_reasoning": false,
+              "itl_ms": 27.974999975413084
+            },
+            {
+              "timestamp": 537950.9157838,
+              "time_from_start_ms": 2535.715500009246,
+              "is_reasoning": false,
+              "itl_ms": 27.184200007468462
+            },
+            {
+              "timestamp": 537950.9432181,
+              "time_from_start_ms": 2563.1498000584543,
+              "is_reasoning": false,
+              "itl_ms": 27.434300049208105
+            },
+            {
+              "timestamp": 537950.9703276,
+              "time_from_start_ms": 2590.2593000791967,
+              "is_reasoning": false,
+              "itl_ms": 27.109500020742416
+            },
+            {
+              "timestamp": 537950.9979996,
+              "time_from_start_ms": 2617.9313000757247,
+              "is_reasoning": false,
+              "itl_ms": 27.67199999652803
+            },
+            {
+              "timestamp": 537951.0251805,
+              "time_from_start_ms": 2645.1122000580654,
+              "is_reasoning": false,
+              "itl_ms": 27.180899982340634
+            },
+            {
+              "timestamp": 537951.0527761,
+              "time_from_start_ms": 2672.7078000549227,
+              "is_reasoning": false,
+              "itl_ms": 27.595599996857345
+            },
+            {
+              "timestamp": 537951.0801347,
+              "time_from_start_ms": 2700.0664001097903,
+              "is_reasoning": false,
+              "itl_ms": 27.358600054867566
+            },
+            {
+              "timestamp": 537951.1077528,
+              "time_from_start_ms": 2727.684500045143,
+              "is_reasoning": false,
+              "itl_ms": 27.618099935352802
+            },
+            {
+              "timestamp": 537951.1352478,
+              "time_from_start_ms": 2755.1795000908896,
+              "is_reasoning": false,
+              "itl_ms": 27.495000045746565
+            },
+            {
+              "timestamp": 537951.1626899,
+              "time_from_start_ms": 2782.6216000830755,
+              "is_reasoning": false,
+              "itl_ms": 27.44209999218583
+            },
+            {
+              "timestamp": 537951.1901196,
+              "time_from_start_ms": 2810.051300097257,
+              "is_reasoning": false,
+              "itl_ms": 27.429700014181435
+            },
+            {
+              "timestamp": 537951.2178015,
+              "time_from_start_ms": 2837.733200052753,
+              "is_reasoning": false,
+              "itl_ms": 27.681899955496192
+            },
+            {
+              "timestamp": 537951.2453414,
+              "time_from_start_ms": 2865.2731000911444,
+              "is_reasoning": false,
+              "itl_ms": 27.53990003839135
+            },
+            {
+              "timestamp": 537951.2728116,
+              "time_from_start_ms": 2892.743300064467,
+              "is_reasoning": false,
+              "itl_ms": 27.47019997332245
+            },
+            {
+              "timestamp": 537951.2999541,
+              "time_from_start_ms": 2919.885800103657,
+              "is_reasoning": false,
+              "itl_ms": 27.142500039190054
+            },
+            {
+              "timestamp": 537951.3271689,
+              "time_from_start_ms": 2947.1006001112983,
+              "is_reasoning": false,
+              "itl_ms": 27.214800007641315
+            },
+            {
+              "timestamp": 537951.3549773,
+              "time_from_start_ms": 2974.9090000987053,
+              "is_reasoning": false,
+              "itl_ms": 27.80839998740703
+            },
+            {
+              "timestamp": 537951.3823833,
+              "time_from_start_ms": 3002.3150000488386,
+              "is_reasoning": false,
+              "itl_ms": 27.405999950133264
+            },
+            {
+              "timestamp": 537951.4098127,
+              "time_from_start_ms": 3029.7444000607356,
+              "is_reasoning": false,
+              "itl_ms": 27.429400011897087
+            },
+            {
+              "timestamp": 537951.4371361,
+              "time_from_start_ms": 3057.0678000804037,
+              "is_reasoning": false,
+              "itl_ms": 27.323400019668043
+            },
+            {
+              "timestamp": 537951.4645261,
+              "time_from_start_ms": 3084.4578000251204,
+              "is_reasoning": false,
+              "itl_ms": 27.389999944716692
+            },
+            {
+              "timestamp": 537951.4921219,
+              "time_from_start_ms": 3112.0536000235006,
+              "is_reasoning": false,
+              "itl_ms": 27.595799998380244
+            },
+            {
+              "timestamp": 537951.5194056,
+              "time_from_start_ms": 3139.3373000901192,
+              "is_reasoning": false,
+              "itl_ms": 27.28370006661862
+            },
+            {
+              "timestamp": 537951.5467618,
+              "time_from_start_ms": 3166.6935000102967,
+              "is_reasoning": false,
+              "itl_ms": 27.35619992017746
+            },
+            {
+              "timestamp": 537951.5744811,
+              "time_from_start_ms": 3194.4128000177443,
+              "is_reasoning": false,
+              "itl_ms": 27.7193000074476
+            },
+            {
+              "timestamp": 537951.601645,
+              "time_from_start_ms": 3221.576700103469,
+              "is_reasoning": false,
+              "itl_ms": 27.16390008572489
+            },
+            {
+              "timestamp": 537951.6294828,
+              "time_from_start_ms": 3249.4145000819117,
+              "is_reasoning": false,
+              "itl_ms": 27.83779997844249
+            },
+            {
+              "timestamp": 537951.6566586,
+              "time_from_start_ms": 3276.5903000254184,
+              "is_reasoning": false,
+              "itl_ms": 27.175799943506718
+            },
+            {
+              "timestamp": 537951.6874798,
+              "time_from_start_ms": 3307.4115000199527,
+              "is_reasoning": false,
+              "itl_ms": 30.821199994534254
+            },
+            {
+              "timestamp": 537951.7119593,
+              "time_from_start_ms": 3331.891000038013,
+              "is_reasoning": false,
+              "itl_ms": 24.479500018060207
+            },
+            {
+              "timestamp": 537951.7392949,
+              "time_from_start_ms": 3359.2266000341624,
+              "is_reasoning": false,
+              "itl_ms": 27.33559999614954
+            },
+            {
+              "timestamp": 537951.7667082,
+              "time_from_start_ms": 3386.6399000398815,
+              "is_reasoning": false,
+              "itl_ms": 27.413300005719066
+            },
+            {
+              "timestamp": 537951.7940982,
+              "time_from_start_ms": 3414.0299001010135,
+              "is_reasoning": false,
+              "itl_ms": 27.390000061132014
+            },
+            {
+              "timestamp": 537951.8214123,
+              "time_from_start_ms": 3441.3440000498667,
+              "is_reasoning": false,
+              "itl_ms": 27.314099948853254
+            },
+            {
+              "timestamp": 537951.8490989,
+              "time_from_start_ms": 3469.030600041151,
+              "is_reasoning": false,
+              "itl_ms": 27.68659999128431
+            },
+            {
+              "timestamp": 537951.8764545,
+              "time_from_start_ms": 3496.386200073175,
+              "is_reasoning": false,
+              "itl_ms": 27.355600032024086
+            },
+            {
+              "timestamp": 537951.9043024,
+              "time_from_start_ms": 3524.2341000121087,
+              "is_reasoning": false,
+              "itl_ms": 27.84789993893355
+            },
+            {
+              "timestamp": 537951.9315699,
+              "time_from_start_ms": 3551.501600071788,
+              "is_reasoning": false,
+              "itl_ms": 27.26750005967915
+            },
+            {
+              "timestamp": 537951.9587477,
+              "time_from_start_ms": 3578.6794000305235,
+              "is_reasoning": false,
+              "itl_ms": 27.177799958735704
+            },
+            {
+              "timestamp": 537951.986431,
+              "time_from_start_ms": 3606.3627001130953,
+              "is_reasoning": false,
+              "itl_ms": 27.683300082571805
+            },
+            {
+              "timestamp": 537952.0139407,
+              "time_from_start_ms": 3633.8724000379443,
+              "is_reasoning": false,
+              "itl_ms": 27.509699924848974
+            },
+            {
+              "timestamp": 537952.0413806,
+              "time_from_start_ms": 3661.3123000133783,
+              "is_reasoning": false,
+              "itl_ms": 27.439899975433946
+            },
+            {
+              "timestamp": 537952.0687295,
+              "time_from_start_ms": 3688.6612001108006,
+              "is_reasoning": false,
+              "itl_ms": 27.3489000974223
+            },
+            {
+              "timestamp": 537952.0962327,
+              "time_from_start_ms": 3716.1644001025707,
+              "is_reasoning": false,
+              "itl_ms": 27.50319999177009
+            },
+            {
+              "timestamp": 537952.1239312,
+              "time_from_start_ms": 3743.862900068052,
+              "is_reasoning": false,
+              "itl_ms": 27.69849996548146
+            },
+            {
+              "timestamp": 537952.1510066,
+              "time_from_start_ms": 3770.938300061971,
+              "is_reasoning": false,
+              "itl_ms": 27.075399993918836
+            },
+            {
+              "timestamp": 537952.1786663,
+              "time_from_start_ms": 3798.598000081256,
+              "is_reasoning": false,
+              "itl_ms": 27.659700019285083
+            },
+            {
+              "timestamp": 537952.2060391,
+              "time_from_start_ms": 3825.9708000114188,
+              "is_reasoning": false,
+              "itl_ms": 27.372799930162728
+            },
+            {
+              "timestamp": 537952.2336301,
+              "time_from_start_ms": 3853.5618000896648,
+              "is_reasoning": false,
+              "itl_ms": 27.591000078245997
+            },
+            {
+              "timestamp": 537952.2615515,
+              "time_from_start_ms": 3881.483200006187,
+              "is_reasoning": false,
+              "itl_ms": 27.921399916522205
+            },
+            {
+              "timestamp": 537952.2889636,
+              "time_from_start_ms": 3908.8953000027686,
+              "is_reasoning": false,
+              "itl_ms": 27.412099996581674
+            },
+            {
+              "timestamp": 537952.3162088,
+              "time_from_start_ms": 3936.14050000906,
+              "is_reasoning": false,
+              "itl_ms": 27.24520000629127
+            },
+            {
+              "timestamp": 537952.3435012,
+              "time_from_start_ms": 3963.4329000255093,
+              "is_reasoning": false,
+              "itl_ms": 27.292400016449392
+            },
+            {
+              "timestamp": 537952.3711617,
+              "time_from_start_ms": 3991.093400050886,
+              "is_reasoning": false,
+              "itl_ms": 27.660500025376678
+            },
+            {
+              "timestamp": 537952.3982508,
+              "time_from_start_ms": 4018.182500032708,
+              "is_reasoning": false,
+              "itl_ms": 27.089099981822073
+            },
+            {
+              "timestamp": 537952.4257262,
+              "time_from_start_ms": 4045.657900045626,
+              "is_reasoning": false,
+              "itl_ms": 27.475400012917817
+            },
+            {
+              "timestamp": 537952.4532386,
+              "time_from_start_ms": 4073.1703001074493,
+              "is_reasoning": false,
+              "itl_ms": 27.512400061823428
+            },
+            {
+              "timestamp": 537952.4805469,
+              "time_from_start_ms": 4100.4786000121385,
+              "is_reasoning": false,
+              "itl_ms": 27.308299904689193
+            },
+            {
+              "timestamp": 537952.5082859,
+              "time_from_start_ms": 4128.217600053176,
+              "is_reasoning": false,
+              "itl_ms": 27.739000041037798
+            },
+            {
+              "timestamp": 537952.5356523,
+              "time_from_start_ms": 4155.584000051022,
+              "is_reasoning": false,
+              "itl_ms": 27.366399997845292
+            },
+            {
+              "timestamp": 537952.5631899,
+              "time_from_start_ms": 4183.1216000719,
+              "is_reasoning": false,
+              "itl_ms": 27.537600020878017
+            },
+            {
+              "timestamp": 537952.5904657,
+              "time_from_start_ms": 4210.397400078364,
+              "is_reasoning": false,
+              "itl_ms": 27.275800006464124
+            },
+            {
+              "timestamp": 537952.6076784,
+              "time_from_start_ms": 4227.610100060701,
+              "is_reasoning": false,
+              "itl_ms": 17.212699982337654
+            }
+          ],
+          "itl_stats": {
+            "mean": 27.46,
+            "min": 17.21,
+            "max": 38.4,
+            "std": 1.41,
+            "count": 127
+          }
+        }
+      ],
+      "status": "成功"
+    },
+    {
+      "type": "result",
+      "prompt_length": 2048,
+      "requested_prompt_length": 2048,
+      "network_latency_ms": 41.67,
+      "network_latency_sample_count": 6,
+      "avg_prompt_tokens": 2048.0,
+      "concurrency": 1,
+      "successful": 1,
+      "failed": 0,
+      "avg_prefill_speed": 1463.65,
+      "avg_output_speed": 36.57,
+      "max_prefill_speed": 1463.65,
+      "max_output_speed": 36.57,
+      "aggregate_prefill_time_ms": 1399.24,
+      "aggregate_output_time_ms": 3500.56,
+      "aggregate_prefill_speed": 1463.65,
+      "aggregate_output_speed": 36.57,
+      "client_prefill_time_ms": 1399.24,
+      "client_output_time_ms": 3500.56,
+      "client_total_time_ms": 4899.8,
+      "client_has_phase_boundary": true,
+      "aggregate_prefill_source": "client_latency_adjusted",
+      "aggregate_output_source": "client",
+      "avg_ttft_ms": 1440.91,
+      "source": "python_backend",
+      "record_tags": [
+        "source:python_backend",
+        "prefill_source:client_latency_adjusted"
+      ],
+      "boundary_fallback_count": 0,
+      "token_warning_count": 0,
+      "aggregate_warnings": [],
+      "concurrent_details": [
+        {
+          "success": true,
+          "prompt_length": 2048,
+          "requested_prompt_length": 2048,
+          "generated_prompt_length": 2027,
+          "prompt_tokens": 2048,
+          "estimated_prompt_tokens": 2048,
+          "local_estimated_prompt_tokens": 2033,
+          "local_estimated_output_tokens": 127,
+          "prompt_calibration": {
+            "source": "warmup_usage",
+            "estimated_prompt_tokens": 102,
+            "actual_prompt_tokens": 117,
+            "token_offset": 15,
+            "token_ratio": 1.1470588235294117
+          },
+          "output_tokens": 128,
+          "ttft_ms": 1440.91,
+          "prefill_time_ms": 1399.24,
+          "prefill_speed": 1463.65,
+          "output_time_ms": 3500.56,
+          "output_speed": 36.57,
+          "total_time_ms": 4941.47,
+          "prompt_text": "by all time model reason of light you text we this truth value clear light or data change in system is simple of be we story is life work in we is the system if they will system to as value idea that we they they one human simple the you it on light can text you system of work mind as to we work a the system one world future value not change a light this space model value model we change in a simple token model light token idea in for space you idea by be for simple a text a work from to world be the life light can one simple life value from be model a life reason one text be system life system or reason system one is story text model we the life data for to the that you work world all value can value world token system and time are can it by to time text are data be light life world time light and is from simple from by to text simple idea reason idea mind they or text by will simple the space in text can this be future this mind as text value change they space a will world data to system mind idea data and simple as story reason they truth with can you be and as if we this time text for a clear reason if system from a light idea value by reason if and simple with work model of simple work or as on and are as of by if work of human model we time will idea that or if be if it can life text data to space all in is can can model they they that human you data not can story you can change for with light as text truth change one you that life are they can on human future or light text they world system idea clear will not change are work time model we clear change truth by as of world by you truth with or to be for work the with and system the the as to light that for you clear be work truth idea as not change story is will value are value system story or one if system by clear this life be be in if we human world that to or is or story text time life mind as or as change can clear model the if you the clear simple not mind world reason are truth by future future value all we as change we work will truth clear in the text you they text mind clear you change space human from of text model be future data by or truth system work change system truth change system are text clear if this for system idea text human can time simple from life will human world a data all truth token light one story simple future light human work they mind in model change simple on mind or to we this space time if to life human will it future story model from not change for world are that by token not and and not human are work token work they in world in idea not they change story work change life if future model will if if the you human idea if to story all life idea idea if work or light model can are with in on all or as data that data a by for as one by for world future from by for change to clear is story to future text and can idea value time can not in a time all you a one are that will work world this the will life all if as token text change this it be data on if of for all the the simple value life as is or this on this change token simple mind by reason you space or by from truth to reason light from or in space data space or and change that as space on story will simple all be clear from and be of time value token story idea we change as work to reason to story be or of by this is is token truth and in or future to simple model can if clear future from on are data in by reason and future reason of value is world you a text is simple with truth model token not you we space it mind to not world can mind space is time by that token a value we that as we data future model on human work are they on story value to idea not future if one you can future not in or world mind space it text to they value mind world that mind story all is this you by clear to clear as one is reason this world work system value will system by world truth as truth clear for space light truth future work life and human system be from to we on system it token the are work is text mind token for light reason truth it change to simple value you simple text truth model for mind is and that will one future model human future reason is data change the with value of life on that story idea future simple with it model it token text data of world be will this future if or they be story the you truth truth by or reason light from idea life of and to clear or model can value time that this or be text can on not in you be of with to token space for life one they or life the all future of truth be they future a will you world world from life it we we world as or a be the human on a by not one it this in system and value not text system that this human we work mind story data truth a will not if they model light this and are if it they value system light data time value reason work this we mind idea text to clear token of and reason if we is are clear and token reason life it data and on one as and work in model in is with is clear on truth not it can for of with reason space simple data system future idea change space work and they work space clear one not by time if on world text it human if space data if are or they they of on or on all a one reason is all you will change will story in we life value as world this if they space can on on time simple will they this future we model token they time can that by work space this can change a light they in the it data are value light token as truth this all change not work system simple a one on are mind is for if are value human a as time for can a from if light change idea as for is text this light not by one from we truth if world that change with in reason if not clear on simple text are clear reason with token for will by are and and life in they work will we system token on that be for all human to as clear can the the reason value not system one story text human life is model by all truth the will we text clear future are text and the that work all work reason truth or text idea for light of in system mind light life not with space mind can light light is by all the for is work value world a from we will text for light data clear idea all simple change time text truth future they system from this value token the can on change system for token work not or and clear story you idea text for and or life truth as that token story change with if life with are they model is one truth idea is data in time with story token or as clear truth reason human or truth with text not or text token system if that simple work system future future on a not system or on life change change mind in to to if life human from will or not work truth human simple life simple will space simple that data world or not to to you world future or truth a human they by model clear space if by one all can value it text mind will idea or human world simple for work mind all that story they they all or change one story if or that we if space be time value a it story clear model change this from value not or time change by text data simple token world light work from data model idea time of light of as space token from you by or the will you this time work can they world text is future it the not mind or as clear is reason can with we this if as reason light text can from a by is it life life work that human be space it with as will space light it by future for as as as token world the truth will for we space that from reason as future human you with a be truth human we of time of token story reason on future if can not story they from light to from reason on be if with the that of to text as you one to story token one data life in simple to not world token mind of reason text the as mind of time system by they we token and be will if by of with or they on light all you to clear idea future space truth be by or be and clear is data they of a or they a system or or all be system of life time life change this in truth work truth you work for with in life system not we are from all on clear are model clear value by for reason system they to in reason reason value clear mind the of in of space will simple mind will we can idea or from is to world we that if they system or in the can with space they reason value story not a not reason work to if be system by is on and by and clear to token to space as this work we story be time from that not the future life token system is on idea token by work that for not clear be from story model they if we clear of to model one the they can truth they system space are mind by value human be all as all from to all they world change token for token mind a from you simple from mind the as future idea or mind future with for not light value all change they that clear human all token story you to all one as is is with life future by life for data we it from and a to can time a system one token a future they change value for if story story token truth or one light from reason mind on as not a life it with world be with and reason will they text idea a light time future token future value reason from if they for if data be work system value on clear clear space one future human light light a a story truth space story future a that mind idea with future on on on they life it of from world to from truth world and idea it can model all if and time not work\nBased on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.",
+          "output_content": "The provided text is a chaotic stream of keywords related to systems, light, data, truth, and human existence. While it lacks grammatical structure, it contains a rich vocabulary of philosophical and scientific concepts: *light, truth, system, mind, value, future, change, data, story, life, world, reason*.\n\nBelow is a short philosophical essay that synthesizes these themes into a coherent discussion on existence, consciousness, and humanity’s place in the universe.\n\n***\n\n### The Luminous System: Existence, Consciousness, and the Human Story\n\nExistence, at its most fundamental level, may be understood",
+          "reasoning_content": "",
+          "usage_info": {
+            "prompt_tokens": 2048,
+            "total_tokens": 2176,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "missed_tokens": 2048
+            }
+          },
+          "server_timing_used": false,
+          "server_prefill_time_ms": null,
+          "server_decode_time_ms": null,
+          "prefill_time_source": "client_latency_adjusted",
+          "output_time_source": "client",
+          "network_latency_ms": 41.67,
+          "network_latency_sample_count": 6,
+          "client_prefill_time_ms": 1399.24,
+          "client_decode_time_ms": 3500.56,
+          "client_total_time_ms": 4899.8,
+          "client_has_phase_boundary": true,
+          "has_streaming_content": true,
+          "chunk_count": 130,
+          "start_timestamp": 537954.1737311,
+          "first_chunk_timestamp": 537954.2444866,
+          "first_token_timestamp": 537955.6146424,
+          "boundary_timestamp": 537955.6146424,
+          "boundary_source": "first_content_token",
+          "end_timestamp": 537959.1152048,
+          "token_source": "API",
+          "token_warnings": [],
+          "token_timestamps": [
+            {
+              "timestamp": 537955.6146424,
+              "time_from_start_ms": 1440.9112998982891,
+              "is_reasoning": false,
+              "itl_ms": null
+            },
+            {
+              "timestamp": 537955.6538544,
+              "time_from_start_ms": 1480.123299988918,
+              "is_reasoning": false,
+              "itl_ms": 39.21200009062886
+            },
+            {
+              "timestamp": 537955.6817935,
+              "time_from_start_ms": 1508.0623999238014,
+              "is_reasoning": false,
+              "itl_ms": 27.939099934883416
+            },
+            {
+              "timestamp": 537955.7086492,
+              "time_from_start_ms": 1534.918099991046,
+              "is_reasoning": false,
+              "itl_ms": 26.85570006724447
+            },
+            {
+              "timestamp": 537955.7356465,
+              "time_from_start_ms": 1561.9153999723494,
+              "is_reasoning": false,
+              "itl_ms": 26.997299981303513
+            },
+            {
+              "timestamp": 537955.7638843,
+              "time_from_start_ms": 1590.1531999697909,
+              "is_reasoning": false,
+              "itl_ms": 28.23779999744147
+            },
+            {
+              "timestamp": 537955.7910547,
+              "time_from_start_ms": 1617.3235999885947,
+              "is_reasoning": false,
+              "itl_ms": 27.170400018803775
+            },
+            {
+              "timestamp": 537955.8183022,
+              "time_from_start_ms": 1644.571099895984,
+              "is_reasoning": false,
+              "itl_ms": 27.247499907389283
+            },
+            {
+              "timestamp": 537955.8459112,
+              "time_from_start_ms": 1672.1800999948755,
+              "is_reasoning": false,
+              "itl_ms": 27.609000098891556
+            },
+            {
+              "timestamp": 537955.8731872,
+              "time_from_start_ms": 1699.4561000028625,
+              "is_reasoning": false,
+              "itl_ms": 27.276000007987022
+            },
+            {
+              "timestamp": 537955.9006145,
+              "time_from_start_ms": 1726.8833999987692,
+              "is_reasoning": false,
+              "itl_ms": 27.42729999590665
+            },
+            {
+              "timestamp": 537955.9281685,
+              "time_from_start_ms": 1754.4373999116942,
+              "is_reasoning": false,
+              "itl_ms": 27.553999912925065
+            },
+            {
+              "timestamp": 537955.9555708,
+              "time_from_start_ms": 1781.8396999500692,
+              "is_reasoning": false,
+              "itl_ms": 27.40230003837496
+            },
+            {
+              "timestamp": 537955.9830542,
+              "time_from_start_ms": 1809.3230999074876,
+              "is_reasoning": false,
+              "itl_ms": 27.48339995741844
+            },
+            {
+              "timestamp": 537956.0106422,
+              "time_from_start_ms": 1836.9110999628901,
+              "is_reasoning": false,
+              "itl_ms": 27.588000055402517
+            },
+            {
+              "timestamp": 537956.0381322,
+              "time_from_start_ms": 1864.4010999705642,
+              "is_reasoning": false,
+              "itl_ms": 27.490000007674098
+            },
+            {
+              "timestamp": 537956.0656846,
+              "time_from_start_ms": 1891.9534999877214,
+              "is_reasoning": false,
+              "itl_ms": 27.552400017157197
+            },
+            {
+              "timestamp": 537956.0932011,
+              "time_from_start_ms": 1919.469999964349,
+              "is_reasoning": false,
+              "itl_ms": 27.51649997662753
+            },
+            {
+              "timestamp": 537956.1208665,
+              "time_from_start_ms": 1947.1353999106213,
+              "is_reasoning": false,
+              "itl_ms": 27.665399946272373
+            },
+            {
+              "timestamp": 537956.1481081,
+              "time_from_start_ms": 1974.3770000059158,
+              "is_reasoning": false,
+              "itl_ms": 27.241600095294416
+            },
+            {
+              "timestamp": 537956.1759088,
+              "time_from_start_ms": 2002.1776999346912,
+              "is_reasoning": false,
+              "itl_ms": 27.80069992877543
+            },
+            {
+              "timestamp": 537956.2028859,
+              "time_from_start_ms": 2029.1547999950126,
+              "is_reasoning": false,
+              "itl_ms": 26.97710006032139
+            },
+            {
+              "timestamp": 537956.2306011,
+              "time_from_start_ms": 2056.8699999712408,
+              "is_reasoning": false,
+              "itl_ms": 27.715199976228178
+            },
+            {
+              "timestamp": 537956.2585215,
+              "time_from_start_ms": 2084.790399996564,
+              "is_reasoning": false,
+              "itl_ms": 27.920400025323033
+            },
+            {
+              "timestamp": 537956.2859973,
+              "time_from_start_ms": 2112.266199896112,
+              "is_reasoning": false,
+              "itl_ms": 27.475799899548292
+            },
+            {
+              "timestamp": 537956.3131555,
+              "time_from_start_ms": 2139.4243999384344,
+              "is_reasoning": false,
+              "itl_ms": 27.158200042322278
+            },
+            {
+              "timestamp": 537956.3406939,
+              "time_from_start_ms": 2166.962799965404,
+              "is_reasoning": false,
+              "itl_ms": 27.53840002696961
+            },
+            {
+              "timestamp": 537956.3681327,
+              "time_from_start_ms": 2194.401599932462,
+              "is_reasoning": false,
+              "itl_ms": 27.438799967058003
+            },
+            {
+              "timestamp": 537956.3959801,
+              "time_from_start_ms": 2222.2489999840036,
+              "is_reasoning": false,
+              "itl_ms": 27.847400051541626
+            },
+            {
+              "timestamp": 537956.4228477,
+              "time_from_start_ms": 2249.11659990903,
+              "is_reasoning": false,
+              "itl_ms": 26.867599925026298
+            },
+            {
+              "timestamp": 537956.4511889,
+              "time_from_start_ms": 2277.457799995318,
+              "is_reasoning": false,
+              "itl_ms": 28.341200086288154
+            },
+            {
+              "timestamp": 537956.4783685,
+              "time_from_start_ms": 2304.63739996776,
+              "is_reasoning": false,
+              "itl_ms": 27.179599972441792
+            },
+            {
+              "timestamp": 537956.5058246,
+              "time_from_start_ms": 2332.0934999501333,
+              "is_reasoning": false,
+              "itl_ms": 27.456099982373416
+            },
+            {
+              "timestamp": 537956.5332527,
+              "time_from_start_ms": 2359.5215999521315,
+              "is_reasoning": false,
+              "itl_ms": 27.428100001998246
+            },
+            {
+              "timestamp": 537956.5608306,
+              "time_from_start_ms": 2387.0994999306276,
+              "is_reasoning": false,
+              "itl_ms": 27.577899978496134
+            },
+            {
+              "timestamp": 537956.5883762,
+              "time_from_start_ms": 2414.6450998960063,
+              "is_reasoning": false,
+              "itl_ms": 27.545599965378642
+            },
+            {
+              "timestamp": 537956.6161517,
+              "time_from_start_ms": 2442.4205999821424,
+              "is_reasoning": false,
+              "itl_ms": 27.775500086136162
+            },
+            {
+              "timestamp": 537956.6433842,
+              "time_from_start_ms": 2469.653100008145,
+              "is_reasoning": false,
+              "itl_ms": 27.232500026002526
+            },
+            {
+              "timestamp": 537956.6709364,
+              "time_from_start_ms": 2497.205299907364,
+              "is_reasoning": false,
+              "itl_ms": 27.552199899218976
+            },
+            {
+              "timestamp": 537956.6981734,
+              "time_from_start_ms": 2524.4422999676317,
+              "is_reasoning": false,
+              "itl_ms": 27.237000060267746
+            },
+            {
+              "timestamp": 537956.725625,
+              "time_from_start_ms": 2551.89389991574,
+              "is_reasoning": false,
+              "itl_ms": 27.451599948108196
+            },
+            {
+              "timestamp": 537956.7533371,
+              "time_from_start_ms": 2579.6059999847785,
+              "is_reasoning": false,
+              "itl_ms": 27.71210006903857
+            },
+            {
+              "timestamp": 537956.7806304,
+              "time_from_start_ms": 2606.899300008081,
+              "is_reasoning": false,
+              "itl_ms": 27.293300023302436
+            },
+            {
+              "timestamp": 537956.8083735,
+              "time_from_start_ms": 2634.642399963923,
+              "is_reasoning": false,
+              "itl_ms": 27.7430999558419
+            },
+            {
+              "timestamp": 537956.8357175,
+              "time_from_start_ms": 2661.9863999076188,
+              "is_reasoning": false,
+              "itl_ms": 27.343999943695962
+            },
+            {
+              "timestamp": 537956.8631616,
+              "time_from_start_ms": 2689.4304999150336,
+              "is_reasoning": false,
+              "itl_ms": 27.444100007414818
+            },
+            {
+              "timestamp": 537956.8906446,
+              "time_from_start_ms": 2716.9134999858215,
+              "is_reasoning": false,
+              "itl_ms": 27.483000070787966
+            },
+            {
+              "timestamp": 537956.9181036,
+              "time_from_start_ms": 2744.372499990277,
+              "is_reasoning": false,
+              "itl_ms": 27.459000004455447
+            },
+            {
+              "timestamp": 537956.9453937,
+              "time_from_start_ms": 2771.662599989213,
+              "is_reasoning": false,
+              "itl_ms": 27.290099998936057
+            },
+            {
+              "timestamp": 537956.9729378,
+              "time_from_start_ms": 2799.20669994317,
+              "is_reasoning": false,
+              "itl_ms": 27.544099953956902
+            },
+            {
+              "timestamp": 537957.000611,
+              "time_from_start_ms": 2826.8798999488354,
+              "is_reasoning": false,
+              "itl_ms": 27.67320000566542
+            },
+            {
+              "timestamp": 537957.0282077,
+              "time_from_start_ms": 2854.4765999540687,
+              "is_reasoning": false,
+              "itl_ms": 27.596700005233288
+            },
+            {
+              "timestamp": 537957.055642,
+              "time_from_start_ms": 2881.9109000032768,
+              "is_reasoning": false,
+              "itl_ms": 27.434300049208105
+            },
+            {
+              "timestamp": 537957.0826946,
+              "time_from_start_ms": 2908.9634999400005,
+              "is_reasoning": false,
+              "itl_ms": 27.05259993672371
+            },
+            {
+              "timestamp": 537957.1104197,
+              "time_from_start_ms": 2936.688599991612,
+              "is_reasoning": false,
+              "itl_ms": 27.725100051611662
+            },
+            {
+              "timestamp": 537957.1380562,
+              "time_from_start_ms": 2964.3250999506563,
+              "is_reasoning": false,
+              "itl_ms": 27.63649995904416
+            },
+            {
+              "timestamp": 537957.1654197,
+              "time_from_start_ms": 2991.6885999264196,
+              "is_reasoning": false,
+              "itl_ms": 27.36349997576326
+            },
+            {
+              "timestamp": 537957.1929569,
+              "time_from_start_ms": 3019.225799944252,
+              "is_reasoning": false,
+              "itl_ms": 27.53720001783222
+            },
+            {
+              "timestamp": 537957.2207807,
+              "time_from_start_ms": 3047.0495999325067,
+              "is_reasoning": false,
+              "itl_ms": 27.823799988254905
+            },
+            {
+              "timestamp": 537957.2483556,
+              "time_from_start_ms": 3074.6245000045747,
+              "is_reasoning": false,
+              "itl_ms": 27.574900072067976
+            },
+            {
+              "timestamp": 537957.2757902,
+              "time_from_start_ms": 3102.059099939652,
+              "is_reasoning": false,
+              "itl_ms": 27.43459993507713
+            },
+            {
+              "timestamp": 537957.3038085,
+              "time_from_start_ms": 3130.0773998955265,
+              "is_reasoning": false,
+              "itl_ms": 28.01829995587468
+            },
+            {
+              "timestamp": 537957.3313655,
+              "time_from_start_ms": 3157.6343999477103,
+              "is_reasoning": false,
+              "itl_ms": 27.557000052183867
+            },
+            {
+              "timestamp": 537957.3589044,
+              "time_from_start_ms": 3185.173299978487,
+              "is_reasoning": false,
+              "itl_ms": 27.53890003077686
+            },
+            {
+              "timestamp": 537957.3864154,
+              "time_from_start_ms": 3212.684299913235,
+              "is_reasoning": false,
+              "itl_ms": 27.510999934747815
+            },
+            {
+              "timestamp": 537957.4141331,
+              "time_from_start_ms": 3240.4019999084994,
+              "is_reasoning": false,
+              "itl_ms": 27.71769999526441
+            },
+            {
+              "timestamp": 537957.4415463,
+              "time_from_start_ms": 3267.815199913457,
+              "is_reasoning": false,
+              "itl_ms": 27.413200004957616
+            },
+            {
+              "timestamp": 537957.4691685,
+              "time_from_start_ms": 3295.4373999964446,
+              "is_reasoning": false,
+              "itl_ms": 27.622200082987547
+            },
+            {
+              "timestamp": 537957.4961952,
+              "time_from_start_ms": 3322.4640999687836,
+              "is_reasoning": false,
+              "itl_ms": 27.026699972338974
+            },
+            {
+              "timestamp": 537957.5238784,
+              "time_from_start_ms": 3350.1472999341786,
+              "is_reasoning": false,
+              "itl_ms": 27.683199965395033
+            },
+            {
+              "timestamp": 537957.5507542,
+              "time_from_start_ms": 3377.0230999216437,
+              "is_reasoning": false,
+              "itl_ms": 26.875799987465143
+            },
+            {
+              "timestamp": 537957.5789358,
+              "time_from_start_ms": 3405.204699956812,
+              "is_reasoning": false,
+              "itl_ms": 28.18160003516823
+            },
+            {
+              "timestamp": 537957.6063624,
+              "time_from_start_ms": 3432.6312999473885,
+              "is_reasoning": false,
+              "itl_ms": 27.426599990576506
+            },
+            {
+              "timestamp": 537957.6336932,
+              "time_from_start_ms": 3459.9620999069884,
+              "is_reasoning": false,
+              "itl_ms": 27.33079995959997
+            },
+            {
+              "timestamp": 537957.6612412,
+              "time_from_start_ms": 3487.510100007057,
+              "is_reasoning": false,
+              "itl_ms": 27.548000100068748
+            },
+            {
+              "timestamp": 537957.6886605,
+              "time_from_start_ms": 3514.929399942048,
+              "is_reasoning": false,
+              "itl_ms": 27.419299934990704
+            },
+            {
+              "timestamp": 537957.7157076,
+              "time_from_start_ms": 3541.976499953307,
+              "is_reasoning": false,
+              "itl_ms": 27.047100011259317
+            },
+            {
+              "timestamp": 537957.7438106,
+              "time_from_start_ms": 3570.079499972053,
+              "is_reasoning": false,
+              "itl_ms": 28.10300001874566
+            },
+            {
+              "timestamp": 537957.7709685,
+              "time_from_start_ms": 3597.2373998956755,
+              "is_reasoning": false,
+              "itl_ms": 27.157899923622608
+            },
+            {
+              "timestamp": 537957.798824,
+              "time_from_start_ms": 3625.0929000088945,
+              "is_reasoning": false,
+              "itl_ms": 27.855500113219023
+            },
+            {
+              "timestamp": 537957.8265084,
+              "time_from_start_ms": 3652.777299983427,
+              "is_reasoning": false,
+              "itl_ms": 27.684399974532425
+            },
+            {
+              "timestamp": 537957.8537862,
+              "time_from_start_ms": 3680.05510000512,
+              "is_reasoning": false,
+              "itl_ms": 27.27780002169311
+            },
+            {
+              "timestamp": 537957.8813663,
+              "time_from_start_ms": 3707.635200000368,
+              "is_reasoning": false,
+              "itl_ms": 27.58009999524802
+            },
+            {
+              "timestamp": 537957.9087321,
+              "time_from_start_ms": 3735.0009999936447,
+              "is_reasoning": false,
+              "itl_ms": 27.365799993276596
+            },
+            {
+              "timestamp": 537957.9362727,
+              "time_from_start_ms": 3762.541599920951,
+              "is_reasoning": false,
+              "itl_ms": 27.540599927306175
+            },
+            {
+              "timestamp": 537957.9638821,
+              "time_from_start_ms": 3790.150999906473,
+              "is_reasoning": false,
+              "itl_ms": 27.609399985522032
+            },
+            {
+              "timestamp": 537957.9910624,
+              "time_from_start_ms": 3817.33130000066,
+              "is_reasoning": false,
+              "itl_ms": 27.18030009418726
+            },
+            {
+              "timestamp": 537958.0186356,
+              "time_from_start_ms": 3844.904499943368,
+              "is_reasoning": false,
+              "itl_ms": 27.573199942708015
+            },
+            {
+              "timestamp": 537958.046191,
+              "time_from_start_ms": 3872.459899983369,
+              "is_reasoning": false,
+              "itl_ms": 27.555400040000677
+            },
+            {
+              "timestamp": 537958.0739627,
+              "time_from_start_ms": 3900.2315999241546,
+              "is_reasoning": false,
+              "itl_ms": 27.771699940785766
+            },
+            {
+              "timestamp": 537958.1012883,
+              "time_from_start_ms": 3927.5571999605745,
+              "is_reasoning": false,
+              "itl_ms": 27.325600036419928
+            },
+            {
+              "timestamp": 537958.128799,
+              "time_from_start_ms": 3955.0679000094533,
+              "is_reasoning": false,
+              "itl_ms": 27.51070004887879
+            },
+            {
+              "timestamp": 537958.1563734,
+              "time_from_start_ms": 3982.6422999612987,
+              "is_reasoning": false,
+              "itl_ms": 27.574399951845407
+            },
+            {
+              "timestamp": 537958.1838683,
+              "time_from_start_ms": 4010.137200006284,
+              "is_reasoning": false,
+              "itl_ms": 27.494900044985116
+            },
+            {
+              "timestamp": 537958.2115328,
+              "time_from_start_ms": 4037.801699945703,
+              "is_reasoning": false,
+              "itl_ms": 27.66449993941933
+            },
+            {
+              "timestamp": 537958.2389121,
+              "time_from_start_ms": 4065.18099992536,
+              "is_reasoning": false,
+              "itl_ms": 27.379299979656935
+            },
+            {
+              "timestamp": 537958.266714,
+              "time_from_start_ms": 4092.982899979688,
+              "is_reasoning": false,
+              "itl_ms": 27.801900054328144
+            },
+            {
+              "timestamp": 537958.293735,
+              "time_from_start_ms": 4120.003899908625,
+              "is_reasoning": false,
+              "itl_ms": 27.020999928936362
+            },
+            {
+              "timestamp": 537958.3215457,
+              "time_from_start_ms": 4147.814599913545,
+              "is_reasoning": false,
+              "itl_ms": 27.810700004920363
+            },
+            {
+              "timestamp": 537958.3490962,
+              "time_from_start_ms": 4175.365099916235,
+              "is_reasoning": false,
+              "itl_ms": 27.55050000268966
+            },
+            {
+              "timestamp": 537958.3763406,
+              "time_from_start_ms": 4202.609499916434,
+              "is_reasoning": false,
+              "itl_ms": 27.244400000199676
+            },
+            {
+              "timestamp": 537958.4035838,
+              "time_from_start_ms": 4229.852699907497,
+              "is_reasoning": false,
+              "itl_ms": 27.243199991062284
+            },
+            {
+              "timestamp": 537958.4309204,
+              "time_from_start_ms": 4257.189299911261,
+              "is_reasoning": false,
+              "itl_ms": 27.336600003764033
+            },
+            {
+              "timestamp": 537958.4588143,
+              "time_from_start_ms": 4285.08319996763,
+              "is_reasoning": false,
+              "itl_ms": 27.893900056369603
+            },
+            {
+              "timestamp": 537958.4864031,
+              "time_from_start_ms": 4312.671999912709,
+              "is_reasoning": false,
+              "itl_ms": 27.58879994507879
+            },
+            {
+              "timestamp": 537958.5135709,
+              "time_from_start_ms": 4339.839799911715,
+              "is_reasoning": false,
+              "itl_ms": 27.167799999006093
+            },
+            {
+              "timestamp": 537958.5411275,
+              "time_from_start_ms": 4367.396399960853,
+              "is_reasoning": false,
+              "itl_ms": 27.55660004913807
+            },
+            {
+              "timestamp": 537958.5686757,
+              "time_from_start_ms": 4394.9445999460295,
+              "is_reasoning": false,
+              "itl_ms": 27.548199985176325
+            },
+            {
+              "timestamp": 537958.5962187,
+              "time_from_start_ms": 4422.487600008026,
+              "is_reasoning": false,
+              "itl_ms": 27.54300006199628
+            },
+            {
+              "timestamp": 537958.6240846,
+              "time_from_start_ms": 4450.353499967605,
+              "is_reasoning": false,
+              "itl_ms": 27.86589995957911
+            },
+            {
+              "timestamp": 537958.6513965,
+              "time_from_start_ms": 4477.665399899706,
+              "is_reasoning": false,
+              "itl_ms": 27.31189993210137
+            },
+            {
+              "timestamp": 537958.6785936,
+              "time_from_start_ms": 4504.862500005402,
+              "is_reasoning": false,
+              "itl_ms": 27.197100105695426
+            },
+            {
+              "timestamp": 537958.7061207,
+              "time_from_start_ms": 4532.3895999463275,
+              "is_reasoning": false,
+              "itl_ms": 27.527099940925837
+            },
+            {
+              "timestamp": 537958.7337275,
+              "time_from_start_ms": 4559.996399912052,
+              "is_reasoning": false,
+              "itl_ms": 27.60679996572435
+            },
+            {
+              "timestamp": 537958.7613349,
+              "time_from_start_ms": 4587.60379999876,
+              "is_reasoning": false,
+              "itl_ms": 27.607400086708367
+            },
+            {
+              "timestamp": 537958.7888695,
+              "time_from_start_ms": 4615.138399996795,
+              "is_reasoning": false,
+              "itl_ms": 27.534599998034537
+            },
+            {
+              "timestamp": 537958.8162935,
+              "time_from_start_ms": 4642.562399967574,
+              "is_reasoning": false,
+              "itl_ms": 27.423999970778823
+            },
+            {
+              "timestamp": 537958.8436696,
+              "time_from_start_ms": 4669.938499922864,
+              "is_reasoning": false,
+              "itl_ms": 27.376099955290556
+            },
+            {
+              "timestamp": 537958.8712034,
+              "time_from_start_ms": 4697.472299914807,
+              "is_reasoning": false,
+              "itl_ms": 27.533799991942942
+            },
+            {
+              "timestamp": 537958.8986625,
+              "time_from_start_ms": 4724.931399920024,
+              "is_reasoning": false,
+              "itl_ms": 27.459100005216897
+            },
+            {
+              "timestamp": 537958.9263547,
+              "time_from_start_ms": 4752.623599953949,
+              "is_reasoning": false,
+              "itl_ms": 27.692200033925474
+            },
+            {
+              "timestamp": 537958.9541476,
+              "time_from_start_ms": 4780.416499939747,
+              "is_reasoning": false,
+              "itl_ms": 27.792899985797703
+            },
+            {
+              "timestamp": 537958.9813245,
+              "time_from_start_ms": 4807.593400008045,
+              "is_reasoning": false,
+              "itl_ms": 27.176900068297982
+            },
+            {
+              "timestamp": 537959.0088727,
+              "time_from_start_ms": 4835.1415999932215,
+              "is_reasoning": false,
+              "itl_ms": 27.548199985176325
+            },
+            {
+              "timestamp": 537959.0362194,
+              "time_from_start_ms": 4862.488299957477,
+              "is_reasoning": false,
+              "itl_ms": 27.346699964255095
+            },
+            {
+              "timestamp": 537959.0642503,
+              "time_from_start_ms": 4890.519200009294,
+              "is_reasoning": false,
+              "itl_ms": 28.030900051817298
+            },
+            {
+              "timestamp": 537959.0914278,
+              "time_from_start_ms": 4917.696699965745,
+              "is_reasoning": false,
+              "itl_ms": 27.177499956451356
+            },
+            {
+              "timestamp": 537959.1090445,
+              "time_from_start_ms": 4935.31339999754,
+              "is_reasoning": false,
+              "itl_ms": 17.616700031794608
+            }
+          ],
+          "itl_stats": {
+            "mean": 27.51,
+            "min": 17.62,
+            "max": 39.21,
+            "std": 1.39,
+            "count": 127
+          }
+        }
+      ],
+      "status": "成功"
+    },
+    {
+      "type": "result",
+      "prompt_length": 4096,
+      "requested_prompt_length": 4096,
+      "network_latency_ms": 42.14,
+      "network_latency_sample_count": 7,
+      "avg_prompt_tokens": 4096.0,
+      "concurrency": 1,
+      "successful": 1,
+      "failed": 0,
+      "avg_prefill_speed": 1438.48,
+      "avg_output_speed": 36.41,
+      "max_prefill_speed": 1438.48,
+      "max_output_speed": 36.41,
+      "aggregate_prefill_time_ms": 2847.45,
+      "aggregate_output_time_ms": 3515.98,
+      "aggregate_prefill_speed": 1438.48,
+      "aggregate_output_speed": 36.41,
+      "client_prefill_time_ms": 2847.45,
+      "client_output_time_ms": 3515.98,
+      "client_total_time_ms": 6363.43,
+      "client_has_phase_boundary": true,
+      "aggregate_prefill_source": "client_latency_adjusted",
+      "aggregate_output_source": "client",
+      "avg_ttft_ms": 2889.59,
+      "source": "python_backend",
+      "record_tags": [
+        "source:python_backend",
+        "prefill_source:client_latency_adjusted"
+      ],
+      "boundary_fallback_count": 0,
+      "token_warning_count": 0,
+      "aggregate_warnings": [],
+      "concurrent_details": [
+        {
+          "success": true,
+          "prompt_length": 4096,
+          "requested_prompt_length": 4096,
+          "generated_prompt_length": 4075,
+          "prompt_tokens": 4096,
+          "estimated_prompt_tokens": 4096,
+          "local_estimated_prompt_tokens": 4081,
+          "local_estimated_output_tokens": 132,
+          "prompt_calibration": {
+            "source": "warmup_usage",
+            "estimated_prompt_tokens": 102,
+            "actual_prompt_tokens": 117,
+            "token_offset": 15,
+            "token_ratio": 1.1470588235294117
+          },
+          "output_tokens": 128,
+          "ttft_ms": 2889.59,
+          "prefill_time_ms": 2847.45,
+          "prefill_speed": 1438.48,
+          "output_time_ms": 3515.98,
+          "output_speed": 36.41,
+          "total_time_ms": 6405.57,
+          "prompt_text": "can life we reason not truth mind with idea space light human idea human space all the we as and you you and token they clear life of the life space clear to not if they time this of data text that of change be story on one this and human text be truth by this and token or the truth text or this light will on will it to not is text value future light we we of data by world this will system all value data data are and clear the a clear truth clear they simple data the token and one token if world text be if that of reason one it from are not if from it text it human time on to the you you as reason reason value time a token this it this it mind idea this all space all mind be time change can in they token this space future by model and life the as clear one from work is light we if data of from you is be in life mind we time all will be that text you this that this is to to time idea or world by one from space from will model clear system value time be a the idea this and human on is one reason is or or or will is they is all if is token we truth is truth model can if as that is on token value reason or it with we light system you of that model are that world data mind on will light not story by you on clear reason can by is for the mind not with are model with simple from that as can be change reason is of clear if reason not future this mind as are the all the world system be space space mind time clear for of world can time as life change time token time is on time human as light system on not with that not in is from to space text idea by in life reason text mind future story change you this not human for if value text you of mind to change world from light world with is they not one or this on clear human reason world to idea data future work to this to we to you clear clear be world this of will are reason you life all on space work space with model with not future is light or simple are of life by on of system model clear can all of data token it light are token space light be data system clear value are story mind with value they space time can a text human it change with with for you a will value light that from token can not or are human one truth from it one system all this and world it all text simple from this by that that reason by a space story mind model from light of from if you will story future from all you story light the story change text is life on on future for time and light or are model not in truth human are not by one in if truth work idea story data and world value light you that simple idea be the we future you if one simple on are if on be space story with as is can in text system we a are clear we and we idea work world in from will or by and truth life this will text not this idea future a change by story or are the value not one to human the one for on you on are are change model future life we simple in you with simple token in this be system space with light reason reason of from time be in on world you world model to all data idea data story for one will if for they a not we token story as be to you you work if truth data the work truth value by are space human a clear a are will or or that model to are text with reason a all and they world to human as future simple story you the story human mind or truth of system life and can one life model if is reason work are light are for to mind they will to we can of data light will for not is can for as of not and work are data you future will are value are text not reason one you with by by from by idea token mind all world not work token all or token we space space and it light text with not simple clear one you a the idea be text the of by model light data clear mind are that on from light we light light system change to can or or idea are to space time if as in truth mind idea idea they mind mind light reason space you all for world text one of simple mind is it and work future on of token with is it work this you and token model one that they as value time idea mind will for to system world and for idea to future clear text reason clear you data life work reason it reason from they and you time change all change data token as work system of human in or will story data future token human light life in not value truth will or clear truth one story token can mind clear or model all one idea in time it from system in it or clear in life can world you will will or the future system they time on data in life life are data token you not data story space token with of change idea world life on are can a with will it they are the of if or model this text human simple for clear one story text on the story idea space and or or are idea to that from all that not space data light model be to is one life it idea text time simple you and can can they that one life in of future all to change of change on change a can the token in are we that from they value if space can from if they are work data light work token is mind mind change can truth and is you model with by all this in work not with future will change story can can of they as the if idea as will they of and a on token reason are they system can for on value if change time time in model with will space model text are one it clear life world in with can will simple can with in clear a will value are can is idea on on light to token all if model we we on token reason is by human mind space a the you this not text a reason a you from model you human time system the by will idea change by in the story are that system that data on one clear model simple truth not from idea of simple for idea life value work with simple data simple world from if can change human and in we you as clear human one can they idea be on reason and a by the this from idea clear truth data life you token system a model simple a with model light reason reason not token in or truth it on by this if work be we by future if a truth if token if text it all one story light value as token all one be text not truth token they on it reason reason human story mind truth that the they story time data time work one story be with for or simple on future work human are truth work for or and text it from life model will all reason data world as token story that not human a it they or reason for it token a light for a text will are token world from life is clear model for reason model you can or if time from if you they you model will world is by life as a space by they text will one is not and space and be it that you simple model will value they be you from simple human with they it we reason text they they with will all idea you are mind all we all for will light the if of one or model world token as for if data for can or on data that if reason a simple can can it idea this they one of you space all that you of with if of future by future from from you is are story clear space you story be from space for on with data in can as is this a reason story or for life truth story that time time this for with with or that for simple they simple value they as with the we by is token can or for system data reason model story and that world space can change be life mind time we data be with truth with they change time for mind simple simple of work mind for to text idea simple as it life mind they we on future the life are are system future all can they be one reason this clear reason will light data model life for reason that will model system it token all of system on or we text truth data human life idea space in future life world value work data will a a light if it can with be data you story time future or one space system this the and change change space of on value truth it system or and is model light one time will life work we in time will model time work all work for if they time value and for clear or or will from are or of truth are space system mind you story text data to or life human a a or system idea mind it truth and one story all to mind space by system you clear with or with reason work as will idea change token will be text from be is can the not model work mind system one to data are value with that is space world of reason life you reason that if not light on as time one can or human one truth and value text story reason system idea can with of future are model time mind change will life can is idea model is they mind be to clear value to as story time reason change with space change on reason human life we model system light system clear model if token light can human can with simple as are model with simple you as is for on we change value the story future system simple it can simple this world we for we work mind will world one idea light light space to world not value light you a or that if future work space are will can with it this with they this a world model human for will on the truth text mind simple this to or that that not world time token mind for story for life be they clear system and story by world future it to not time system truth we one mind value human space world token that by as of truth mind value story work data that it one you by all token to space story and change on will model from idea all you simple it are one value in from as change will they simple you mind are life life the clear life the they a human the with be text if change to all life clear by light clear human work be story for world text story future to idea with you with clear this the world from one a model data with if the one a story are we a can for clear of if all work simple work we the that data from space are model you mind value to world world can change of world system space mind idea that in work world text one if truth you one if and from to the life future life to reason text with you a text story in in is will work work truth that they as are by to space text world be reason are one value for and with are idea is change of it token to not change world are of change reason from clear for simple future idea you will human reason or space to model time we data work text life you a by mind mind not change all truth value reason human to token work it life in idea be text space space you be of truth simple not all space life the reason all it on one idea story simple all mind can one this time story by future text a time model are will a clear value life simple from will they token the they from this reason from model simple this work system clear by story system is it light reason to time model life work from space value for by simple model we is light this model this they simple this model it value they value can token future by model truth human world future time will value as world one story if the from will one mind data clear value text with change story and life is they on or space clear in work idea you not space idea human are mind you future all light human for world time work story not simple story by by it it token if data reason on from world simple reason they will data story time idea this if model to work idea it be change mind value this will future not time time light story value space the you light it life clear to future it all you one if we clear a and model mind for story be one light mind we text and light work we reason from if human not system are on or will system space work change simple value if as life is by world not or and you of work for life you life human data are in idea world are system it not life data with story as clear as all from truth you future they time it the text text from text clear work not this are to or one can life model of light model they time simple change to be or truth we to space work one reason that you data clear they value a is value token world a are truth it that in system can text as story life you they we are story light not one a change mind if not and all future a we if on change from space for by if as the a from model simple reason truth mind with all data they space be by reason change idea a system as not not can mind time human model work data truth not are world value human on value human is by is model not data simple with future model system in model we for they on of value token to to not future truth by be or token as and it or model be that and token not human and all world in model work simple idea in in system be one they value time as with life reason is human space that the light token it if in or model one life this world light the as be mind is space world if model is data value human that with work of future text work are it system a world and life on you they to the we and future truth will is by to light are space in from will text from truth we human one human model that it data clear reason simple the with to you can will work clear from work space as reason life work the as time or truth the be they of human that by all time idea token the you clear it model data simple future truth it we to one it be this human are will for or we token life to with human of can mind not is of future and to with space will future the be simple are the idea light text text is as we all human truth model by life will light from be you is a not can future reason with space not by token by human from by light idea simple a can space value not token not this life this it the for it we will one system space on can the by reason idea if and will are change story you time the all mind they text value reason we the idea they from work that life to the future world time time light model value with data for the we and time token from for that not idea of story by a be a or text token mind system future world this story system you is by if the from change model human data this this work is simple system if for token on we human that they on space life for space token by time that and it all you work from one and life that if mind all by one value in as as value change model can by change from clear on value they and this mind model are the mind is that you on change reason not can be one light text reason future reason life work in system we data human text will not reason mind value space as and future on human you as that simple idea value world will future can space on reason one be time model all will will in change can future with light system can system all on work one space are future this model value they that it for truth value story system a of model by future the or that and life future that clear data work be that human the is you can world work light for model that that you that clear truth value space system is to not they token and world time value from is it token as is simple can on this world time of it to we or be a future will light are future light all is space for if the you by be by clear are are as of as light change text change token change that it text simple be text they for we one to can human text to not space value future reason future not time data light of human is world model idea we are all system a you space truth they light not can story mind from a future and truth simple model if be with they truth model be human if life one mind a if truth time we it value space will are time on model life with that we we future to as truth text be if with simple to human reason the life data change change and world to with data for space and token mind reason future they reason value not one you we mind by on a will it all token one it a all reason they change space are and text change work that on life if in a they for of we it light light value space change model in one idea be a token you human if from text in space as to time life with data be model in the story simple space you can light that that idea time reason life are time mind story work are you future be work idea with reason if one will are mind of be or one and token if mind space they to of this a change reason are will model of human system life they that you text as value story simple simple text be be time human idea will of from in for one by mind reason story data can this data value space human text or as this the be story they world they one we is not idea this change human you life work system change it on light will human it world value with one if with they change it model on work this world mind story idea simple human of or not and on life data it simple or from they if be and as one is light space you mind story value you mind for that model clear you mind one as model that we life model not it and the reason will from clear it truth that as in or text a you simple world text one model reason if you future you this of in system in with is data token future this as future it change light text change we for future value and future by clear if a can in data are space change on mind token a life life can mind text they a text you change it to this if is on from it time of clear that can and or or the that a idea of data mind of model token if by or change space is of token value not of one or to on as mind that time it as all work with one work they and clear on by reason model world of if of token one data system reason change or world one world change simple they mind token be space from we life the clear be this from truth truth story space are one we if text a to human by story for by truth by the we world of change work a reason time one we to one work for space human world data idea we system token as the on or data reason be that as is light in all system are token work is are will clear the from as token on model if simple we data and of from human not are model on be to data life text we in light they a space simple time of data world world they truth be of if time not is system in simple data future by one value by to with to truth model story with model of of from and from mind one mind not human to truth world future the is space story space of system can or you if is idea a of it simple time time change with token model one life from to by if a if we time the a is mind reason idea with model simple for change system clear mind the data all they space to truth you mind data story we text simple mind we light it this system truth a can future model all life not for be the as will on all and future token idea future one human space on by in in idea be are it is not that work simple reason or it are this in data story story future of from all future as system be life truth model time by time not if reason story reason and data text is change text on you time this can be are value simple model on value space truth by they clear future life on story truth is all as light story we and idea that we and change human all this clear to on data story value can of token model be clear is human the not it time one data value human or story from story system a if be you simple is if data clear it we for from in are idea truth in world this be one change as change they that reason story mind from for and as as\nBased on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.",
+          "output_content": "**The Luminous Thread: Existence, Consciousness, and the Human Place**\n\nThe words provided, though scattered and repetitive, form a dense tapestry of concepts that, when woven together, suggest a profound meditation on the nature of reality. At the heart of this linguistic constellation are the ideas of *truth*, *light*, *mind*, and *change*. From this chaotic array, a coherent philosophical argument emerges regarding existence, consciousness, and humanity’s role in the cosmos.\n\nExistence, in this framework, is not a static state but a dynamic process of *change*. The repeated emphasis on \"change\" and \"",
+          "reasoning_content": "",
+          "usage_info": {
+            "prompt_tokens": 4096,
+            "total_tokens": 4224,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "missed_tokens": 4096
+            }
+          },
+          "server_timing_used": false,
+          "server_prefill_time_ms": null,
+          "server_decode_time_ms": null,
+          "prefill_time_source": "client_latency_adjusted",
+          "output_time_source": "client",
+          "network_latency_ms": 42.14,
+          "network_latency_sample_count": 7,
+          "client_prefill_time_ms": 2847.45,
+          "client_decode_time_ms": 3515.98,
+          "client_total_time_ms": 6363.43,
+          "client_has_phase_boundary": true,
+          "has_streaming_content": true,
+          "chunk_count": 130,
+          "start_timestamp": 537960.6876271,
+          "first_chunk_timestamp": 537960.7852404,
+          "first_token_timestamp": 537963.5772155,
+          "boundary_timestamp": 537963.5772155,
+          "boundary_source": "first_content_token",
+          "end_timestamp": 537967.0931931,
+          "token_source": "API",
+          "token_warnings": [],
+          "token_timestamps": [
+            {
+              "timestamp": 537963.5772155,
+              "time_from_start_ms": 2889.5883999066427,
+              "is_reasoning": false,
+              "itl_ms": null
+            },
+            {
+              "timestamp": 537963.6158792,
+              "time_from_start_ms": 2928.2521000131965,
+              "is_reasoning": false,
+              "itl_ms": 38.66370010655373
+            },
+            {
+              "timestamp": 537963.6429834,
+              "time_from_start_ms": 2955.356299993582,
+              "is_reasoning": false,
+              "itl_ms": 27.1041999803856
+            },
+            {
+              "timestamp": 537963.6708128,
+              "time_from_start_ms": 2983.185699908063,
+              "is_reasoning": false,
+              "itl_ms": 27.829399914480746
+            },
+            {
+              "timestamp": 537963.6983334,
+              "time_from_start_ms": 3010.7062999159098,
+              "is_reasoning": false,
+              "itl_ms": 27.52060000784695
+            },
+            {
+              "timestamp": 537963.7257281,
+              "time_from_start_ms": 3038.10100001283,
+              "is_reasoning": false,
+              "itl_ms": 27.394700096920133
+            },
+            {
+              "timestamp": 537963.7538015,
+              "time_from_start_ms": 3066.174399922602,
+              "is_reasoning": false,
+              "itl_ms": 28.07339990977198
+            },
+            {
+              "timestamp": 537963.7807371,
+              "time_from_start_ms": 3093.1100000161678,
+              "is_reasoning": false,
+              "itl_ms": 26.93560009356588
+            },
+            {
+              "timestamp": 537963.8082215,
+              "time_from_start_ms": 3120.5943999812007,
+              "is_reasoning": false,
+              "itl_ms": 27.484399965032935
+            },
+            {
+              "timestamp": 537963.8358497,
+              "time_from_start_ms": 3148.22259999346,
+              "is_reasoning": false,
+              "itl_ms": 27.628200012259185
+            },
+            {
+              "timestamp": 537963.8640288,
+              "time_from_start_ms": 3176.401700009592,
+              "is_reasoning": false,
+              "itl_ms": 28.179100016131997
+            },
+            {
+              "timestamp": 537963.891432,
+              "time_from_start_ms": 3203.8048999384046,
+              "is_reasoning": false,
+              "itl_ms": 27.403199928812683
+            },
+            {
+              "timestamp": 537963.9193365,
+              "time_from_start_ms": 3231.7093999590725,
+              "is_reasoning": false,
+              "itl_ms": 27.90450002066791
+            },
+            {
+              "timestamp": 537963.946528,
+              "time_from_start_ms": 3258.9008999057114,
+              "is_reasoning": false,
+              "itl_ms": 27.19149994663894
+            },
+            {
+              "timestamp": 537963.9738189,
+              "time_from_start_ms": 3286.191799910739,
+              "is_reasoning": false,
+              "itl_ms": 27.290900005027652
+            },
+            {
+              "timestamp": 537964.0016745,
+              "time_from_start_ms": 3314.047399908304,
+              "is_reasoning": false,
+              "itl_ms": 27.85559999756515
+            },
+            {
+              "timestamp": 537964.0290243,
+              "time_from_start_ms": 3341.3972000125796,
+              "is_reasoning": false,
+              "itl_ms": 27.349800104275346
+            },
+            {
+              "timestamp": 537964.0569662,
+              "time_from_start_ms": 3369.3390999687836,
+              "is_reasoning": false,
+              "itl_ms": 27.941899956203997
+            },
+            {
+              "timestamp": 537964.0846613,
+              "time_from_start_ms": 3397.0341999083757,
+              "is_reasoning": false,
+              "itl_ms": 27.695099939592183
+            },
+            {
+              "timestamp": 537964.1122059,
+              "time_from_start_ms": 3424.578799982555,
+              "is_reasoning": false,
+              "itl_ms": 27.54460007417947
+            },
+            {
+              "timestamp": 537964.1404079,
+              "time_from_start_ms": 3452.7807999402285,
+              "is_reasoning": false,
+              "itl_ms": 28.20199995767325
+            },
+            {
+              "timestamp": 537964.1675118,
+              "time_from_start_ms": 3479.8846999183297,
+              "is_reasoning": false,
+              "itl_ms": 27.103899978101254
+            },
+            {
+              "timestamp": 537964.1949887,
+              "time_from_start_ms": 3507.3615999426693,
+              "is_reasoning": false,
+              "itl_ms": 27.476900024339557
+            },
+            {
+              "timestamp": 537964.2226731,
+              "time_from_start_ms": 3535.0459999172017,
+              "is_reasoning": false,
+              "itl_ms": 27.684399974532425
+            },
+            {
+              "timestamp": 537964.2501881,
+              "time_from_start_ms": 3562.560999998823,
+              "is_reasoning": false,
+              "itl_ms": 27.51500008162111
+            },
+            {
+              "timestamp": 537964.2780095,
+              "time_from_start_ms": 3590.382399968803,
+              "is_reasoning": false,
+              "itl_ms": 27.82139996998012
+            },
+            {
+              "timestamp": 537964.3055942,
+              "time_from_start_ms": 3617.9670999990776,
+              "is_reasoning": false,
+              "itl_ms": 27.58470003027469
+            },
+            {
+              "timestamp": 537964.3334811,
+              "time_from_start_ms": 3645.8540000021458,
+              "is_reasoning": false,
+              "itl_ms": 27.88690000306815
+            },
+            {
+              "timestamp": 537964.3608416,
+              "time_from_start_ms": 3673.2144999550655,
+              "is_reasoning": false,
+              "itl_ms": 27.36049995291978
+            },
+            {
+              "timestamp": 537964.3886147,
+              "time_from_start_ms": 3700.9875999065116,
+              "is_reasoning": false,
+              "itl_ms": 27.773099951446056
+            },
+            {
+              "timestamp": 537964.4156511,
+              "time_from_start_ms": 3728.023999952711,
+              "is_reasoning": false,
+              "itl_ms": 27.03640004619956
+            },
+            {
+              "timestamp": 537964.4434731,
+              "time_from_start_ms": 3755.84599992726,
+              "is_reasoning": false,
+              "itl_ms": 27.821999974548817
+            },
+            {
+              "timestamp": 537964.4716656,
+              "time_from_start_ms": 3784.038499929011,
+              "is_reasoning": false,
+              "itl_ms": 28.192500001750886
+            },
+            {
+              "timestamp": 537964.4986351,
+              "time_from_start_ms": 3811.007999931462,
+              "is_reasoning": false,
+              "itl_ms": 26.96950000245124
+            },
+            {
+              "timestamp": 537964.5266782,
+              "time_from_start_ms": 3839.051099959761,
+              "is_reasoning": false,
+              "itl_ms": 28.043100028298795
+            },
+            {
+              "timestamp": 537964.5540344,
+              "time_from_start_ms": 3866.4072999963537,
+              "is_reasoning": false,
+              "itl_ms": 27.35620003659278
+            },
+            {
+              "timestamp": 537964.5814037,
+              "time_from_start_ms": 3893.776600016281,
+              "is_reasoning": false,
+              "itl_ms": 27.369300019927323
+            },
+            {
+              "timestamp": 537964.6092958,
+              "time_from_start_ms": 3921.668699942529,
+              "is_reasoning": false,
+              "itl_ms": 27.892099926248193
+            },
+            {
+              "timestamp": 537964.6368946,
+              "time_from_start_ms": 3949.267499963753,
+              "is_reasoning": false,
+              "itl_ms": 27.598800021223724
+            },
+            {
+              "timestamp": 537964.6646305,
+              "time_from_start_ms": 3977.003399981186,
+              "is_reasoning": false,
+              "itl_ms": 27.73590001743287
+            },
+            {
+              "timestamp": 537964.6925888,
+              "time_from_start_ms": 4004.961699945852,
+              "is_reasoning": false,
+              "itl_ms": 27.958299964666367
+            },
+            {
+              "timestamp": 537964.7203921,
+              "time_from_start_ms": 4032.7650000108406,
+              "is_reasoning": false,
+              "itl_ms": 27.803300064988434
+            },
+            {
+              "timestamp": 537964.7480144,
+              "time_from_start_ms": 4060.3872999781743,
+              "is_reasoning": false,
+              "itl_ms": 27.622299967333674
+            },
+            {
+              "timestamp": 537964.7753535,
+              "time_from_start_ms": 4087.7264000009745,
+              "is_reasoning": false,
+              "itl_ms": 27.339100022800267
+            },
+            {
+              "timestamp": 537964.8028939,
+              "time_from_start_ms": 4115.266799926758,
+              "is_reasoning": false,
+              "itl_ms": 27.540399925783277
+            },
+            {
+              "timestamp": 537964.8302457,
+              "time_from_start_ms": 4142.618599929847,
+              "is_reasoning": false,
+              "itl_ms": 27.35180000308901
+            },
+            {
+              "timestamp": 537964.8577791,
+              "time_from_start_ms": 4170.151999918744,
+              "is_reasoning": false,
+              "itl_ms": 27.533399988897145
+            },
+            {
+              "timestamp": 537964.8852418,
+              "time_from_start_ms": 4197.614699951373,
+              "is_reasoning": false,
+              "itl_ms": 27.462700032629073
+            },
+            {
+              "timestamp": 537964.9167777,
+              "time_from_start_ms": 4229.150599916466,
+              "is_reasoning": false,
+              "itl_ms": 31.53589996509254
+            },
+            {
+              "timestamp": 537964.9408491,
+              "time_from_start_ms": 4253.221999970265,
+              "is_reasoning": false,
+              "itl_ms": 24.071400053799152
+            },
+            {
+              "timestamp": 537964.9681567,
+              "time_from_start_ms": 4280.529599986039,
+              "is_reasoning": false,
+              "itl_ms": 27.30760001577437
+            },
+            {
+              "timestamp": 537964.9957477,
+              "time_from_start_ms": 4308.12059994787,
+              "is_reasoning": false,
+              "itl_ms": 27.590999961830676
+            },
+            {
+              "timestamp": 537965.0236699,
+              "time_from_start_ms": 4336.042799986899,
+              "is_reasoning": false,
+              "itl_ms": 27.92220003902912
+            },
+            {
+              "timestamp": 537965.0510242,
+              "time_from_start_ms": 4363.397100009024,
+              "is_reasoning": false,
+              "itl_ms": 27.354300022125244
+            },
+            {
+              "timestamp": 537965.0784093,
+              "time_from_start_ms": 4390.78219991643,
+              "is_reasoning": false,
+              "itl_ms": 27.385099907405674
+            },
+            {
+              "timestamp": 537965.1060082,
+              "time_from_start_ms": 4418.381099938415,
+              "is_reasoning": false,
+              "itl_ms": 27.598900021985173
+            },
+            {
+              "timestamp": 537965.13339,
+              "time_from_start_ms": 4445.762899937108,
+              "is_reasoning": false,
+              "itl_ms": 27.381799998693168
+            },
+            {
+              "timestamp": 537965.1611535,
+              "time_from_start_ms": 4473.52639993187,
+              "is_reasoning": false,
+              "itl_ms": 27.763499994762242
+            },
+            {
+              "timestamp": 537965.1885437,
+              "time_from_start_ms": 4500.916599994525,
+              "is_reasoning": false,
+              "itl_ms": 27.390200062654912
+            },
+            {
+              "timestamp": 537965.2168398,
+              "time_from_start_ms": 4529.2126999702305,
+              "is_reasoning": false,
+              "itl_ms": 28.296099975705147
+            },
+            {
+              "timestamp": 537965.2443022,
+              "time_from_start_ms": 4556.675100000575,
+              "is_reasoning": false,
+              "itl_ms": 27.462400030344725
+            },
+            {
+              "timestamp": 537965.2716982,
+              "time_from_start_ms": 4584.071099990979,
+              "is_reasoning": false,
+              "itl_ms": 27.395999990403652
+            },
+            {
+              "timestamp": 537965.2993645,
+              "time_from_start_ms": 4611.737399944104,
+              "is_reasoning": false,
+              "itl_ms": 27.666299953125417
+            },
+            {
+              "timestamp": 537965.3272939,
+              "time_from_start_ms": 4639.666799921542,
+              "is_reasoning": false,
+              "itl_ms": 27.929399977438152
+            },
+            {
+              "timestamp": 537965.3545241,
+              "time_from_start_ms": 4666.896999930032,
+              "is_reasoning": false,
+              "itl_ms": 27.23020000848919
+            },
+            {
+              "timestamp": 537965.3820844,
+              "time_from_start_ms": 4694.457300007343,
+              "is_reasoning": false,
+              "itl_ms": 27.560300077311695
+            },
+            {
+              "timestamp": 537965.4098772,
+              "time_from_start_ms": 4722.25009999238,
+              "is_reasoning": false,
+              "itl_ms": 27.792799985036254
+            },
+            {
+              "timestamp": 537965.4373142,
+              "time_from_start_ms": 4749.6870999457315,
+              "is_reasoning": false,
+              "itl_ms": 27.436999953351915
+            },
+            {
+              "timestamp": 537965.4650776,
+              "time_from_start_ms": 4777.450499939732,
+              "is_reasoning": false,
+              "itl_ms": 27.763399994000793
+            },
+            {
+              "timestamp": 537965.4922187,
+              "time_from_start_ms": 4804.591599968262,
+              "is_reasoning": false,
+              "itl_ms": 27.141100028529763
+            },
+            {
+              "timestamp": 537965.520216,
+              "time_from_start_ms": 4832.588899997063,
+              "is_reasoning": false,
+              "itl_ms": 27.997300028800964
+            },
+            {
+              "timestamp": 537965.547882,
+              "time_from_start_ms": 4860.254899947904,
+              "is_reasoning": false,
+              "itl_ms": 27.66599995084107
+            },
+            {
+              "timestamp": 537965.5754012,
+              "time_from_start_ms": 4887.774099945091,
+              "is_reasoning": false,
+              "itl_ms": 27.51919999718666
+            },
+            {
+              "timestamp": 537965.6035679,
+              "time_from_start_ms": 4915.940799983218,
+              "is_reasoning": false,
+              "itl_ms": 28.1667000381276
+            },
+            {
+              "timestamp": 537965.6308721,
+              "time_from_start_ms": 4943.244999973103,
+              "is_reasoning": false,
+              "itl_ms": 27.304199989885092
+            },
+            {
+              "timestamp": 537965.6583228,
+              "time_from_start_ms": 4970.695699914359,
+              "is_reasoning": false,
+              "itl_ms": 27.450699941255152
+            },
+            {
+              "timestamp": 537965.6858726,
+              "time_from_start_ms": 4998.245499911718,
+              "is_reasoning": false,
+              "itl_ms": 27.549799997359514
+            },
+            {
+              "timestamp": 537965.7131672,
+              "time_from_start_ms": 5025.540099944919,
+              "is_reasoning": false,
+              "itl_ms": 27.294600033201277
+            },
+            {
+              "timestamp": 537965.7410525,
+              "time_from_start_ms": 5053.425399935804,
+              "is_reasoning": false,
+              "itl_ms": 27.88529999088496
+            },
+            {
+              "timestamp": 537965.7686431,
+              "time_from_start_ms": 5081.0160000110045,
+              "is_reasoning": false,
+              "itl_ms": 27.5906000752002
+            },
+            {
+              "timestamp": 537965.7962114,
+              "time_from_start_ms": 5108.5842999164015,
+              "is_reasoning": false,
+              "itl_ms": 27.568299905396998
+            },
+            {
+              "timestamp": 537965.8238935,
+              "time_from_start_ms": 5136.266399989836,
+              "is_reasoning": false,
+              "itl_ms": 27.682100073434412
+            },
+            {
+              "timestamp": 537965.8517634,
+              "time_from_start_ms": 5164.136299979873,
+              "is_reasoning": false,
+              "itl_ms": 27.869899990037084
+            },
+            {
+              "timestamp": 537965.8794708,
+              "time_from_start_ms": 5191.843700013123,
+              "is_reasoning": false,
+              "itl_ms": 27.70740003325045
+            },
+            {
+              "timestamp": 537965.9072589,
+              "time_from_start_ms": 5219.631799962372,
+              "is_reasoning": false,
+              "itl_ms": 27.788099949248135
+            },
+            {
+              "timestamp": 537965.9347722,
+              "time_from_start_ms": 5247.145099914633,
+              "is_reasoning": false,
+              "itl_ms": 27.51329995226115
+            },
+            {
+              "timestamp": 537965.9628203,
+              "time_from_start_ms": 5275.193199981004,
+              "is_reasoning": false,
+              "itl_ms": 28.048100066371262
+            },
+            {
+              "timestamp": 537965.990251,
+              "time_from_start_ms": 5302.6239000028,
+              "is_reasoning": false,
+              "itl_ms": 27.43070002179593
+            },
+            {
+              "timestamp": 537966.0180211,
+              "time_from_start_ms": 5330.3939999314025,
+              "is_reasoning": false,
+              "itl_ms": 27.770099928602576
+            },
+            {
+              "timestamp": 537966.0460051,
+              "time_from_start_ms": 5358.377999975346,
+              "is_reasoning": false,
+              "itl_ms": 27.984000043943524
+            },
+            {
+              "timestamp": 537966.0734267,
+              "time_from_start_ms": 5385.79959992785,
+              "is_reasoning": false,
+              "itl_ms": 27.42159995250404
+            },
+            {
+              "timestamp": 537966.1009006,
+              "time_from_start_ms": 5413.273499929346,
+              "is_reasoning": false,
+              "itl_ms": 27.473900001496077
+            },
+            {
+              "timestamp": 537966.1287863,
+              "time_from_start_ms": 5441.159199923277,
+              "is_reasoning": false,
+              "itl_ms": 27.885699993930757
+            },
+            {
+              "timestamp": 537966.1563661,
+              "time_from_start_ms": 5468.738999916241,
+              "is_reasoning": false,
+              "itl_ms": 27.57979999296367
+            },
+            {
+              "timestamp": 537966.1839393,
+              "time_from_start_ms": 5496.312199975364,
+              "is_reasoning": false,
+              "itl_ms": 27.573200059123337
+            },
+            {
+              "timestamp": 537966.2114382,
+              "time_from_start_ms": 5523.811099934392,
+              "is_reasoning": false,
+              "itl_ms": 27.498899959027767
+            },
+            {
+              "timestamp": 537966.2390541,
+              "time_from_start_ms": 5551.426999969408,
+              "is_reasoning": false,
+              "itl_ms": 27.61590003501624
+            },
+            {
+              "timestamp": 537966.2665239,
+              "time_from_start_ms": 5578.896799939685,
+              "is_reasoning": false,
+              "itl_ms": 27.469799970276654
+            },
+            {
+              "timestamp": 537966.2943788,
+              "time_from_start_ms": 5606.75169993192,
+              "is_reasoning": false,
+              "itl_ms": 27.854899992235005
+            },
+            {
+              "timestamp": 537966.3216306,
+              "time_from_start_ms": 5634.0034999884665,
+              "is_reasoning": false,
+              "itl_ms": 27.251800056546926
+            },
+            {
+              "timestamp": 537966.3491647,
+              "time_from_start_ms": 5661.537599982694,
+              "is_reasoning": false,
+              "itl_ms": 27.53409999422729
+            },
+            {
+              "timestamp": 537966.3767084,
+              "time_from_start_ms": 5689.081299933605,
+              "is_reasoning": false,
+              "itl_ms": 27.543699950911105
+            },
+            {
+              "timestamp": 537966.4044207,
+              "time_from_start_ms": 5716.793600004166,
+              "is_reasoning": false,
+              "itl_ms": 27.71230007056147
+            },
+            {
+              "timestamp": 537966.4321454,
+              "time_from_start_ms": 5744.518299936317,
+              "is_reasoning": false,
+              "itl_ms": 27.724699932150543
+            },
+            {
+              "timestamp": 537966.4595753,
+              "time_from_start_ms": 5771.948199952021,
+              "is_reasoning": false,
+              "itl_ms": 27.429900015704334
+            },
+            {
+              "timestamp": 537966.4872003,
+              "time_from_start_ms": 5799.573199939914,
+              "is_reasoning": false,
+              "itl_ms": 27.624999987892807
+            },
+            {
+              "timestamp": 537966.5149636,
+              "time_from_start_ms": 5827.336499933153,
+              "is_reasoning": false,
+              "itl_ms": 27.763299993239343
+            },
+            {
+              "timestamp": 537966.5426392,
+              "time_from_start_ms": 5855.012099957094,
+              "is_reasoning": false,
+              "itl_ms": 27.675600023940206
+            },
+            {
+              "timestamp": 537966.5703408,
+              "time_from_start_ms": 5882.71369994618,
+              "is_reasoning": false,
+              "itl_ms": 27.70159998908639
+            },
+            {
+              "timestamp": 537966.5979119,
+              "time_from_start_ms": 5910.284799989313,
+              "is_reasoning": false,
+              "itl_ms": 27.5711000431329
+            },
+            {
+              "timestamp": 537966.6256221,
+              "time_from_start_ms": 5937.994999927469,
+              "is_reasoning": false,
+              "itl_ms": 27.71019993815571
+            },
+            {
+              "timestamp": 537966.6532145,
+              "time_from_start_ms": 5965.587400016375,
+              "is_reasoning": false,
+              "itl_ms": 27.592400088906288
+            },
+            {
+              "timestamp": 537966.6806231,
+              "time_from_start_ms": 5992.995999986306,
+              "is_reasoning": false,
+              "itl_ms": 27.408599969930947
+            },
+            {
+              "timestamp": 537966.708355,
+              "time_from_start_ms": 6020.727899973281,
+              "is_reasoning": false,
+              "itl_ms": 27.731899986974895
+            },
+            {
+              "timestamp": 537966.7359704,
+              "time_from_start_ms": 6048.34330000449,
+              "is_reasoning": false,
+              "itl_ms": 27.615400031208992
+            },
+            {
+              "timestamp": 537966.7636233,
+              "time_from_start_ms": 6075.996199971996,
+              "is_reasoning": false,
+              "itl_ms": 27.652899967506528
+            },
+            {
+              "timestamp": 537966.7916868,
+              "time_from_start_ms": 6104.0596999228,
+              "is_reasoning": false,
+              "itl_ms": 28.063499950803816
+            },
+            {
+              "timestamp": 537966.8196741,
+              "time_from_start_ms": 6132.046999991871,
+              "is_reasoning": false,
+              "itl_ms": 27.987300069071352
+            },
+            {
+              "timestamp": 537966.847362,
+              "time_from_start_ms": 6159.734899993055,
+              "is_reasoning": false,
+              "itl_ms": 27.687900001183152
+            },
+            {
+              "timestamp": 537966.8751983,
+              "time_from_start_ms": 6187.571199960075,
+              "is_reasoning": false,
+              "itl_ms": 27.83629996702075
+            },
+            {
+              "timestamp": 537966.9030725,
+              "time_from_start_ms": 6215.445399982855,
+              "is_reasoning": false,
+              "itl_ms": 27.874200022779405
+            },
+            {
+              "timestamp": 537966.9306405,
+              "time_from_start_ms": 6243.013400002383,
+              "is_reasoning": false,
+              "itl_ms": 27.56800001952797
+            },
+            {
+              "timestamp": 537966.9587219,
+              "time_from_start_ms": 6271.094799973071,
+              "is_reasoning": false,
+              "itl_ms": 28.081399970687926
+            },
+            {
+              "timestamp": 537966.9858787,
+              "time_from_start_ms": 6298.251600004733,
+              "is_reasoning": false,
+              "itl_ms": 27.156800031661987
+            },
+            {
+              "timestamp": 537967.0137259,
+              "time_from_start_ms": 6326.098799938336,
+              "is_reasoning": false,
+              "itl_ms": 27.847199933603406
+            },
+            {
+              "timestamp": 537967.0416322,
+              "time_from_start_ms": 6354.00509997271,
+              "is_reasoning": false,
+              "itl_ms": 27.906300034374
+            },
+            {
+              "timestamp": 537967.0693588,
+              "time_from_start_ms": 6381.731699919328,
+              "is_reasoning": false,
+              "itl_ms": 27.72659994661808
+            },
+            {
+              "timestamp": 537967.0862697,
+              "time_from_start_ms": 6398.642599931918,
+              "is_reasoning": false,
+              "itl_ms": 16.91090001258999
+            }
+          ],
+          "itl_stats": {
+            "mean": 27.63,
+            "min": 16.91,
+            "max": 38.66,
+            "std": 1.47,
+            "count": 127
+          }
+        }
+      ],
+      "status": "成功"
+    }
+  ]
+}

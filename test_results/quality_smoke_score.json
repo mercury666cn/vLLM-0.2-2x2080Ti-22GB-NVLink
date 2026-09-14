@@ -1,0 +1,190 @@
+{
+  "model_a": {
+    "path": "test_results\\quality_smoke_b.jsonl",
+    "total": 6,
+    "api_errors": 0,
+    "category_scores": {
+      "chinese_knowledge": 1.0,
+      "code": 0.0,
+      "instruction_following": 0.0,
+      "long_context": 1.0,
+      "multiturn_stability": 0.0,
+      "reasoning": 0.0
+    },
+    "overall_equal_weight": 0.3333333333333333,
+    "details": [
+      {
+        "case_id": "ceval:computer_network:16",
+        "task": "ceval",
+        "category": "chinese_knowledge",
+        "score": 1.0,
+        "parsed": "A",
+        "status": "ok",
+        "elapsed_seconds": 1.0372
+      },
+      {
+        "case_id": "gsm8k:0",
+        "task": "gsm8k",
+        "category": "reasoning",
+        "score": 0.0,
+        "parsed": "89",
+        "status": "ok",
+        "elapsed_seconds": 3.4736
+      },
+      {
+        "case_id": "humaneval:HumanEval/0",
+        "task": "humaneval",
+        "category": "code",
+        "score": 0.0,
+        "parsed": "pass=False",
+        "status": "ok",
+        "elapsed_seconds": 10.9444
+      },
+      {
+        "case_id": "ifeval:2398",
+        "task": "ifeval",
+        "category": "instruction_following",
+        "score": 0.0,
+        "parsed": "instruction_accuracy=0.0000",
+        "status": "ok",
+        "elapsed_seconds": 7.0772
+      },
+      {
+        "case_id": "longbench_multifieldqa_zh:23c6a5601028da5a35e888eb9dbf34d8858f101e8cb0e7d7",
+        "task": "longbench_multifieldqa_zh",
+        "category": "long_context",
+        "score": 1.0,
+        "parsed": "f1=1.0000",
+        "status": "ok",
+        "elapsed_seconds": 2.3735
+      },
+      {
+        "case_id": "multiturn:0",
+        "task": "multiturn",
+        "category": "multiturn_stability",
+        "score": 0.0,
+        "parsed": "{\"name\": \"项目-00\", \"owner\": \"A\", \"预算\": 100}",
+        "status": "ok",
+        "elapsed_seconds": 1.4362
+      }
+    ],
+    "bootstrap_95_ci": [
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  "model_b": {
+    "path": "test_results\\quality_smoke_b.jsonl",
+    "total": 6,
+    "api_errors": 0,
+    "category_scores": {
+      "chinese_knowledge": 1.0,
+      "code": 0.0,
+      "instruction_following": 0.0,
+      "long_context": 1.0,
+      "multiturn_stability": 0.0,
+      "reasoning": 0.0
+    },
+    "overall_equal_weight": 0.3333333333333333,
+    "details": [
+      {
+        "case_id": "ceval:computer_network:16",
+        "task": "ceval",
+        "category": "chinese_knowledge",
+        "score": 1.0,
+        "parsed": "A",
+        "status": "ok",
+        "elapsed_seconds": 1.0372
+      },
+      {
+        "case_id": "gsm8k:0",
+        "task": "gsm8k",
+        "category": "reasoning",
+        "score": 0.0,
+        "parsed": "89",
+        "status": "ok",
+        "elapsed_seconds": 3.4736
+      },
+      {
+        "case_id": "humaneval:HumanEval/0",
+        "task": "humaneval",
+        "category": "code",
+        "score": 0.0,
+        "parsed": "pass=False",
+        "status": "ok",
+        "elapsed_seconds": 10.9444
+      },
+      {
+        "case_id": "ifeval:2398",
+        "task": "ifeval",
+        "category": "instruction_following",
+        "score": 0.0,
+        "parsed": "instruction_accuracy=0.0000",
+        "status": "ok",
+        "elapsed_seconds": 7.0772
+      },
+      {
+        "case_id": "longbench_multifieldqa_zh:23c6a5601028da5a35e888eb9dbf34d8858f101e8cb0e7d7",
+        "task": "longbench_multifieldqa_zh",
+        "category": "long_context",
+        "score": 1.0,
+        "parsed": "f1=1.0000",
+        "status": "ok",
+        "elapsed_seconds": 2.3735
+      },
+      {
+        "case_id": "multiturn:0",
+        "task": "multiturn",
+        "category": "multiturn_stability",
+        "score": 0.0,
+        "parsed": "{\"name\": \"项目-00\", \"owner\": \"A\", \"预算\": 100}",
+        "status": "ok",
+        "elapsed_seconds": 1.4362
+      }
+    ],
+    "bootstrap_95_ci": [
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  "comparison": {
+    "chinese_knowledge": {
+      "model_a": 1.0,
+      "model_b": 1.0,
+      "delta_percentage_points": 0.0
+    },
+    "code": {
+      "model_a": 0.0,
+      "model_b": 0.0,
+      "delta_percentage_points": 0.0
+    },
+    "instruction_following": {
+      "model_a": 0.0,
+      "model_b": 0.0,
+      "delta_percentage_points": 0.0
+    },
+    "long_context": {
+      "model_a": 1.0,
+      "model_b": 1.0,
+      "delta_percentage_points": 0.0
+    },
+    "multiturn_stability": {
+      "model_a": 0.0,
+      "model_b": 0.0,
+      "delta_percentage_points": 0.0
+    },
+    "reasoning": {
+      "model_a": 0.0,
+      "model_b": 0.0,
+      "delta_percentage_points": 0.0
+    }
+  },
+  "gate": {
+    "suite_complete": false,
+    "no_api_errors": true,
+    "overall_ratio": 1.0,
+    "overall_ratio_pass": true,
+    "category_delta_pass": true,
+    "production_pass": false
+  }
+}

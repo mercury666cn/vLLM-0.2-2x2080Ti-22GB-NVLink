@@ -1,0 +1,7 @@
+This repository is a deployment note overlay.
+
+- FastLLM upstream: https://github.com/ztxz16/fastllm (Apache-2.0)
+- vLLM 0.2 upstream: https://github.com/weicj/vLLM-2080Ti-Definitive (Apache-2.0)
+
+Measurement notes and host scripts in this overlay are provided as-is for
+reproducing the dual RTX 2080 Ti 22GB + NVLink Docker setup.

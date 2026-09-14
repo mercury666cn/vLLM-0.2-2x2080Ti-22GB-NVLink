@@ -1,0 +1,136 @@
+{
+  "ruler": {
+    "name": "fixed English chat 4096/128",
+    "prompt_tokens": 4096,
+    "completion_tokens": 128,
+    "temperature": 0.0,
+    "mtp_tokens": 3,
+    "prefix_cache": false,
+    "runs": 3,
+    "aggregation": "median"
+  },
+  "performance": [
+    {
+      "runtime": "v0.1.17",
+      "model": "FP8",
+      "mode": "MTP3",
+      "prefill_tps": 1680.57,
+      "decode_tps": 48.41,
+      "ttft_s": 2.4373
+    },
+    {
+      "runtime": "v0.1.17",
+      "model": "NVFP4",
+      "mode": "MTP3",
+      "status": "unsupported",
+      "error": "lm_head.weight_scale is not recognized by Qwen3_5ForCausalLM"
+    },
+    {
+      "runtime": "v0.2.1-pre3",
+      "model": "FP8",
+      "mode": "MTP3",
+      "prefill_tps": 1344.61,
+      "decode_tps": 52.45,
+      "ttft_s": 3.0462
+    },
+    {
+      "runtime": "v0.2.1-pre3",
+      "model": "NVFP4",
+      "mode": "MTP3",
+      "prefill_tps": 1207.49,
+      "decode_tps": 34.56,
+      "ttft_s": 3.3922
+    },
+    {
+      "runtime": "FastLLM 0.1.8.2",
+      "model": "FP8",
+      "mode": "MTP3",
+      "prefill_tps": 1356.45,
+      "decode_tps": 66.31,
+      "ttft_s": 3.0196
+    },
+    {
+      "runtime": "FastLLM 0.1.8.2",
+      "model": "NVFP4",
+      "mode": "MTP3",
+      "prefill_tps": 1535.18,
+      "decode_tps": 74.91,
+      "ttft_s": 2.6681
+    },
+    {
+      "runtime": "FastLLM 0.1.8.2",
+      "model": "FP8",
+      "mode": "DFlash7",
+      "prefill_tps": 1393.14,
+      "decode_tps": 63.31,
+      "ttft_s": 2.9401
+    }
+  ],
+  "context_validation": [
+    {
+      "runtime": "v0.1.17",
+      "model": "FP8",
+      "configured_tokens": 131072,
+      "status": "capacity_insufficient",
+      "required_kv_gib": 4.64,
+      "available_kv_gib": 3.72,
+      "estimated_max_tokens": 102400
+    },
+    {
+      "runtime": "v0.2.1-pre3",
+      "model": "FP8",
+      "configured_tokens": 131072,
+      "status": "capacity_insufficient",
+      "required_kv_gib": 4.64,
+      "available_kv_gib": 3.48,
+      "estimated_max_tokens": 95200
+    },
+    {
+      "runtime": "v0.2.1-pre3",
+      "model": "NVFP4",
+      "configured_tokens": 245760,
+      "prompt_tokens": 245600,
+      "completion_tokens": 32,
+      "status": "passed",
+      "ttft_s": 378.316,
+      "prefill_tps": 649.19,
+      "decode_tps": 89.2
+    },
+    {
+      "runtime": "FastLLM 0.1.8.2",
+      "model": "FP8",
+      "mode": "MTP3",
+      "configured_tokens": 131072,
+      "prompt_tokens": 130900,
+      "completion_tokens": 32,
+      "status": "passed",
+      "ttft_s": 167.969,
+      "prefill_tps": 779.31,
+      "decode_tps": 29.69
+    },
+    {
+      "runtime": "FastLLM 0.1.8.2",
+      "model": "NVFP4",
+      "mode": "MTP3",
+      "configured_tokens": 131072,
+      "prompt_tokens": 130900,
+      "completion_tokens": 32,
+      "status": "passed",
+      "ttft_s": 157.263,
+      "prefill_tps": 832.36,
+      "decode_tps": 28.3
+    },
+    {
+      "runtime": "FastLLM 0.1.8.2",
+      "model": "FP8",
+      "mode": "DFlash7",
+      "configured_tokens": 131072,
+      "prompt_tokens": 130900,
+      "completion_tokens": 32,
+      "status": "passed",
+      "ttft_s": 171.383,
+      "prefill_tps": 763.79,
+      "decode_tps": 43.87
+    }
+  ]
+}

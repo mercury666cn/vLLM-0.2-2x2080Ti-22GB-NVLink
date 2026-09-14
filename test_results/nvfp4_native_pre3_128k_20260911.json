@@ -1,0 +1,46 @@
+{
+  "ok": false,
+  "model": "qwen27b-nvfp4-test",
+  "max_model_len": 131072,
+  "en_median": 66.87,
+  "cn_median": 42.605000000000004,
+  "smoke": {
+    "prompt_tokens": 64,
+    "completion_tokens": 43,
+    "elapsed": 0.916,
+    "ttft": 0.229,
+    "decode_tps": 66.8
+  },
+  "en": [
+    {
+      "prompt_tokens": 60,
+      "completion_tokens": 387,
+      "elapsed": 6.008,
+      "ttft": 0.184,
+      "decode_tps": 66.95
+    },
+    {
+      "prompt_tokens": 60,
+      "completion_tokens": 387,
+      "elapsed": 6.021,
+      "ttft": 0.184,
+      "decode_tps": 66.79
+    }
+  ],
+  "cn": [
+    {
+      "prompt_tokens": 67,
+      "completion_tokens": 198,
+      "elapsed": 4.819,
+      "ttft": 0.195,
+      "decode_tps": 42.6
+    },
+    {
+      "prompt_tokens": 67,
+      "completion_tokens": 198,
+      "elapsed": 4.812,
+      "ttft": 0.188,
+      "decode_tps": 42.61
+    }
+  ]
+}

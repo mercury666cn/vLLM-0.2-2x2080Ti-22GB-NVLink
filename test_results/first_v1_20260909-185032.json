@@ -1,0 +1,1718 @@
+{
+  "ok": true,
+  "started": "2026-09-09T18:50:32",
+  "config": {
+    "api_url": "http://<LAN_IP>:8000/v1/chat/completions",
+    "model_name": "qwen27b-fp8-fp16kv-128K-mtp3-text-only-cu128",
+    "api_key": "<API_KEY>",
+    "api_type": "openai",
+    "min_length": 128,
+    "max_length": 4096,
+    "step": 128,
+    "test_lengths": [
+      128,
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "output_length": 128,
+    "concurrency": 1,
+    "timeout": 180000,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0
+  },
+  "results": [
+    {
+      "type": "result",
+      "prompt_length": 128,
+      "requested_prompt_length": 128,
+      "network_latency_ms": 39.85,
+      "network_latency_sample_count": 3,
+      "avg_prompt_tokens": 128.0,
+      "concurrency": 1,
+      "successful": 1,
+      "failed": 0,
+      "avg_prefill_speed": 800.76,
+      "avg_output_speed": 50.53,
+      "max_prefill_speed": 800.76,
+      "max_output_speed": 50.53,
+      "aggregate_prefill_time_ms": 159.85,
+      "aggregate_output_time_ms": 2533.1,
+      "aggregate_prefill_speed": 800.75,
+      "aggregate_output_speed": 50.53,
+      "client_prefill_time_ms": 159.85,
+      "client_output_time_ms": 2533.1,
+      "client_total_time_ms": 2692.95,
+      "client_has_phase_boundary": true,
+      "aggregate_prefill_source": "client_latency_adjusted",
+      "aggregate_output_source": "client",
+      "avg_ttft_ms": 199.7,
+      "source": "python_backend",
+      "record_tags": [
+        "source:python_backend",
+        "prefill_source:client_latency_adjusted"
+      ],
+      "boundary_fallback_count": 0,
+      "token_warning_count": 0,
+      "aggregate_warnings": [],
+      "concurrent_details": [
+        {
+          "success": true,
+          "prompt_length": 128,
+          "requested_prompt_length": 128,
+          "generated_prompt_length": 71,
+          "prompt_tokens": 128,
+          "estimated_prompt_tokens": 128,
+          "local_estimated_prompt_tokens": 77,
+          "local_estimated_output_tokens": 130,
+          "prompt_calibration": {
+            "source": "warmup_usage",
+            "estimated_prompt_tokens": 102,
+            "actual_prompt_tokens": 153,
+            "token_offset": 51,
+            "token_ratio": 1.5
+          },
+          "output_tokens": 128,
+          "ttft_ms": 199.7,
+          "prefill_time_ms": 159.85,
+          "prefill_speed": 800.76,
+          "output_time_ms": 2533.1,
+          "output_speed": 50.53,
+          "total_time_ms": 2732.8,
+          "prompt_text": "time to world to clear token it or world from to the all space with you not if can for are all token story time future life clear simple value world simple\nBased on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.",
+          "output_content": "",
+          "reasoning_content": "We need to respond to user: \"time to world to clear token it or world from to the all space with you not if can for are all token story time future life clear simple value world simple\nBased on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.\"\n\nUser provided a garbled set of words. Need write short philosophical essay using those words? \"Based on the words above\" likely means use the words above? Need incorporate? They are: time to world to clear token it or world from to the",
+          "usage_info": {
+            "prompt_tokens": 128,
+            "total_tokens": 256,
+            "completion_tokens": 128
+          },
+          "server_timing_used": false,
+          "server_prefill_time_ms": null,
+          "server_decode_time_ms": null,
+          "prefill_time_source": "client_latency_adjusted",
+          "output_time_source": "client",
+          "network_latency_ms": 39.85,
+          "network_latency_sample_count": 3,
+          "client_prefill_time_ms": 159.85,
+          "client_decode_time_ms": 2533.1,
+          "client_total_time_ms": 2692.94,
+          "client_has_phase_boundary": true,
+          "has_streaming_content": true,
+          "chunk_count": 45,
+          "start_timestamp": 346258.0813886,
+          "first_chunk_timestamp": 346258.2810213,
+          "first_token_timestamp": 346258.2810885,
+          "boundary_timestamp": 346258.2810885,
+          "boundary_source": "first_content_token",
+          "end_timestamp": 346260.8141846,
+          "token_source": "API",
+          "token_warnings": [],
+          "token_timestamps": [
+            {
+              "timestamp": 346258.2810885,
+              "time_from_start_ms": 199.69989999663085,
+              "is_reasoning": true,
+              "itl_ms": null
+            },
+            {
+              "timestamp": 346258.3404041,
+              "time_from_start_ms": 259.01550002163276,
+              "is_reasoning": true,
+              "itl_ms": 59.31560002500191
+            },
+            {
+              "timestamp": 346258.4008588,
+              "time_from_start_ms": 319.47019998915493,
+              "is_reasoning": true,
+              "itl_ms": 60.454699967522174
+            },
+            {
+              "timestamp": 346258.4609781,
+              "time_from_start_ms": 379.5895000221208,
+              "is_reasoning": true,
+              "itl_ms": 60.11930003296584
+            },
+            {
+              "timestamp": 346258.5212038,
+              "time_from_start_ms": 439.8151999921538,
+              "is_reasoning": true,
+              "itl_ms": 60.22569997003302
+            },
+            {
+              "timestamp": 346258.5815233,
+              "time_from_start_ms": 500.13469997793436,
+              "is_reasoning": true,
+              "itl_ms": 60.31949998578057
+            },
+            {
+              "timestamp": 346258.6415372,
+              "time_from_start_ms": 560.1486000232399,
+              "is_reasoning": true,
+              "itl_ms": 60.01390004530549
+            },
+            {
+              "timestamp": 346258.7015803,
+              "time_from_start_ms": 620.1916999998502,
+              "is_reasoning": true,
+              "itl_ms": 60.04309997661039
+            },
+            {
+              "timestamp": 346258.761686,
+              "time_from_start_ms": 680.2973999874666,
+              "is_reasoning": true,
+              "itl_ms": 60.10569998761639
+            },
+            {
+              "timestamp": 346258.8216857,
+              "time_from_start_ms": 740.297099982854,
+              "is_reasoning": true,
+              "itl_ms": 59.999699995387346
+            },
+            {
+              "timestamp": 346258.8821115,
+              "time_from_start_ms": 800.7229000213556,
+              "is_reasoning": true,
+              "itl_ms": 60.42580003850162
+            },
+            {
+              "timestamp": 346258.941967,
+              "time_from_start_ms": 860.5784000246786,
+              "is_reasoning": true,
+              "itl_ms": 59.85550000332296
+            },
+            {
+              "timestamp": 346259.0019506,
+              "time_from_start_ms": 920.5620000138879,
+              "is_reasoning": true,
+              "itl_ms": 59.983599989209324
+            },
+            {
+              "timestamp": 346259.0622788,
+              "time_from_start_ms": 980.8902000077069,
+              "is_reasoning": true,
+              "itl_ms": 60.328199993819
+            },
+            {
+              "timestamp": 346259.1223572,
+              "time_from_start_ms": 1040.9686000202782,
+              "is_reasoning": true,
+              "itl_ms": 60.078400012571365
+            },
+            {
+              "timestamp": 346259.1825573,
+              "time_from_start_ms": 1101.1687000282109,
+              "is_reasoning": true,
+              "itl_ms": 60.20010000793263
+            },
+            {
+              "timestamp": 346259.2427631,
+              "time_from_start_ms": 1161.3745000213385,
+              "is_reasoning": true,
+              "itl_ms": 60.205799993127584
+            },
+            {
+              "timestamp": 346259.3028695,
+              "time_from_start_ms": 1221.480900014285,
+              "is_reasoning": true,
+              "itl_ms": 60.106399992946535
+            },
+            {
+              "timestamp": 346259.3630069,
+              "time_from_start_ms": 1281.6183000104502,
+              "is_reasoning": true,
+              "itl_ms": 60.137399996165186
+            },
+            {
+              "timestamp": 346259.4233955,
+              "time_from_start_ms": 1342.0068999985233,
+              "is_reasoning": true,
+              "itl_ms": 60.38859998807311
+            },
+            {
+              "timestamp": 346259.4831471,
+              "time_from_start_ms": 1401.7585000256076,
+              "is_reasoning": true,
+              "itl_ms": 59.75160002708435
+            },
+            {
+              "timestamp": 346259.5434983,
+              "time_from_start_ms": 1462.109700019937,
+              "is_reasoning": true,
+              "itl_ms": 60.35119999432936
+            },
+            {
+              "timestamp": 346259.6032973,
+              "time_from_start_ms": 1521.9087000004947,
+              "is_reasoning": true,
+              "itl_ms": 59.79899998055771
+            },
+            {
+              "timestamp": 346259.6634517,
+              "time_from_start_ms": 1582.063100009691,
+              "is_reasoning": true,
+              "itl_ms": 60.15440000919625
+            },
+            {
+              "timestamp": 346259.7236376,
+              "time_from_start_ms": 1642.2490000259131,
+              "is_reasoning": true,
+              "itl_ms": 60.18590001622215
+            },
+            {
+              "timestamp": 346259.7836352,
+              "time_from_start_ms": 1702.24660000531,
+              "is_reasoning": true,
+              "itl_ms": 59.99759997939691
+            },
+            {
+              "timestamp": 346259.8440177,
+              "time_from_start_ms": 1762.6291000051424,
+              "is_reasoning": true,
+              "itl_ms": 60.38249999983236
+            },
+            {
+              "timestamp": 346259.904269,
+              "time_from_start_ms": 1822.8803999954835,
+              "is_reasoning": true,
+              "itl_ms": 60.25129999034107
+            },
+            {
+              "timestamp": 346259.9644288,
+              "time_from_start_ms": 1883.0401999875903,
+              "is_reasoning": true,
+              "itl_ms": 60.159799992106855
+            },
+            {
+              "timestamp": 346260.0246095,
+              "time_from_start_ms": 1943.2209000224248,
+              "is_reasoning": true,
+              "itl_ms": 60.180700034834445
+            },
+            {
+              "timestamp": 346260.0845014,
+              "time_from_start_ms": 2003.112800011877,
+              "is_reasoning": true,
+              "itl_ms": 59.89189998945221
+            },
+            {
+              "timestamp": 346260.144609,
+              "time_from_start_ms": 2063.220400013961,
+              "is_reasoning": true,
+              "itl_ms": 60.10760000208393
+            },
+            {
+              "timestamp": 346260.2045595,
+              "time_from_start_ms": 2123.170899983961,
+              "is_reasoning": true,
+              "itl_ms": 59.95049997000024
+            },
+            {
+              "timestamp": 346260.2650633,
+              "time_from_start_ms": 2183.674699976109,
+              "is_reasoning": true,
+              "itl_ms": 60.50379999214783
+            },
+            {
+              "timestamp": 346260.3251684,
+              "time_from_start_ms": 2243.7798000173643,
+              "is_reasoning": true,
+              "itl_ms": 60.105100041255355
+            },
+            {
+              "timestamp": 346260.3854056,
+              "time_from_start_ms": 2304.0170000167564,
+              "is_reasoning": true,
+              "itl_ms": 60.23719999939203
+            },
+            {
+              "timestamp": 346260.445478,
+              "time_from_start_ms": 2364.0893999836408,
+              "is_reasoning": true,
+              "itl_ms": 60.072399966884404
+            },
+            {
+              "timestamp": 346260.5055593,
+              "time_from_start_ms": 2424.170700018294,
+              "is_reasoning": true,
+              "itl_ms": 60.081300034653395
+            },
+            {
+              "timestamp": 346260.5656742,
+              "time_from_start_ms": 2484.285600017756,
+              "is_reasoning": true,
+              "itl_ms": 60.11489999946207
+            },
+            {
+              "timestamp": 346260.6256808,
+              "time_from_start_ms": 2544.292200007476,
+              "is_reasoning": true,
+              "itl_ms": 60.00659998971969
+            },
+            {
+              "timestamp": 346260.6861335,
+              "time_from_start_ms": 2604.7449000179768,
+              "is_reasoning": true,
+              "itl_ms": 60.45270001050085
+            },
+            {
+              "timestamp": 346260.7462163,
+              "time_from_start_ms": 2664.8277000058442,
+              "is_reasoning": true,
+              "itl_ms": 60.082799987867475
+            },
+            {
+              "timestamp": 346260.8070806,
+              "time_from_start_ms": 2725.692000007257,
+              "is_reasoning": true,
+              "itl_ms": 60.86430000141263
+            }
+          ],
+          "itl_stats": {
+            "mean": 60.14,
+            "min": 59.32,
+            "max": 60.86,
+            "std": 0.24,
+            "count": 42
+          }
+        }
+      ],
+      "status": "成功"
+    },
+    {
+      "type": "result",
+      "prompt_length": 512,
+      "requested_prompt_length": 512,
+      "network_latency_ms": 40.49,
+      "network_latency_sample_count": 4,
+      "avg_prompt_tokens": 512.0,
+      "concurrency": 1,
+      "successful": 1,
+      "failed": 0,
+      "avg_prefill_speed": 1554.59,
+      "avg_output_speed": 66.34,
+      "max_prefill_speed": 1554.59,
+      "max_output_speed": 66.34,
+      "aggregate_prefill_time_ms": 329.35,
+      "aggregate_output_time_ms": 1929.54,
+      "aggregate_prefill_speed": 1554.57,
+      "aggregate_output_speed": 66.34,
+      "client_prefill_time_ms": 329.35,
+      "client_output_time_ms": 1929.54,
+      "client_total_time_ms": 2258.89,
+      "client_has_phase_boundary": true,
+      "aggregate_prefill_source": "client_latency_adjusted",
+      "aggregate_output_source": "client",
+      "avg_ttft_ms": 369.84,
+      "source": "python_backend",
+      "record_tags": [
+        "source:python_backend",
+        "prefill_source:client_latency_adjusted"
+      ],
+      "boundary_fallback_count": 0,
+      "token_warning_count": 0,
+      "aggregate_warnings": [],
+      "concurrent_details": [
+        {
+          "success": true,
+          "prompt_length": 512,
+          "requested_prompt_length": 512,
+          "generated_prompt_length": 455,
+          "prompt_tokens": 512,
+          "estimated_prompt_tokens": 512,
+          "local_estimated_prompt_tokens": 461,
+          "local_estimated_output_tokens": 128,
+          "prompt_calibration": {
+            "source": "warmup_usage",
+            "estimated_prompt_tokens": 102,
+            "actual_prompt_tokens": 153,
+            "token_offset": 51,
+            "token_ratio": 1.5
+          },
+          "output_tokens": 128,
+          "ttft_ms": 369.84,
+          "prefill_time_ms": 329.35,
+          "prefill_speed": 1554.59,
+          "output_time_ms": 1929.54,
+          "output_speed": 66.34,
+          "total_time_ms": 2299.38,
+          "prompt_text": "can life as on future be life or is simple or text with from model and one and data for they reason simple with future or and idea clear by in with the that data future they this mind clear text system be you simple one not this be not human one world be mind if are data world this data that value a with world life all text in reason simple it be it on human world are a can one world in idea truth the by be life data this reason space world idea by space in mind text life the data that as idea change truth and is that truth value that are can value will it all data not reason as human human is is life one space work are system are human future a can they they it clear model to be human on life to life from this in in mind will work mind light from this all all for will they is light work are one mind are or that change if token truth all will are one for or are clear reason on is mind system to world text token simple truth it work change change story in as reason value this a you mind life in that system text and that they the for and future change life be one model are as be value model truth that time this life mind to not of or of be of model simple idea and not light with story simple life reason future be will the time idea we be as model time can if light system and this or world text for one light mind light work as truth as that token from it if clear one you to one this idea in space light it work can with a from value not life all life of not reason as of can token system idea human value will it truth we value change for they value not be is system for is clear token value life be for mind human mind with in you value by human change all time we as mind and if or text clear model not simple reason mind will as all change if will token simple of all model reason it this truth to text as light space that of value clear token all they not change be is as story mind is all they model simple world that can a work value\nBased on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.",
+          "output_content": "",
+          "reasoning_content": "We need to respond to user: \"can life as on future be life or is simple or text with from model and one and data for they reason simple with future or and idea clear by in with the that data future they this mind clear text system be you simple one not this be not human one world be mind if are data world this data that value a with world life all text in reason simple it be it on human world are a can one world in idea truth the by be life data this reason space world idea by space in mind text life the data that as idea change truth and is that truth value that are can value will it",
+          "usage_info": {
+            "prompt_tokens": 512,
+            "total_tokens": 640,
+            "completion_tokens": 128
+          },
+          "server_timing_used": false,
+          "server_prefill_time_ms": null,
+          "server_decode_time_ms": null,
+          "prefill_time_source": "client_latency_adjusted",
+          "output_time_source": "client",
+          "network_latency_ms": 40.49,
+          "network_latency_sample_count": 4,
+          "client_prefill_time_ms": 329.35,
+          "client_decode_time_ms": 1929.54,
+          "client_total_time_ms": 2258.88,
+          "client_has_phase_boundary": true,
+          "has_streaming_content": true,
+          "chunk_count": 35,
+          "start_timestamp": 346262.3760356,
+          "first_chunk_timestamp": 346262.7457581,
+          "first_token_timestamp": 346262.7458775,
+          "boundary_timestamp": 346262.7458775,
+          "boundary_source": "first_content_token",
+          "end_timestamp": 346264.6754151,
+          "token_source": "API",
+          "token_warnings": [],
+          "token_timestamps": [
+            {
+              "timestamp": 346262.7458775,
+              "time_from_start_ms": 369.8418999556452,
+              "is_reasoning": true,
+              "itl_ms": null
+            },
+            {
+              "timestamp": 346262.8046637,
+              "time_from_start_ms": 428.62809996586293,
+              "is_reasoning": true,
+              "itl_ms": 58.786200010217726
+            },
+            {
+              "timestamp": 346262.8649121,
+              "time_from_start_ms": 488.8764999923296,
+              "is_reasoning": true,
+              "itl_ms": 60.2484000264667
+            },
+            {
+              "timestamp": 346262.9251357,
+              "time_from_start_ms": 549.1000999463722,
+              "is_reasoning": true,
+              "itl_ms": 60.223599954042584
+            },
+            {
+              "timestamp": 346262.9852195,
+              "time_from_start_ms": 609.1839000000618,
+              "is_reasoning": true,
+              "itl_ms": 60.08380005368963
+            },
+            {
+              "timestamp": 346263.0455278,
+              "time_from_start_ms": 669.4921999587677,
+              "is_reasoning": true,
+              "itl_ms": 60.3082999587059
+            },
+            {
+              "timestamp": 346263.1056012,
+              "time_from_start_ms": 729.5655999914743,
+              "is_reasoning": true,
+              "itl_ms": 60.07340003270656
+            },
+            {
+              "timestamp": 346263.1655958,
+              "time_from_start_ms": 789.5601999480277,
+              "is_reasoning": true,
+              "itl_ms": 59.99459995655343
+            },
+            {
+              "timestamp": 346263.2259341,
+              "time_from_start_ms": 849.8984999605455,
+              "is_reasoning": true,
+              "itl_ms": 60.33830001251772
+            },
+            {
+              "timestamp": 346263.2864567,
+              "time_from_start_ms": 910.4210999794304,
+              "is_reasoning": true,
+              "itl_ms": 60.52260001888499
+            },
+            {
+              "timestamp": 346263.3470172,
+              "time_from_start_ms": 970.9815999958664,
+              "is_reasoning": true,
+              "itl_ms": 60.56050001643598
+            },
+            {
+              "timestamp": 346263.407224,
+              "time_from_start_ms": 1031.1883999966085,
+              "is_reasoning": true,
+              "itl_ms": 60.20680000074208
+            },
+            {
+              "timestamp": 346263.4672844,
+              "time_from_start_ms": 1091.2487999885343,
+              "is_reasoning": true,
+              "itl_ms": 60.060399991925806
+            },
+            {
+              "timestamp": 346263.5276946,
+              "time_from_start_ms": 1151.6589999664575,
+              "is_reasoning": true,
+              "itl_ms": 60.410199977923185
+            },
+            {
+              "timestamp": 346263.5882217,
+              "time_from_start_ms": 1212.1860999614,
+              "is_reasoning": true,
+              "itl_ms": 60.527099994942546
+            },
+            {
+              "timestamp": 346263.648381,
+              "time_from_start_ms": 1272.3453999496996,
+              "is_reasoning": true,
+              "itl_ms": 60.15929998829961
+            },
+            {
+              "timestamp": 346263.7084223,
+              "time_from_start_ms": 1332.3866999708116,
+              "is_reasoning": true,
+              "itl_ms": 60.041300021111965
+            },
+            {
+              "timestamp": 346263.7689591,
+              "time_from_start_ms": 1392.923499981407,
+              "is_reasoning": true,
+              "itl_ms": 60.53680001059547
+            },
+            {
+              "timestamp": 346263.8288475,
+              "time_from_start_ms": 1452.8118999442086,
+              "is_reasoning": true,
+              "itl_ms": 59.888399962801486
+            },
+            {
+              "timestamp": 346263.8890674,
+              "time_from_start_ms": 1513.0317999864928,
+              "is_reasoning": true,
+              "itl_ms": 60.21990004228428
+            },
+            {
+              "timestamp": 346263.9493981,
+              "time_from_start_ms": 1573.362499999348,
+              "is_reasoning": true,
+              "itl_ms": 60.33070001285523
+            },
+            {
+              "timestamp": 346264.0092878,
+              "time_from_start_ms": 1633.2521999720484,
+              "is_reasoning": true,
+              "itl_ms": 59.88969997270033
+            },
+            {
+              "timestamp": 346264.0695214,
+              "time_from_start_ms": 1693.4857999440283,
+              "is_reasoning": true,
+              "itl_ms": 60.23359997197986
+            },
+            {
+              "timestamp": 346264.1299443,
+              "time_from_start_ms": 1753.9086999604478,
+              "is_reasoning": true,
+              "itl_ms": 60.42290001641959
+            },
+            {
+              "timestamp": 346264.1901298,
+              "time_from_start_ms": 1814.0941999736242,
+              "is_reasoning": true,
+              "itl_ms": 60.18550001317635
+            },
+            {
+              "timestamp": 346264.2502152,
+              "time_from_start_ms": 1874.1795999812894,
+              "is_reasoning": true,
+              "itl_ms": 60.08540000766516
+            },
+            {
+              "timestamp": 346264.3101952,
+              "time_from_start_ms": 1934.1596000012942,
+              "is_reasoning": true,
+              "itl_ms": 59.98000002000481
+            },
+            {
+              "timestamp": 346264.3705602,
+              "time_from_start_ms": 1994.5245999842882,
+              "is_reasoning": true,
+              "itl_ms": 60.36499998299405
+            },
+            {
+              "timestamp": 346264.4306621,
+              "time_from_start_ms": 2054.626500001177,
+              "is_reasoning": true,
+              "itl_ms": 60.101900016888976
+            },
+            {
+              "timestamp": 346264.4907701,
+              "time_from_start_ms": 2114.7344999480993,
+              "is_reasoning": true,
+              "itl_ms": 60.107999946922064
+            },
+            {
+              "timestamp": 346264.5510466,
+              "time_from_start_ms": 2175.0109999557026,
+              "is_reasoning": true,
+              "itl_ms": 60.27650000760332
+            },
+            {
+              "timestamp": 346264.6113195,
+              "time_from_start_ms": 2235.2838999941014,
+              "is_reasoning": true,
+              "itl_ms": 60.2729000383988
+            },
+            {
+              "timestamp": 346264.671912,
+              "time_from_start_ms": 2295.876399963163,
+              "is_reasoning": true,
+              "itl_ms": 60.592499969061464
+            }
+          ],
+          "itl_stats": {
+            "mean": 60.19,
+            "min": 58.79,
+            "max": 60.59,
+            "std": 0.32,
+            "count": 32
+          }
+        }
+      ],
+      "status": "成功"
+    },
+    {
+      "type": "result",
+      "prompt_length": 1024,
+      "requested_prompt_length": 1024,
+      "network_latency_ms": 40.68,
+      "network_latency_sample_count": 5,
+      "avg_prompt_tokens": 1024.0,
+      "concurrency": 1,
+      "successful": 1,
+      "failed": 0,
+      "avg_prefill_speed": 1668.87,
+      "avg_output_speed": 49.39,
+      "max_prefill_speed": 1668.87,
+      "max_output_speed": 49.39,
+      "aggregate_prefill_time_ms": 613.59,
+      "aggregate_output_time_ms": 2591.75,
+      "aggregate_prefill_speed": 1668.87,
+      "aggregate_output_speed": 49.39,
+      "client_prefill_time_ms": 613.59,
+      "client_output_time_ms": 2591.75,
+      "client_total_time_ms": 3205.33,
+      "client_has_phase_boundary": true,
+      "aggregate_prefill_source": "client_latency_adjusted",
+      "aggregate_output_source": "client",
+      "avg_ttft_ms": 654.27,
+      "source": "python_backend",
+      "record_tags": [
+        "source:python_backend",
+        "prefill_source:client_latency_adjusted"
+      ],
+      "boundary_fallback_count": 0,
+      "token_warning_count": 0,
+      "aggregate_warnings": [],
+      "concurrent_details": [
+        {
+          "success": true,
+          "prompt_length": 1024,
+          "requested_prompt_length": 1024,
+          "generated_prompt_length": 967,
+          "prompt_tokens": 1024,
+          "estimated_prompt_tokens": 1024,
+          "local_estimated_prompt_tokens": 973,
+          "local_estimated_output_tokens": 134,
+          "prompt_calibration": {
+            "source": "warmup_usage",
+            "estimated_prompt_tokens": 102,
+            "actual_prompt_tokens": 153,
+            "token_offset": 51,
+            "token_ratio": 1.5
+          },
+          "output_tokens": 128,
+          "ttft_ms": 654.27,
+          "prefill_time_ms": 613.59,
+          "prefill_speed": 1668.87,
+          "output_time_ms": 2591.75,
+          "output_speed": 49.39,
+          "total_time_ms": 3246.01,
+          "prompt_text": "mind can reason be future of if on to a not they truth by system with world will world not to will space work by or story all and work world token future if on data idea all on in this data a simple one they time light truth is text system truth world you with all that are will not will the from by to simple idea on model clear we simple truth not in of story system clear one simple light with model light world if change of data idea world model future model space a the for if all reason value not you light with from of they can we space story data data life in it one as and that can not not are this work all data system data we value life the with as model be is time story for or if or from human clear truth time and to as of of idea will system all you and time human story world that future and a can idea model human change world world future model value time simple of of mind a system light data will work human life will text one the mind it that truth story value text work from that of to story of space is story system work by of they if be a text text change future system by can not simple world human as world for text a you reason the the or it can truth all it light of of to future you time mind the on the with space from a text mind future or token for life all system in story all clear it value with is this a model token truth you that as they story light simple from this to this story life or of future that story one can we be clear a as as time are a story light from system model if all human one from of not all they idea they with as change this as from time they mind if mind they simple reason truth that light on one model data idea work you all on story idea it they they clear it that a story value work and idea future this from of with model future for from on be token will work token token data this idea in of if clear human human all space reason truth with time is this text is can they simple work life by truth will it as space or you token world light they change are as and human future space is by space truth it can with model with mind and value work this a the one life work a value from system of for text with model we this simple as world idea story mind work that in token light token we human clear with work are it mind all that reason a a they text all with work this light space future value if are is time to we idea time of will idea by value is data change will from simple a it space model text model be story is this be data we in from it they text truth in to is human with space and from life all be we model they token token story token in truth story system a simple be light on model text they reason data work one time token future all truth will space idea reason be and for future one be truth simple idea for time reason time idea for all space simple will is by story we data and all world all you on can in will are story one world this this clear data token with you by work system mind mind it and idea idea it token text as you model truth value if all and space system mind on by work truth space clear the model system and a we truth are you be of work with idea with change life text or will time world life truth they model life light reason one a it model value work idea space can simple will light a will a you all idea of mind value time and if if to on light truth data to space token system this to and it light they story not and is value simple as are future not story you are work space we idea will space to on human one in with that as of model clear will one future data reason with is to all or as simple mind as that time by this space can be mind story on and in all to system reason token light as that world by or to are they change it work by token clear token change text by truth work text for of to simple truth this text in model reason model mind from are future truth in to all one change as a as is world model can we be life work story model model human light is not is from they or for we it we world in future a on on and will by mind we with will all this data and on is space of that for text reason one life will a this that for they clear it and clear with work mind idea all value is world reason by model from we work will system they all you be value space of mind light can truth truth idea text to that mind a mind and or you we be be\nBased on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.",
+          "output_content": "",
+          "reasoning_content": "We need to respond to user: \"Based on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.\"\n\nNeed produce final answer only. Need likely use the provided word cloud? They ask based on words above. We can write short philosophical essay using many of those words? Need clear coherent sentences. Should incorporate themes: meaning of existence, consciousness, humanity's place. Maybe use words from list: mind, reason, future, truth, system, world, data, idea, light, story, model, time, space",
+          "usage_info": {
+            "prompt_tokens": 1024,
+            "total_tokens": 1152,
+            "completion_tokens": 128
+          },
+          "server_timing_used": false,
+          "server_prefill_time_ms": null,
+          "server_decode_time_ms": null,
+          "prefill_time_source": "client_latency_adjusted",
+          "output_time_source": "client",
+          "network_latency_ms": 40.68,
+          "network_latency_sample_count": 5,
+          "client_prefill_time_ms": 613.59,
+          "client_decode_time_ms": 2591.75,
+          "client_total_time_ms": 3205.33,
+          "client_has_phase_boundary": true,
+          "has_streaming_content": true,
+          "chunk_count": 46,
+          "start_timestamp": 346266.2293154,
+          "first_chunk_timestamp": 346266.8835175,
+          "first_token_timestamp": 346266.8835841,
+          "boundary_timestamp": 346266.8835841,
+          "boundary_source": "first_content_token",
+          "end_timestamp": 346269.4753304,
+          "token_source": "API",
+          "token_warnings": [],
+          "token_timestamps": [
+            {
+              "timestamp": 346266.8835841,
+              "time_from_start_ms": 654.2686999891885,
+              "is_reasoning": true,
+              "itl_ms": null
+            },
+            {
+              "timestamp": 346266.9422923,
+              "time_from_start_ms": 712.9768999875523,
+              "is_reasoning": true,
+              "itl_ms": 58.70819999836385
+            },
+            {
+              "timestamp": 346267.0026158,
+              "time_from_start_ms": 773.3004000037909,
+              "is_reasoning": true,
+              "itl_ms": 60.32350001623854
+            },
+            {
+              "timestamp": 346267.0628651,
+              "time_from_start_ms": 833.5496999789029,
+              "is_reasoning": true,
+              "itl_ms": 60.24929997511208
+            },
+            {
+              "timestamp": 346267.1231407,
+              "time_from_start_ms": 893.8252999796532,
+              "is_reasoning": true,
+              "itl_ms": 60.27560000075027
+            },
+            {
+              "timestamp": 346267.1831379,
+              "time_from_start_ms": 953.822500014212,
+              "is_reasoning": true,
+              "itl_ms": 59.99720003455877
+            },
+            {
+              "timestamp": 346267.243345,
+              "time_from_start_ms": 1014.0296000172384,
+              "is_reasoning": true,
+              "itl_ms": 60.207100003026426
+            },
+            {
+              "timestamp": 346267.3035139,
+              "time_from_start_ms": 1074.1985000204295,
+              "is_reasoning": true,
+              "itl_ms": 60.168900003191084
+            },
+            {
+              "timestamp": 346267.3638709,
+              "time_from_start_ms": 1134.5555000007153,
+              "is_reasoning": true,
+              "itl_ms": 60.356999980285764
+            },
+            {
+              "timestamp": 346267.4242004,
+              "time_from_start_ms": 1194.885000004433,
+              "is_reasoning": true,
+              "itl_ms": 60.32950000371784
+            },
+            {
+              "timestamp": 346267.4841655,
+              "time_from_start_ms": 1254.8500999691896,
+              "is_reasoning": true,
+              "itl_ms": 59.96509996475652
+            },
+            {
+              "timestamp": 346267.5442942,
+              "time_from_start_ms": 1314.978800015524,
+              "is_reasoning": true,
+              "itl_ms": 60.128700046334416
+            },
+            {
+              "timestamp": 346267.6044945,
+              "time_from_start_ms": 1375.179099966772,
+              "is_reasoning": true,
+              "itl_ms": 60.20029995124787
+            },
+            {
+              "timestamp": 346267.6647846,
+              "time_from_start_ms": 1435.4692000197247,
+              "is_reasoning": true,
+              "itl_ms": 60.290100052952766
+            },
+            {
+              "timestamp": 346267.7247249,
+              "time_from_start_ms": 1495.4094999702647,
+              "is_reasoning": true,
+              "itl_ms": 59.940299950540066
+            },
+            {
+              "timestamp": 346267.7847962,
+              "time_from_start_ms": 1555.4807999869809,
+              "is_reasoning": true,
+              "itl_ms": 60.07130001671612
+            },
+            {
+              "timestamp": 346267.844887,
+              "time_from_start_ms": 1615.5715999775566,
+              "is_reasoning": true,
+              "itl_ms": 60.09079999057576
+            },
+            {
+              "timestamp": 346267.9050861,
+              "time_from_start_ms": 1675.7706999778748,
+              "is_reasoning": true,
+              "itl_ms": 60.19910000031814
+            },
+            {
+              "timestamp": 346267.9652939,
+              "time_from_start_ms": 1735.9784999862313,
+              "is_reasoning": true,
+              "itl_ms": 60.20780000835657
+            },
+            {
+              "timestamp": 346268.0252848,
+              "time_from_start_ms": 1795.9693999728188,
+              "is_reasoning": true,
+              "itl_ms": 59.990899986587465
+            },
+            {
+              "timestamp": 346268.0857762,
+              "time_from_start_ms": 1856.4607999869622,
+              "is_reasoning": true,
+              "itl_ms": 60.49140001414344
+            },
+            {
+              "timestamp": 346268.1457498,
+              "time_from_start_ms": 1916.434400016442,
+              "is_reasoning": true,
+              "itl_ms": 59.97360002947971
+            },
+            {
+              "timestamp": 346268.2058439,
+              "time_from_start_ms": 1976.5284999739379,
+              "is_reasoning": true,
+              "itl_ms": 60.09409995749593
+            },
+            {
+              "timestamp": 346268.2662363,
+              "time_from_start_ms": 2036.920899990946,
+              "is_reasoning": true,
+              "itl_ms": 60.392400017008185
+            },
+            {
+              "timestamp": 346268.3258757,
+              "time_from_start_ms": 2096.5602999785915,
+              "is_reasoning": true,
+              "itl_ms": 59.63939998764545
+            },
+            {
+              "timestamp": 346268.3861894,
+              "time_from_start_ms": 2156.8739999784157,
+              "is_reasoning": true,
+              "itl_ms": 60.313699999824166
+            },
+            {
+              "timestamp": 346268.4459304,
+              "time_from_start_ms": 2216.614999982994,
+              "is_reasoning": true,
+              "itl_ms": 59.74100000457838
+            },
+            {
+              "timestamp": 346268.5061951,
+              "time_from_start_ms": 2276.8797000171617,
+              "is_reasoning": true,
+              "itl_ms": 60.26470003416762
+            },
+            {
+              "timestamp": 346268.5665205,
+              "time_from_start_ms": 2337.20509998966,
+              "is_reasoning": true,
+              "itl_ms": 60.32539997249842
+            },
+            {
+              "timestamp": 346268.6264288,
+              "time_from_start_ms": 2397.1133999875747,
+              "is_reasoning": true,
+              "itl_ms": 59.90829999791458
+            },
+            {
+              "timestamp": 346268.6862124,
+              "time_from_start_ms": 2456.8969999672845,
+              "is_reasoning": true,
+              "itl_ms": 59.783599979709834
+            },
+            {
+              "timestamp": 346268.7465238,
+              "time_from_start_ms": 2517.208400007803,
+              "is_reasoning": true,
+              "itl_ms": 60.31140004051849
+            },
+            {
+              "timestamp": 346268.806893,
+              "time_from_start_ms": 2577.5775999645703,
+              "is_reasoning": true,
+              "itl_ms": 60.36919995676726
+            },
+            {
+              "timestamp": 346268.8668229,
+              "time_from_start_ms": 2637.5075000105426,
+              "is_reasoning": true,
+              "itl_ms": 59.92990004597232
+            },
+            {
+              "timestamp": 346268.9271545,
+              "time_from_start_ms": 2697.839099972043,
+              "is_reasoning": true,
+              "itl_ms": 60.331599961500615
+            },
+            {
+              "timestamp": 346268.9871531,
+              "time_from_start_ms": 2757.8377000172623,
+              "is_reasoning": true,
+              "itl_ms": 59.998600045219064
+            },
+            {
+              "timestamp": 346269.0472239,
+              "time_from_start_ms": 2817.9084999719635,
+              "is_reasoning": true,
+              "itl_ms": 60.070799954701215
+            },
+            {
+              "timestamp": 346269.1073281,
+              "time_from_start_ms": 2878.012700006366,
+              "is_reasoning": true,
+              "itl_ms": 60.10420003440231
+            },
+            {
+              "timestamp": 346269.1672425,
+              "time_from_start_ms": 2937.927099992521,
+              "is_reasoning": true,
+              "itl_ms": 59.91439998615533
+            },
+            {
+              "timestamp": 346269.2275319,
+              "time_from_start_ms": 2998.216499981936,
+              "is_reasoning": true,
+              "itl_ms": 60.28939998941496
+            },
+            {
+              "timestamp": 346269.287651,
+              "time_from_start_ms": 3058.335600013379,
+              "is_reasoning": true,
+              "itl_ms": 60.11910003144294
+            },
+            {
+              "timestamp": 346269.3480514,
+              "time_from_start_ms": 3118.735999974888,
+              "is_reasoning": true,
+              "itl_ms": 60.40039996150881
+            },
+            {
+              "timestamp": 346269.4080233,
+              "time_from_start_ms": 3178.707899991423,
+              "is_reasoning": true,
+              "itl_ms": 59.97190001653507
+            },
+            {
+              "timestamp": 346269.4687969,
+              "time_from_start_ms": 3239.481500000693,
+              "is_reasoning": true,
+              "itl_ms": 60.77360000927001
+            }
+          ],
+          "itl_stats": {
+            "mean": 60.12,
+            "min": 58.71,
+            "max": 60.77,
+            "std": 0.3,
+            "count": 43
+          }
+        }
+      ],
+      "status": "成功"
+    },
+    {
+      "type": "result",
+      "prompt_length": 2048,
+      "requested_prompt_length": 2048,
+      "network_latency_ms": 40.54,
+      "network_latency_sample_count": 6,
+      "avg_prompt_tokens": 2048.0,
+      "concurrency": 1,
+      "successful": 1,
+      "failed": 0,
+      "avg_prefill_speed": 1623.07,
+      "avg_output_speed": 64.38,
+      "max_prefill_speed": 1623.07,
+      "max_output_speed": 64.38,
+      "aggregate_prefill_time_ms": 1261.8,
+      "aggregate_output_time_ms": 1988.33,
+      "aggregate_prefill_speed": 1623.07,
+      "aggregate_output_speed": 64.38,
+      "client_prefill_time_ms": 1261.8,
+      "client_output_time_ms": 1988.33,
+      "client_total_time_ms": 3250.13,
+      "client_has_phase_boundary": true,
+      "aggregate_prefill_source": "client_latency_adjusted",
+      "aggregate_output_source": "client",
+      "avg_ttft_ms": 1302.34,
+      "source": "python_backend",
+      "record_tags": [
+        "source:python_backend",
+        "prefill_source:client_latency_adjusted"
+      ],
+      "boundary_fallback_count": 0,
+      "token_warning_count": 0,
+      "aggregate_warnings": [],
+      "concurrent_details": [
+        {
+          "success": true,
+          "prompt_length": 2048,
+          "requested_prompt_length": 2048,
+          "generated_prompt_length": 1991,
+          "prompt_tokens": 2048,
+          "estimated_prompt_tokens": 2048,
+          "local_estimated_prompt_tokens": 1997,
+          "local_estimated_output_tokens": 128,
+          "prompt_calibration": {
+            "source": "warmup_usage",
+            "estimated_prompt_tokens": 102,
+            "actual_prompt_tokens": 153,
+            "token_offset": 51,
+            "token_ratio": 1.5
+          },
+          "output_tokens": 128,
+          "ttft_ms": 1302.34,
+          "prefill_time_ms": 1261.81,
+          "prefill_speed": 1623.07,
+          "output_time_ms": 1988.33,
+          "output_speed": 64.38,
+          "total_time_ms": 3290.67,
+          "prompt_text": "truth one with can not of model is or they story we idea from you truth from value is in work that or world space they story or idea for mind and you be data human clear truth work to this we model or change data idea work we simple you space for and token we light can a of as time all be truth mind future one a simple one to change reason it life token from will to change in mind space or from story and reason be world simple text the it by it model system light you we if from be change light truth not truth can are light change with we are if if life in work from will model and world that value token with or one clear world all of idea on they you in change will this token a all if can the or time of and to for it you from a token token they token world by life not it clear from reason you with in be this simple this truth of can human future will they story can a future token you can change change change world token space mind the is it of and mind light idea by idea clear text this as all system that time by change future one space text all can change value are or truth and by change truth world they space work as token model with we idea model clear text work as we the with space is story world change be human a can idea mind by with time clear for we mind idea story data model are world work system work it they that in are we value all work space you from it in human mind future all all human world future will simple truth of world they all and will are from human will we not story be light world this and are mind truth can by the light that and with the idea system data it we from one to text or be of is model the clear model for this this space for by on value that this one truth will light story token human this for all will or world clear with truth human you can world clear from change system time a time space life one data for life they system token world will all on life with data on that model life truth all will work by if are as the story not of light or as we by world text to will time change a by that all data and by is work reason story world truth it not story that this light are will human you it truth idea with not in it on will as one that space future and are value change work light a human this idea can be will text data mind truth text that can mind are the and text future life a this change as by mind world be light or change token simple we mind we time that future light truth idea as human in to with if all to that future truth will text light by not human for model will value for for text a space system not text of from is idea be future story the by light space is system model on of or on one all we model not one system data is story all it this token it work if for life with work text text one time can model by story of can value token one reason one as light for future world light by all story change human if space light is time life system by this from can text in truth space one story that we truth by you they mind as will can in that be reason simple to in a in world a one life it life it it this if work as of reason with human truth system as future is data truth system it and future the truth text as idea space be be future story we not all are clear that you idea reason clear they for a light for the value to be space they text all for one as are that one are light this space they mind one model reason is as world truth as the on idea one work and can model that idea or with can on a we text the truth change and this as change or you one as we and on clear if text mind idea a that future by in story that to clear all not to are system mind will can is time and can data world and world idea clear in work can by on are we reason human this work change story idea reason are all idea in text data all as world life in you to change for is not data future are story all human light light we value they light to human with of life idea to we we life of for reason and clear space idea by for token one world you can text story if time system space clear it this with you on work will value simple by reason idea time and are mind system you change will is with on if one reason will work work data be mind of change time human value simple change by change it reason time are and time time is or light simple idea that story space idea system from human mind from clear be can to or the on be not text with world and simple that future text are change if future that can text we text human you can of by mind for space life life for with space the for of they system we time mind and human this are by or be reason story reason system is or simple that model to you idea that in or be on on the model for change are one all not data this human human be if not idea model this clear and can light and it for will simple or work space all is idea future are value simple model of in truth text space idea you time for world change life all life world token idea data system the in idea that of can you if truth can light by life be they for as system text on truth time reason mind for you not work data truth time can reason clear of simple it work time and change we if text text you with that value life this time future this with will all light can that be that not world idea data space clear with life will not reason are change in mind clear all life text with will all change or you one data that the text model future world value clear be or time space data and from time the be truth for token by value idea world change mind you text on is this life can change idea or clear light work the reason work for in mind is data can world of value reason truth a token we this one all they future world if value they story token for in change light idea they not as token or mind future clear time text if life story token and story not by it of in of be world space value future token in for from clear this if data clear can one story system story is story they be to token we all time it of will be simple we is text and time if in it change of clear reason change to token story with they time space can value value from system not model truth with you life model it it it mind mind human story life to token will clear be space idea life of model work value or truth they model we if idea you it reason space to we the can change by if if clear world light with change on life that change or are not this all from work not and simple token from by model it or you human with the be token not data data this mind mind a light clear this all reason are this the they and is world data from idea life this truth this you all mind to on a world mind with to model is are as truth it human story model truth text it that life or life and you idea not truth story or if they clear reason or change future of they is of will in this in space be not be can simple future is this truth will system if the space of world human value of a can reason will as and of space future be of token all will in human life the is world are one to can text simple clear work simple space not all reason this this is be not you token future story clear to we not this mind data reason the mind this with story one as and this story one the is to value it world text of simple that one system they with you it we token system light in from if idea if idea we this this or on mind value value on idea this this we text change mind are with on light can by world that we truth will will all are time not are that if be token human system light text from truth be as if light world on simple it change text or a text if token are a all be light will in mind be truth space world light from future system reason future of will with this mind time if change be for change idea on story this if reason mind and for work the by world data we you a if or this by or human a the if time is by model by future data as we are it to from human future life life to world the work be for you it on and data are they on you are be of as of text will one system life if token world work this if with the from simple system story can that will or in as as simple the are space or they in it this clear that future as we life can world story or value token simple one simple the be space value simple all all system all light system simple on mind the on is be for or to reason on be can you we on as we data with model life data will simple system and by a future simple simple system value time or by a for that for the change one life with all the the idea text reason and not we you you value light story text story light world this you by you idea clear simple value clear idea value it simple light simple change not human data if work on change model simple truth system will of space token we by with we we space the idea can with in mind human a one light to all all or clear is this future of data is change change or one are life story to if simple life data on this that can from be this is be work not be life from are value token is simple we it will truth token model future of if from be system idea simple we or text are simple with a work token time we they from life with value with for\nBased on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.",
+          "output_content": "",
+          "reasoning_content": "We need to respond to user: \"truth one with can not of model is or they story we idea from you truth from value is in work that or world space they story or idea for mind and you be data human clear truth work to this we model or change data idea work we simple you space for and token we light can a of as time all be truth mind future one a simple one to change reason it life token from will to change in mind space or from story and reason be world simple text the it by it model system light you we if from be change light truth not truth can are light change with we are if if life",
+          "usage_info": {
+            "prompt_tokens": 2048,
+            "total_tokens": 2176,
+            "completion_tokens": 128
+          },
+          "server_timing_used": false,
+          "server_prefill_time_ms": null,
+          "server_decode_time_ms": null,
+          "prefill_time_source": "client_latency_adjusted",
+          "output_time_source": "client",
+          "network_latency_ms": 40.54,
+          "network_latency_sample_count": 6,
+          "client_prefill_time_ms": 1261.81,
+          "client_decode_time_ms": 1988.33,
+          "client_total_time_ms": 3250.14,
+          "client_has_phase_boundary": true,
+          "has_streaming_content": true,
+          "chunk_count": 36,
+          "start_timestamp": 346271.0332206,
+          "first_chunk_timestamp": 346272.3354998,
+          "first_token_timestamp": 346272.3355654,
+          "boundary_timestamp": 346272.3355654,
+          "boundary_source": "first_content_token",
+          "end_timestamp": 346274.3238926,
+          "token_source": "API",
+          "token_warnings": [],
+          "token_timestamps": [
+            {
+              "timestamp": 346272.3355654,
+              "time_from_start_ms": 1302.3448000312783,
+              "is_reasoning": true,
+              "itl_ms": null
+            },
+            {
+              "timestamp": 346272.3908132,
+              "time_from_start_ms": 1357.592599990312,
+              "is_reasoning": true,
+              "itl_ms": 55.24779995903373
+            },
+            {
+              "timestamp": 346272.4507208,
+              "time_from_start_ms": 1417.500200041104,
+              "is_reasoning": true,
+              "itl_ms": 59.9076000507921
+            },
+            {
+              "timestamp": 346272.511048,
+              "time_from_start_ms": 1477.8274000273086,
+              "is_reasoning": true,
+              "itl_ms": 60.327199986204505
+            },
+            {
+              "timestamp": 346272.5714268,
+              "time_from_start_ms": 1538.2061999989673,
+              "is_reasoning": true,
+              "itl_ms": 60.37879997165874
+            },
+            {
+              "timestamp": 346272.6314746,
+              "time_from_start_ms": 1598.2540000113659,
+              "is_reasoning": true,
+              "itl_ms": 60.04780001239851
+            },
+            {
+              "timestamp": 346272.6915841,
+              "time_from_start_ms": 1658.3635000279173,
+              "is_reasoning": true,
+              "itl_ms": 60.109500016551465
+            },
+            {
+              "timestamp": 346272.7517427,
+              "time_from_start_ms": 1718.5221000108868,
+              "is_reasoning": true,
+              "itl_ms": 60.15859998296946
+            },
+            {
+              "timestamp": 346272.8120911,
+              "time_from_start_ms": 1778.8704999838956,
+              "is_reasoning": true,
+              "itl_ms": 60.34839997300878
+            },
+            {
+              "timestamp": 346272.8723546,
+              "time_from_start_ms": 1839.1340000089258,
+              "is_reasoning": true,
+              "itl_ms": 60.263500025030226
+            },
+            {
+              "timestamp": 346272.9324983,
+              "time_from_start_ms": 1899.2776999948546,
+              "is_reasoning": true,
+              "itl_ms": 60.14369998592883
+            },
+            {
+              "timestamp": 346272.9927985,
+              "time_from_start_ms": 1959.5779000082985,
+              "is_reasoning": true,
+              "itl_ms": 60.30020001344383
+            },
+            {
+              "timestamp": 346273.053029,
+              "time_from_start_ms": 2019.808400014881,
+              "is_reasoning": true,
+              "itl_ms": 60.23050000658259
+            },
+            {
+              "timestamp": 346273.113387,
+              "time_from_start_ms": 2080.1664000027813,
+              "is_reasoning": true,
+              "itl_ms": 60.35799998790026
+            },
+            {
+              "timestamp": 346273.1734654,
+              "time_from_start_ms": 2140.2448000153527,
+              "is_reasoning": true,
+              "itl_ms": 60.078400012571365
+            },
+            {
+              "timestamp": 346273.2337573,
+              "time_from_start_ms": 2200.536700023804,
+              "is_reasoning": true,
+              "itl_ms": 60.291900008451194
+            },
+            {
+              "timestamp": 346273.2939224,
+              "time_from_start_ms": 2260.70179999806,
+              "is_reasoning": true,
+              "itl_ms": 60.16509997425601
+            },
+            {
+              "timestamp": 346273.354098,
+              "time_from_start_ms": 2320.8773999940604,
+              "is_reasoning": true,
+              "itl_ms": 60.17559999600053
+            },
+            {
+              "timestamp": 346273.4143492,
+              "time_from_start_ms": 2381.12859998364,
+              "is_reasoning": true,
+              "itl_ms": 60.25119998957962
+            },
+            {
+              "timestamp": 346273.4744304,
+              "time_from_start_ms": 2441.209800017532,
+              "is_reasoning": true,
+              "itl_ms": 60.081200033891946
+            },
+            {
+              "timestamp": 346273.5349707,
+              "time_from_start_ms": 2501.7500999965705,
+              "is_reasoning": true,
+              "itl_ms": 60.54029997903854
+            },
+            {
+              "timestamp": 346273.5949111,
+              "time_from_start_ms": 2561.6905000060797,
+              "is_reasoning": true,
+              "itl_ms": 59.940400009509176
+            },
+            {
+              "timestamp": 346273.6549017,
+              "time_from_start_ms": 2621.681099990383,
+              "is_reasoning": true,
+              "itl_ms": 59.99059998430312
+            },
+            {
+              "timestamp": 346273.7148835,
+              "time_from_start_ms": 2681.6629000240937,
+              "is_reasoning": true,
+              "itl_ms": 59.9818000337109
+            },
+            {
+              "timestamp": 346273.7751764,
+              "time_from_start_ms": 2741.9558000401594,
+              "is_reasoning": true,
+              "itl_ms": 60.29290001606569
+            },
+            {
+              "timestamp": 346273.8355165,
+              "time_from_start_ms": 2802.2959000081755,
+              "is_reasoning": true,
+              "itl_ms": 60.34009996801615
+            },
+            {
+              "timestamp": 346273.8957431,
+              "time_from_start_ms": 2862.5224999850616,
+              "is_reasoning": true,
+              "itl_ms": 60.226599976886064
+            },
+            {
+              "timestamp": 346273.955844,
+              "time_from_start_ms": 2922.623399994336,
+              "is_reasoning": true,
+              "itl_ms": 60.10090000927448
+            },
+            {
+              "timestamp": 346274.0163933,
+              "time_from_start_ms": 2983.1726999836974,
+              "is_reasoning": true,
+              "itl_ms": 60.549299989361316
+            },
+            {
+              "timestamp": 346274.0764744,
+              "time_from_start_ms": 3043.253800016828,
+              "is_reasoning": true,
+              "itl_ms": 60.0811000331305
+            },
+            {
+              "timestamp": 346274.1362935,
+              "time_from_start_ms": 3103.0729000340216,
+              "is_reasoning": true,
+              "itl_ms": 59.819100017193705
+            },
+            {
+              "timestamp": 346274.1964936,
+              "time_from_start_ms": 3163.2729999837466,
+              "is_reasoning": true,
+              "itl_ms": 60.20009994972497
+            },
+            {
+              "timestamp": 346274.2566598,
+              "time_from_start_ms": 3223.439200024586,
+              "is_reasoning": true,
+              "itl_ms": 60.16620004083961
+            },
+            {
+              "timestamp": 346274.3178963,
+              "time_from_start_ms": 3284.675700007938,
+              "is_reasoning": true,
+              "itl_ms": 61.23649998335168
+            }
+          ],
+          "itl_stats": {
+            "mean": 60.07,
+            "min": 55.25,
+            "max": 61.24,
+            "std": 0.89,
+            "count": 33
+          }
+        }
+      ],
+      "status": "成功"
+    },
+    {
+      "type": "result",
+      "prompt_length": 4096,
+      "requested_prompt_length": 4096,
+      "network_latency_ms": 40.59,
+      "network_latency_sample_count": 7,
+      "avg_prompt_tokens": 4096.0,
+      "concurrency": 1,
+      "successful": 1,
+      "failed": 0,
+      "avg_prefill_speed": 1655.17,
+      "avg_output_speed": 48.89,
+      "max_prefill_speed": 1655.17,
+      "max_output_speed": 48.89,
+      "aggregate_prefill_time_ms": 2474.67,
+      "aggregate_output_time_ms": 2617.87,
+      "aggregate_prefill_speed": 1655.17,
+      "aggregate_output_speed": 48.89,
+      "client_prefill_time_ms": 2474.67,
+      "client_output_time_ms": 2617.87,
+      "client_total_time_ms": 5092.54,
+      "client_has_phase_boundary": true,
+      "aggregate_prefill_source": "client_latency_adjusted",
+      "aggregate_output_source": "client",
+      "avg_ttft_ms": 2515.26,
+      "source": "python_backend",
+      "record_tags": [
+        "source:python_backend",
+        "prefill_source:client_latency_adjusted"
+      ],
+      "boundary_fallback_count": 0,
+      "token_warning_count": 0,
+      "aggregate_warnings": [],
+      "concurrent_details": [
+        {
+          "success": true,
+          "prompt_length": 4096,
+          "requested_prompt_length": 4096,
+          "generated_prompt_length": 4039,
+          "prompt_tokens": 4096,
+          "estimated_prompt_tokens": 4096,
+          "local_estimated_prompt_tokens": 4045,
+          "local_estimated_output_tokens": 133,
+          "prompt_calibration": {
+            "source": "warmup_usage",
+            "estimated_prompt_tokens": 102,
+            "actual_prompt_tokens": 153,
+            "token_offset": 51,
+            "token_ratio": 1.5
+          },
+          "output_tokens": 128,
+          "ttft_ms": 2515.26,
+          "prefill_time_ms": 2474.66,
+          "prefill_speed": 1655.17,
+          "output_time_ms": 2617.87,
+          "output_speed": 48.89,
+          "total_time_ms": 5133.13,
+          "prompt_text": "clear clear data be can truth the they value from light to mind all the on future from of human and future future work value data if to space are model data if will from system be as light truth of we value is it to future be with clear you light all are model you as not you will be story light data or mind it clear story can value from the system space time light simple token in reason in text story to of is the model are or on reason space one or can model are life token is they work data reason they be to for will of on we by you or to story change with world simple truth will are life the time model to for truth text and text text you truth reason this future truth mind future they from text idea a in future that in story will truth in value model system model from can not by we idea space of story idea or to this it of to human data data token this by to with to all reason clear it change reason it world in a to be future human to model life human idea can a this is if life world to story by change value that simple this work the the story token simple we they human the value space idea future value mind this future system or simple if they space a not mind will time human a reason they token to to they is one reason for value they to of it of story from story with in world life you change truth story life and simple idea clear model it text work work for you that light are by idea system time change mind model for space work life by be from work light all by in one truth with can and mind are one human not system system by idea a are world truth you they space and can one model in reason future reason world light reason system this future mind to time in life of truth with a clear will they not life space can if to they is that in text data clear work clear in from on reason clear you mind for can simple human this not token to and to system human work of the will mind clear for time are truth simple work will work story for reason simple time time are mind space not light story and that a of this that the will it data all model model light is is data from data a change idea if a that are in of reason all as not can is data human to with future space not are from from text by of truth simple data truth future with to you the for by text story a clear is clear with space they future idea as life reason work space to for system as text this can change system from mind the that story value mind space from are in data will in change they a work if truth not clear or truth data to you in world not of one or of as space by will clear light with in be work in story simple are idea idea clear they the world will one clear with human all time mind a and it work human is in simple by be text life as they is they that the not token as in on value time one of model to all system as are space can model will future with you future life mind to work all can work it to it future of world idea can data token change light they space of world system change to or be or all story you one reason that with a one reason simple token the with on time to truth on future change or they this mind to world you all text human story world be value space be text simple human all the one light the clear human be on world life or value it reason or as value work to truth it data reason story change a from story for time idea data is future light a a idea will as text reason future you by data from a and idea data time this will in by life you not token or of of system of to model will data are token reason mind truth future one can idea data with it it light in model a world data model model the work space work it if system time or on space life human and not to if all it token they one not for future a for human from on clear from value we data value light text mind human from to from human by with with story and data by we that if of simple world of of with with work for the is token world not mind with by as in mind if idea value can we change can truth are one idea space mind they will a clear space future mind it a value they it in they system system human this be work idea future you system token future to clear clear space all mind not you as you a with not if if text with token by it we clear model clear all can the you one not mind as that reason clear a mind the that if it change all future reason all be truth story by this story text and this system life on by are be reason text be to not it reason reason clear a truth human a for if from and from time with or are all it reason if and it from on clear can simple future work this reason of is human in reason system will and mind model system text in model not this mind in truth work life if clear can space this world value not token is the of token all change are it for if model work for story it this light change of from is the will change in light simple we reason model text story truth be idea clear will simple time reason clear data for time and for time or a life from token this token we in space to on time world human by they idea idea light as idea idea one clear be by as truth to are token and is for be clear be all life world not to you are with light in life will reason to one life a idea model clear they with and from mind by value this of text in if in it value life with clear system value model time space life future to by token be not the and text or by are you light mind story not if it the text from or to a and token the or text idea from text work future in system from reason value as are is model be model are truth clear it value data from time we clear this life data work data simple token as future model to clear idea life model idea text mind change text and future light this a will for to space if is the clear light this is with of not you system data time to we as data future be value if one space simple model can from space on truth to truth by token will we future it they mind human simple it value truth light we to space idea if truth data model human token with to can be in this model and they one of space future or the in as work for a token time human value be we future with it simple as by one work model in human token reason world this if space you you human model story time truth can idea you if can data data all mind will by they is not data if change text data or simple simple human we to to text light time if light by human token mind for of and with the one can a change they change to story a it of on will a in if text value model as change all a in one story text token all life life to simple you or time the on story you is text truth it data on light is it to of clear value that work idea reason idea work change you change time model token idea be story that to it in value from can is value they model with human data text human by truth work mind you truth mind system it all are for truth data space life is as all for system a if is model light to in that on that reason time light this be we value by life one token human space change story by from story is it as can be of idea if by on a not the that this time in is text this be that idea simple all simple space idea they this if they value the of of we it from for be token if model that with for from as and on are with mind or time system it mind system of clear for clear of text reason model and future a one mind this they world is future life one that if from work or from a idea light all token work value mind data future change can one for they you idea work in story it of this token can data we by work text one a we time you we all reason from you simple to human of data this and human will they and as will story from from that and space you if reason one is that if time are is idea not future will value from a with world life clear truth truth will with light in the world clear they simple they truth this of the be human light future human be world this as a life change of model reason simple life system token are clear it on story a model or future to simple light clear the one we human are a this are on time in that this value it of work change on value human or that or human world story reason clear clear not that value by future value text from time you truth life can future truth future is are reason if with space space world and light this work simple they story on data of model token system data from light a truth work reason with world future token as and story system human is the mind for future you future not text world as world world simple for light data and reason by the we of in clear text will to and with space story that model time or time on can value that the simple all is are if can value you future world mind be you this the one simple text with in light reason data if idea token mind time or not change text system text one to from light data space with they if future reason to story if or future light future will world in space truth life can of work light are will model change will as and for simple with text be simple this with clear can mind to token it with space from to are by it all clear they are change clear life by human with truth clear one we human all text life world world model story work in future that world human for token can is in they story if model idea that by token token you you to all life from if change world be is reason are light be time to token this clear light one that it reason we by clear this life on simple they future a clear is truth this the that will or truth from for story life world all space they reason by be simple idea you from data you future are model the will system future this that one it one time in can will life we value data as on will and or we truth idea human they data text idea light will future all model work mind the with one text they not token not by future the by human this story is by as change clear change of are can for are you text story value with data we that a all space simple model on or can light token in will to one with life are change can of or a by that and work with mind model data to that truth will it clear life are human not they will it and is for be reason not time not not life as in light of as or model it for and be will if truth model change light with as value space not text to world simple world life and it and light future light idea clear idea you all with change space on system the one be with data simple to can the reason light a from story all truth to value or data mind in is as model system all work data data they system world with as be one clear this truth mind simple as story truth change simple they time of truth to mind model or that this the not if is space time reason that if the one simple you are that this simple will change a text for a text mind this space time truth by world in time we text simple data world on to that of idea model clear are to space that for of not light a truth we mind for reason you not in is not if the from text clear they time simple with will human for and will you we that this token the with you all with reason one is are they reason with as human they to it work life is in it data simple world that truth a a mind time world for future that change on simple model token light is this text be they truth truth human they by from idea be human as simple all will mind value be data reason one data this model value data one not with simple system data in or simple story text or a this future all as life mind future they model simple life idea all data from in are text world life value work in token in data change we simple to is idea text they space token work that and clear world from world to is for light to as reason light data will system it truth as time on light from text and is for be simple story text one model all of change is the life in not text one space time with you space we system not you and on space it not data and can one data mind a we idea idea by will will not the mind token by future mind this can story reason life life that that of that with for you value light space will world you world token that change are world change as it or light of of by all life for in reason and the life light we of work from and all with the space simple life idea we will of and is system it we one they simple a will they are the simple as data reason model can as all future it system mind simple mind space truth for that from idea model story all system change human on human on will and idea reason future reason to or are as idea we can is as can life is by not by space time idea data work this one by as on if truth system story token that for world data time they system or for change we reason in can it human future work or model work be truth on to a idea by clear that on one token data model from mind system one all change to in are if the value idea this truth mind clear life not change on all mind life you this will truth can data simple human to life can they change work story on light or for that idea human can one all we not that a world model truth clear with light we are time idea as text and with space story will token human future to text light world for mind time and we by for to system story will change and time model light it that can it not token that future in for space that a or idea space it in or story reason to work will on and not work change or idea that they and work life on you with be all and that space by from to mind idea human to data not to model work light reason they is with mind story not clear be one not if it not be if light this as and model one one they world this data it token human the truth they with this not in that this space all from that data model change model reason reason from to we one token model if life world by all a one by by of token mind work the human that to change in human work by by if and for to text with for text simple mind reason to it model one the system simple work we it text text this you truth on all this value simple are model or life it space if or one it human a it space work system with model space time work that change system clear we by truth are token that idea with life this one are are world in with value are this for system text or on we story with mind the to simple world to idea it will with human be time with be a one light will to is be space on it space data to they model token value or is it not by of idea truth reason can simple change that data light on to data system can you can be and or this is we a of world be one one text and a as work all model model the data idea are a text that on or with on future they data value text future model mind in change idea system this text the change are they are text on future model idea system future token if reason work world story if they for or of from be you as value story or or all by this as they light on change or we is in time data you idea all clear work work will this system mind not one on they future from human future from mind will and light clear system idea model mind by reason world be they are a time token we data is future value clear clear it on data simple system model simple will data simple a mind on one truth clear text mind life truth idea this idea this system from as are work system the with from this clear you is world with are by be it can are one simple model light and they work the future change can life be are if that they system mind is life time and we simple future value for in all it that truth are are light world token change model world or change is the time all from on on reason value or they we by it one or mind will of reason model future time model the clear will and one human story time story from they truth text time for future light that story is mind time light the are on will value all all you from on or future future are that token in and be reason text can data human the space system story reason idea all with be life reason this all of text data in future to world you if are the model model will in it light or time space a not future from are can clear mind space by simple by all all future of if world clear be will reason is on it data they the light future a is for model is if from it the can they to space mind change can time one story reason if it time will that one human of clear text if a for by story world to work and all text clear truth human if simple mind space world life one value value it of is simple human data you idea in with and the text on value space data you human if not story reason time story model will simple is story system light the can in world world in idea human with is all this world on world clear one idea mind truth will the in with future or change data that model that they for it we one will can world will with mind or on one human by story not change in on the reason in or and story text on token not world we story space life time that story on as you you one simple a to with text idea it for reason model for text data one we will with value change data with space or can change we by life by be for world for in mind we world reason it if in we all are by from one light and story the be not reason if it value value mind life this reason a to truth life of future system they if the and can are of in or all text are system life not and system mind will future time model simple a in system with space clear simple on will of if change model in a life world a can are system for from token text simple value reason text idea future token you of change mind future not on that is from can be work be be we story on not will token by of as with token by are world a be you in space change change will reason be idea and to life human time of light is and text with space the world by future for not for they clear in from is simple are life light you the in reason light value can work change system clear is model text on all idea time clear or not world mind to future story system they that they on will all clear to is world to change of if be for mind change from will one clear you is reason it we change data is for token they will can by world change to that be of space data space are light or will if world data clear with not and and will all work work in from data future value for they data world text story you clear token all we on with and data if human space we the not reason world is and of to to and by by token simple to all clear mind with model story truth value work one for on work reason that with with of one world are they not if one with clear for all data model that they one mind time all with or or in human not they be to as and clear model as truth model with can value mind all are clear one change this be from of a you to of in that is as data simple and is will you if work life system as system to data\nBased on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.",
+          "output_content": "",
+          "reasoning_content": "We need answer user's request. User provided a long stream of words (word salad) and asks: \"Based on the words above, write a short philosophical essay discussing the meaning of existence, the nature of consciousness, and humanity's place in the universe. Use clear, coherent sentences.\"\n\nWe need produce short philosophical essay. Need likely use themes from words: clear, data, light, truth, value, mind, future, model, system, space, time, life, human, story, reason, token, text, world, work, idea, one, all, future, space, time, light, truth, value",
+          "usage_info": {
+            "prompt_tokens": 4096,
+            "total_tokens": 4224,
+            "completion_tokens": 128
+          },
+          "server_timing_used": false,
+          "server_prefill_time_ms": null,
+          "server_decode_time_ms": null,
+          "prefill_time_source": "client_latency_adjusted",
+          "output_time_source": "client",
+          "network_latency_ms": 40.59,
+          "network_latency_sample_count": 7,
+          "client_prefill_time_ms": 2474.66,
+          "client_decode_time_ms": 2617.87,
+          "client_total_time_ms": 5092.53,
+          "client_has_phase_boundary": true,
+          "has_streaming_content": true,
+          "chunk_count": 47,
+          "start_timestamp": 346275.8950021,
+          "first_chunk_timestamp": 346278.4101909,
+          "first_token_timestamp": 346278.41026,
+          "boundary_timestamp": 346278.41026,
+          "boundary_source": "first_content_token",
+          "end_timestamp": 346281.0281316,
+          "token_source": "API",
+          "token_warnings": [],
+          "token_timestamps": [
+            {
+              "timestamp": 346278.41026,
+              "time_from_start_ms": 2515.257899998687,
+              "is_reasoning": true,
+              "itl_ms": null
+            },
+            {
+              "timestamp": 346278.4616542,
+              "time_from_start_ms": 2566.652100009378,
+              "is_reasoning": true,
+              "itl_ms": 51.39420001069084
+            },
+            {
+              "timestamp": 346278.5210609,
+              "time_from_start_ms": 2626.0588000295684,
+              "is_reasoning": true,
+              "itl_ms": 59.40670002019033
+            },
+            {
+              "timestamp": 346278.5805765,
+              "time_from_start_ms": 2685.574400005862,
+              "is_reasoning": true,
+              "itl_ms": 59.51559997629374
+            },
+            {
+              "timestamp": 346278.6398383,
+              "time_from_start_ms": 2744.836200028658,
+              "is_reasoning": true,
+              "itl_ms": 59.261800022795796
+            },
+            {
+              "timestamp": 346278.6992663,
+              "time_from_start_ms": 2804.264200036414,
+              "is_reasoning": true,
+              "itl_ms": 59.428000007756054
+            },
+            {
+              "timestamp": 346278.7588838,
+              "time_from_start_ms": 2863.881700031925,
+              "is_reasoning": true,
+              "itl_ms": 59.617499995511025
+            },
+            {
+              "timestamp": 346278.8184053,
+              "time_from_start_ms": 2923.4031999949366,
+              "is_reasoning": true,
+              "itl_ms": 59.52149996301159
+            },
+            {
+              "timestamp": 346278.8779201,
+              "time_from_start_ms": 2982.9180000233464,
+              "is_reasoning": true,
+              "itl_ms": 59.51480002840981
+            },
+            {
+              "timestamp": 346278.9374819,
+              "time_from_start_ms": 3042.4798000021838,
+              "is_reasoning": true,
+              "itl_ms": 59.56179997883737
+            },
+            {
+              "timestamp": 346278.9971347,
+              "time_from_start_ms": 3102.1326000336558,
+              "is_reasoning": true,
+              "itl_ms": 59.652800031472
+            },
+            {
+              "timestamp": 346279.0563071,
+              "time_from_start_ms": 3161.305000016,
+              "is_reasoning": true,
+              "itl_ms": 59.17239998234436
+            },
+            {
+              "timestamp": 346279.1163637,
+              "time_from_start_ms": 3221.3616000371985,
+              "is_reasoning": true,
+              "itl_ms": 60.05660002119839
+            },
+            {
+              "timestamp": 346279.1754935,
+              "time_from_start_ms": 3280.4914000444114,
+              "is_reasoning": true,
+              "itl_ms": 59.12980000721291
+            },
+            {
+              "timestamp": 346279.2349841,
+              "time_from_start_ms": 3339.982000004966,
+              "is_reasoning": true,
+              "itl_ms": 59.49059996055439
+            },
+            {
+              "timestamp": 346279.2946123,
+              "time_from_start_ms": 3399.6102000237443,
+              "is_reasoning": true,
+              "itl_ms": 59.62820001877844
+            },
+            {
+              "timestamp": 346279.3539868,
+              "time_from_start_ms": 3458.9847000315785,
+              "is_reasoning": true,
+              "itl_ms": 59.374500007834285
+            },
+            {
+              "timestamp": 346279.4136635,
+              "time_from_start_ms": 3518.6614000122063,
+              "is_reasoning": true,
+              "itl_ms": 59.676699980627745
+            },
+            {
+              "timestamp": 346279.4729351,
+              "time_from_start_ms": 3577.9330000514165,
+              "is_reasoning": true,
+              "itl_ms": 59.27160003921017
+            },
+            {
+              "timestamp": 346279.5325845,
+              "time_from_start_ms": 3637.5823999987915,
+              "is_reasoning": true,
+              "itl_ms": 59.64939994737506
+            },
+            {
+              "timestamp": 346279.5918693,
+              "time_from_start_ms": 3696.8672000220977,
+              "is_reasoning": true,
+              "itl_ms": 59.28480002330616
+            },
+            {
+              "timestamp": 346279.6513272,
+              "time_from_start_ms": 3756.3251000246964,
+              "is_reasoning": true,
+              "itl_ms": 59.45790000259876
+            },
+            {
+              "timestamp": 346279.7107935,
+              "time_from_start_ms": 3815.7914000330493,
+              "is_reasoning": true,
+              "itl_ms": 59.466300008352846
+            },
+            {
+              "timestamp": 346279.7706201,
+              "time_from_start_ms": 3875.618000049144,
+              "is_reasoning": true,
+              "itl_ms": 59.826600016094744
+            },
+            {
+              "timestamp": 346279.8299968,
+              "time_from_start_ms": 3934.9947000155225,
+              "is_reasoning": true,
+              "itl_ms": 59.37669996637851
+            },
+            {
+              "timestamp": 346279.8892744,
+              "time_from_start_ms": 3994.272300042212,
+              "is_reasoning": true,
+              "itl_ms": 59.27760002668947
+            },
+            {
+              "timestamp": 346279.9490854,
+              "time_from_start_ms": 4054.0832999977283,
+              "is_reasoning": true,
+              "itl_ms": 59.81099995551631
+            },
+            {
+              "timestamp": 346280.0085986,
+              "time_from_start_ms": 4113.596500013955,
+              "is_reasoning": true,
+              "itl_ms": 59.51320001622662
+            },
+            {
+              "timestamp": 346280.0679668,
+              "time_from_start_ms": 4172.964700032026,
+              "is_reasoning": true,
+              "itl_ms": 59.36820001807064
+            },
+            {
+              "timestamp": 346280.127951,
+              "time_from_start_ms": 4232.948900025804,
+              "is_reasoning": true,
+              "itl_ms": 59.98419999377802
+            },
+            {
+              "timestamp": 346280.1872463,
+              "time_from_start_ms": 4292.244200012647,
+              "is_reasoning": true,
+              "itl_ms": 59.29529998684302
+            },
+            {
+              "timestamp": 346280.2466909,
+              "time_from_start_ms": 4351.688800030388,
+              "is_reasoning": true,
+              "itl_ms": 59.44460001774132
+            },
+            {
+              "timestamp": 346280.3061193,
+              "time_from_start_ms": 4411.11720004119,
+              "is_reasoning": true,
+              "itl_ms": 59.42840001080185
+            },
+            {
+              "timestamp": 346280.3655538,
+              "time_from_start_ms": 4470.551700040232,
+              "is_reasoning": true,
+              "itl_ms": 59.4344999990426
+            },
+            {
+              "timestamp": 346280.424995,
+              "time_from_start_ms": 4529.992900032084,
+              "is_reasoning": true,
+              "itl_ms": 59.441199991852045
+            },
+            {
+              "timestamp": 346280.4844296,
+              "time_from_start_ms": 4589.4275000318885,
+              "is_reasoning": true,
+              "itl_ms": 59.43459999980405
+            },
+            {
+              "timestamp": 346280.5437862,
+              "time_from_start_ms": 4648.784100019839,
+              "is_reasoning": true,
+              "itl_ms": 59.356599987950176
+            },
+            {
+              "timestamp": 346280.6033425,
+              "time_from_start_ms": 4708.340400015004,
+              "is_reasoning": true,
+              "itl_ms": 59.55629999516532
+            },
+            {
+              "timestamp": 346280.6628315,
+              "time_from_start_ms": 4767.829400021583,
+              "is_reasoning": true,
+              "itl_ms": 59.48900000657886
+            },
+            {
+              "timestamp": 346280.7223245,
+              "time_from_start_ms": 4827.322400000412,
+              "is_reasoning": true,
+              "itl_ms": 59.492999978829175
+            },
+            {
+              "timestamp": 346280.7818505,
+              "time_from_start_ms": 4886.848399997689,
+              "is_reasoning": true,
+              "itl_ms": 59.52599999727681
+            },
+            {
+              "timestamp": 346280.8415543,
+              "time_from_start_ms": 4946.552200010046,
+              "is_reasoning": true,
+              "itl_ms": 59.70380001235753
+            },
+            {
+              "timestamp": 346280.9010046,
+              "time_from_start_ms": 5006.002500012983,
+              "is_reasoning": true,
+              "itl_ms": 59.450300002936274
+            },
+            {
+              "timestamp": 346280.9606901,
+              "time_from_start_ms": 5065.68800000241,
+              "is_reasoning": true,
+              "itl_ms": 59.685499989427626
+            },
+            {
+              "timestamp": 346281.0212695,
+              "time_from_start_ms": 5126.267400046345,
+              "is_reasoning": true,
+              "itl_ms": 60.579400043934584
+            }
+          ],
+          "itl_stats": {
+            "mean": 59.34,
+            "min": 51.39,
+            "max": 60.58,
+            "std": 1.24,
+            "count": 44
+          }
+        }
+      ],
+      "status": "成功"
+    }
+  ]
+}

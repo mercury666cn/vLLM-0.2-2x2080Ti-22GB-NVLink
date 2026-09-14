@@ -1,0 +1,15 @@
+{
+  "mode": "v02_nvfp4_mtp3",
+  "model": "qwen38-27b-nvfp4-fp8kv-240K-mtp3-text-only-cu130",
+  "target_prompt_tokens": 131072,
+  "local_prompt_tokens": 131072,
+  "prompt_tokens": 131072,
+  "completion_tokens": 128,
+  "chunks": 45,
+  "ttft_s": 167.959,
+  "prefill_tps": 780.38,
+  "decode_tps": 47.24,
+  "elapsed_s": 170.648,
+  "response_sha256": "802e9320f176364b216b316478a77f5026a83b52cd0fa6fdd5c865674d4b9c28",
+  "response_preview": "基于提供的文本内容，虽然原文存在大量重复，但其核心信息高度一致且明确。以下是从该文本中提炼出的**核心工程原则**及**明确结论**：\n\n### 核心工程原则\n\n1.  **可靠性源于可验证性与清晰边界**\n    *   在分布式系统与A"
+}

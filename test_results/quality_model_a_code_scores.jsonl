@@ -1,0 +1,164 @@
+{"case_id": "humaneval:HumanEval/0", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp27j0foe0/candidate.py\", line 51, in <module>\n    check(has_close_elements)\n  File \"/tmp/tmp27j0foe0/candidate.py\", line 41, in check\n    assert candidate([1.0, 2.0, 3.9, 4.0, 5.0, 2.2], 0.3) == True\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/1", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp__77twb8/candidate.py\", line 1, in <module>\n    def separate_paren_groups(parenstring: str) -> List[str]:\nNameError: name 'List' is not defined. Did you mean: 'list'?\n"}
+{"case_id": "humaneval:HumanEval/2", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/3", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/4", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpmo76b23_/candidate.py\", line 44, in <module>\n    check(mean_absolute_deviation)\n  File \"/tmp/tmpmo76b23_/candidate.py\", line 38, in check\n    assert abs(candidate([1.0, 2.0, 3.0]) - 2.0/3.0) < 1e-6\nTypeError: unsupported operand type(s) for -: 'NoneType' and 'float'\n"}
+{"case_id": "humaneval:HumanEval/5", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpozfdr9m0/candidate.py\", line 37, in <module>\n    check(intersperse)\n  File \"/tmp/tmpozfdr9m0/candidate.py\", line 32, in check\n    assert candidate([], 7) == []\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/6", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/7", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp6uifeyjz/candidate.py\", line 29, in <module>\n    check(filter_by_substring)\n  File \"/tmp/tmp6uifeyjz/candidate.py\", line 23, in check\n    assert candidate([], 'john') == []\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/8", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/9", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpeewab1_u/candidate.py\", line 45, in <module>\n    check(rolling_max)\n  File \"/tmp/tmpeewab1_u/candidate.py\", line 39, in check\n    assert candidate([]) == []\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/10", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpejtrngsn/candidate.py\", line 39, in <module>\n    check(make_palindrome)\n  File \"/tmp/tmpejtrngsn/candidate.py\", line 32, in check\n    assert candidate('') == ''\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/11", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/12", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/13", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/14", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/15", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpd_xxjf8i/candidate.py\", line 27, in <module>\n    check(string_sequence)\n  File \"/tmp/tmpd_xxjf8i/candidate.py\", line 22, in check\n    assert candidate(0) == '0'\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/16", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpf1emw970/candidate.py\", line 29, in <module>\n    check(count_distinct_characters)\n  File \"/tmp/tmpf1emw970/candidate.py\", line 22, in check\n    assert candidate('') == 0\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/17", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpa01eh24w/candidate.py\", line 36, in <module>\n    check(parse_music)\n  File \"/tmp/tmpa01eh24w/candidate.py\", line 29, in check\n    assert candidate('') == []\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/18", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/19", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/20", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/21", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpy1oki0i0/candidate.py\", line 29, in <module>\n    check(rescale_to_unit)\n  File \"/tmp/tmpy1oki0i0/candidate.py\", line 22, in check\n    assert candidate([2.0, 49.9]) == [0.0, 1.0]\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/22", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpk4xurpsx/candidate.py\", line 38, in <module>\n    check(filter_integers)\n  File \"/tmp/tmpk4xurpsx/candidate.py\", line 33, in check\n    assert candidate([]) == []\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/23", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/24", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpcc1err3s/candidate.py\", line 27, in <module>\n    check(largest_divisor)\n  File \"/tmp/tmpcc1err3s/candidate.py\", line 20, in check\n    assert candidate(3) == 1\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/25", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/26", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/27", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/28", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/29", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/30", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/31", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/32", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp1_t2zt4o/candidate.py\", line 50, in <module>\n    check(find_zero)\n  File \"/tmp/tmp1_t2zt4o/candidate.py\", line 46, in check\n    assert math.fabs(poly(coeffs, solution)) < 1e-4\n  File \"/tmp/tmp1_t2zt4o/candidate.py\", line 9, in poly\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n  File \"/tmp/tmp1_t2zt4o/candidate.py\", line 9, in <listcomp>\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\nTypeError: must be real number, not NoneType\n"}
+{"case_id": "humaneval:HumanEval/33", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/34", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/35", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/36", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/37", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpuumky4_3/candidate.py\", line 40, in <module>\n    check(sort_even)\n  File \"/tmp/tmpuumky4_3/candidate.py\", line 34, in check\n    assert tuple(candidate([1, 2, 3])) == tuple([1, 2, 3])\nTypeError: 'NoneType' object is not iterable\n"}
+{"case_id": "humaneval:HumanEval/38", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpofdzciyy/candidate.py\", line 26, in <module>\n    check(decode_cyclic)\n  File \"/tmp/tmpofdzciyy/candidate.py\", line 21, in check\n    encoded_str = encode_cyclic(str)\nNameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?\n"}
+{"case_id": "humaneval:HumanEval/39", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp6eggafex/candidate.py\", line 39, in <module>\n    check(prime_fib)\n  File \"/tmp/tmp6eggafex/candidate.py\", line 26, in check\n    assert candidate(1) == 2\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/40", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/41", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/42", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/43", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/44", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/45", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/46", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/47", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/48", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmps3jt39ay/candidate.py\", line 46, in <module>\n    check(is_palindrome)\n  File \"/tmp/tmps3jt39ay/candidate.py\", line 36, in check\n    assert candidate('') == True\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/49", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/50", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpbs6fua9t/candidate.py\", line 35, in <module>\n    check(decode_shift)\n  File \"/tmp/tmpbs6fua9t/candidate.py\", line 31, in check\n    assert candidate(copy.deepcopy(encoded_str)) == str\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/51", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/52", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/53", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/54", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/55", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/56", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/57", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/58", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/59", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/60", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/61", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/62", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/63", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp1p9vts06/candidate.py\", line 36, in <module>\n    check(fibfib)\n  File \"/tmp/tmp1p9vts06/candidate.py\", line 26, in check\n    assert candidate(2) == 1\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/64", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/65", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/66", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/67", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/68", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/69", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/70", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/71", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/72", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/73", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/74", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/75", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/76", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpsszabaul/candidate.py\", line 35, in <module>\n    check(is_simple_power)\n  File \"/tmp/tmpsszabaul/candidate.py\", line 20, in check\n    assert candidate(16, 2)== True, \"This prints if this assert fails 1 (good for debugging!)\"\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n"}
+{"case_id": "humaneval:HumanEval/77", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/78", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpdoziwvdc/candidate.py\", line 21, in <module>\n    check(hex_key)\n  File \"/tmp/tmpdoziwvdc/candidate.py\", line 17, in check\n    assert candidate([]) == 0\n  File \"/tmp/tmpdoziwvdc/candidate.py\", line 3, in hex_key\n    return sum(1 for digit in num.upper() if digit in prime_digits)\nAttributeError: 'list' object has no attribute 'upper'\n"}
+{"case_id": "humaneval:HumanEval/79", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/80", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/81", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/82", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/83", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp7qih_gyz/candidate.py\", line 25, in <module>\n    check(starts_one_ends)\n  File \"/tmp/tmp7qih_gyz/candidate.py\", line 14, in check\n    assert candidate(1) == 1\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/84", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/85", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/86", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpewc11t5x/candidate.py\", line 33, in <module>\n    check(anti_shuffle)\n  File \"/tmp/tmpewc11t5x/candidate.py\", line 21, in check\n    assert candidate('Hi') == 'Hi'\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/87", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/88", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/89", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpqelwpbjk/candidate.py\", line 33, in <module>\n    check(encrypt)\n  File \"/tmp/tmpqelwpbjk/candidate.py\", line 19, in check\n    assert candidate('hi') == 'lm', \"This prints if this assert fails 1 (good for debugging!)\"\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n"}
+{"case_id": "humaneval:HumanEval/90", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpngigfscy/candidate.py\", line 44, in <module>\n    check(next_smallest)\n  File \"/tmp/tmpngigfscy/candidate.py\", line 31, in check\n    assert candidate([1, 2, 3, 4, 5]) == 2\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/91", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmppkenyh_4/candidate.py\", line 32, in <module>\n    check(is_bored)\n  File \"/tmp/tmppkenyh_4/candidate.py\", line 20, in check\n    assert candidate(\"Hello world\") == 0, \"Test 1\"\nAssertionError: Test 1\n"}
+{"case_id": "humaneval:HumanEval/92", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/93", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp69lljy3d/candidate.py\", line 32, in <module>\n    check(encode)\n  File \"/tmp/tmp69lljy3d/candidate.py\", line 22, in check\n    assert candidate('TEST') == 'tgst', \"This prints if this assert fails 1 (good for debugging!)\"\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n"}
+{"case_id": "humaneval:HumanEval/94", "passed": false, "detail": "  File \"/tmp/tmpl8jmz2v6/candidate.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax\n"}
+{"case_id": "humaneval:HumanEval/95", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/96", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/97", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpskouzl7j/candidate.py\", line 32, in <module>\n    check(multiply)\n  File \"/tmp/tmpskouzl7j/candidate.py\", line 18, in check\n    assert candidate(148, 412) == 16, \"First test error: \" + str(candidate(148, 412))                    \nAssertionError: First test error: None\n"}
+{"case_id": "humaneval:HumanEval/98", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/99", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpx0cn0993/candidate.py\", line 36, in <module>\n    check(closest_integer)\n  File \"/tmp/tmpx0cn0993/candidate.py\", line 26, in check\n    assert candidate(\"10\") == 10, \"Test 1\"\nAssertionError: Test 1\n"}
+{"case_id": "humaneval:HumanEval/100", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/101", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/102", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/103", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpsaxhtupe/candidate.py\", line 37, in <module>\n    check(rounded_avg)\n  File \"/tmp/tmpsaxhtupe/candidate.py\", line 19, in check\n    assert candidate(1, 5) == \"0b11\"\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/104", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/105", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpwzjnhhao/candidate.py\", line 42, in <module>\n    check(by_length)\n  File \"/tmp/tmpwzjnhhao/candidate.py\", line 31, in check\n    assert candidate([2, 1, 1, 4, 5, 8, 2, 3]) == [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"], \"Error\"\nAssertionError: Error\n"}
+{"case_id": "humaneval:HumanEval/106", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/107", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/108", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/109", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp3209v3x6/candidate.py\", line 43, in <module>\n    check(move_one_ball)\n  File \"/tmp/tmp3209v3x6/candidate.py\", line 35, in check\n    assert candidate([3, 4, 5, 1, 2])==True, \"This prints if this assert fails 1 (good for debugging!)\"\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n"}
+{"case_id": "humaneval:HumanEval/110", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpp71m1b3o/candidate.py\", line 33, in <module>\n    check(exchange)\n  File \"/tmp/tmpp71m1b3o/candidate.py\", line 21, in check\n    assert candidate([1, 2, 3, 4], [1, 2, 3, 4]) == \"YES\"\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/111", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/112", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/113", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp1vxk4h1k/candidate.py\", line 35, in <module>\n    check(odd_count)\n  File \"/tmp/tmp1vxk4h1k/candidate.py\", line 22, in check\n    assert candidate(['1234567']) == [\"the number of odd elements 4n the str4ng 4 of the 4nput.\"], \"Test 1\"\nAssertionError: Test 1\n"}
+{"case_id": "humaneval:HumanEval/114", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpuaj6ucll/candidate.py\", line 49, in <module>\n    check(minSubArraySum)\n  File \"/tmp/tmpuaj6ucll/candidate.py\", line 33, in check\n    assert candidate([2, 3, 4, 1, 2, 4]) == 1, \"This prints if this assert fails 1 (good for debugging!)\"\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n"}
+{"case_id": "humaneval:HumanEval/115", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/116", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpuj4jkgwy/candidate.py\", line 34, in <module>\n    check(sort_array)\n  File \"/tmp/tmpuj4jkgwy/candidate.py\", line 20, in check\n    assert candidate([1,5,2,3,4]) == [1, 2, 4, 3, 5]\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/117", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/118", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpqrf6jwv9/candidate.py\", line 42, in <module>\n    check(get_closest_vowel)\n  File \"/tmp/tmpqrf6jwv9/candidate.py\", line 23, in check\n    assert candidate(\"yogurt\") == \"u\"\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/119", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/120", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/121", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/122", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/123", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/124", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/125", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/126", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/127", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpv_bnkjzx/candidate.py\", line 41, in <module>\n    check(intersection)\n  File \"/tmp/tmpv_bnkjzx/candidate.py\", line 28, in check\n    assert candidate((1, 2), (2, 3)) == \"NO\"\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/128", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/129", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmplaa_2_mu/candidate.py\", line 55, in <module>\n    check(minPath)\n  File \"/tmp/tmplaa_2_mu/candidate.py\", line 39, in check\n    assert candidate([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3) == [1, 2, 1]\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/130", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpa7md0v82/candidate.py\", line 40, in <module>\n    check(tri)\n  File \"/tmp/tmpa7md0v82/candidate.py\", line 26, in check\n    assert candidate(3) == [1, 3, 2.0, 8.0]\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/131", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/132", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpjkfl0pkj/candidate.py\", line 40, in <module>\n    check(is_nested)\n  File \"/tmp/tmpjkfl0pkj/candidate.py\", line 21, in check\n    assert candidate('[[]]') == True, \"This prints if this assert fails 1 (good for debugging!)\"\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n"}
+{"case_id": "humaneval:HumanEval/133", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/134", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/135", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp30v_ur49/candidate.py\", line 42, in <module>\n    check(can_arrange)\n  File \"/tmp/tmp30v_ur49/candidate.py\", line 32, in check\n    assert candidate([1,2,4,3,5])==3\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/136", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/137", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp02__18an/candidate.py\", line 34, in <module>\n    check(compare_one)\n  File \"/tmp/tmp02__18an/candidate.py\", line 20, in check\n    assert candidate(1, 2) == 2\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/138", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpbvxzsaz5/candidate.py\", line 23, in <module>\n    check(is_equal_to_sum_even)\n  File \"/tmp/tmpbvxzsaz5/candidate.py\", line 13, in check\n    assert candidate(4) == False\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/139", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/140", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/141", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/142", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/143", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/144", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/145", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp8wj3k2de/candidate.py\", line 31, in <module>\n    check(order_by_points)\n  File \"/tmp/tmp8wj3k2de/candidate.py\", line 19, in check\n    assert candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/146", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/147", "passed": false, "detail": "  File \"/tmp/tmpo4r3hqnc/candidate.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax\n"}
+{"case_id": "humaneval:HumanEval/148", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmp9hmg4blb/candidate.py\", line 37, in <module>\n    check(bf)\n  File \"/tmp/tmp9hmg4blb/candidate.py\", line 24, in check\n    assert candidate(\"Jupiter\", \"Neptune\") == (\"Saturn\", \"Uranus\"), \"First test error: \" + str(len(candidate(\"Jupiter\", \"Neptune\")))      \nTypeError: object of type 'NoneType' has no len()\n"}
+{"case_id": "humaneval:HumanEval/149", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/150", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpoq8fjokf/candidate.py\", line 33, in <module>\n    check(x_or_y)\n  File \"/tmp/tmpoq8fjokf/candidate.py\", line 17, in check\n    assert candidate(7, 34, 12) == 34\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/151", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/152", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/153", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/154", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpkam4wmjd/candidate.py\", line 31, in <module>\n    check(cycpattern_check)\n  File \"/tmp/tmpkam4wmjd/candidate.py\", line 22, in check\n    assert  candidate(\"xyzw\",\"xyw\") == False , \"test #0\"\nAssertionError: test #0\n"}
+{"case_id": "humaneval:HumanEval/155", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpjufcod74/candidate.py\", line 40, in <module>\n    check(even_odd_count)\n  File \"/tmp/tmpjufcod74/candidate.py\", line 25, in check\n    assert candidate(7) == (0, 1)\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/156", "passed": false, "detail": "  File \"/tmp/tmp99eed2w8/candidate.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax\n"}
+{"case_id": "humaneval:HumanEval/157", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpdrvrq1ms/candidate.py\", line 34, in <module>\n    check(right_angle_triangle)\n  File \"/tmp/tmpdrvrq1ms/candidate.py\", line 18, in check\n    assert candidate(3, 4, 5) == True, \"This prints if this assert fails 1 (good for debugging!)\"\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n"}
+{"case_id": "humaneval:HumanEval/158", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpy11e64d4/candidate.py\", line 45, in <module>\n    check(find_max)\n  File \"/tmp/tmpy11e64d4/candidate.py\", line 30, in check\n    assert (candidate([\"name\", \"of\", \"string\"]) == \"string\"), \"t1\"\nAssertionError: t1\n"}
+{"case_id": "humaneval:HumanEval/159", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/160", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpc4z38fli/candidate.py\", line 42, in <module>\n    check(do_algebra)\n  File \"/tmp/tmpc4z38fli/candidate.py\", line 33, in check\n    assert candidate(['**', '*', '+'], [2, 3, 4, 5]) == 37\nAssertionError\n"}
+{"case_id": "humaneval:HumanEval/161", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/162", "passed": true, "detail": ""}
+{"case_id": "humaneval:HumanEval/163", "passed": false, "detail": "Traceback (most recent call last):\n  File \"/tmp/tmpmz2778rv/candidate.py\", line 28, in <module>\n    check(generate_integers)\n  File \"/tmp/tmpmz2778rv/candidate.py\", line 18, in check\n    assert candidate(2, 10) == [2, 4, 6, 8], \"Test 1\"\nAssertionError: Test 1\n"}

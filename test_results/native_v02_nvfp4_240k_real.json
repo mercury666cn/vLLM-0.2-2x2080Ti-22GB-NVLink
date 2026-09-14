@@ -1,0 +1,11 @@
+{
+  "model": "qwen38-27b-nvfp4-fp8kv-240K-mtp3-text-only-cu130",
+  "target_prompt_tokens": 245600,
+  "prompt_tokens": 245600,
+  "completion_tokens": 32,
+  "chunks": 8,
+  "ttft_s": 378.316,
+  "prefill_tps": 649.19,
+  "decode_tps": 89.2,
+  "elapsed_s": 378.664
+}

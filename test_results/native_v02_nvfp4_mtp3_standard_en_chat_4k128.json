@@ -1,0 +1,38 @@
+{
+  "model": "qwen27b-v02-nvfp4-mtp3-8k",
+  "local_prompt_tokens": 4096,
+  "rows": [
+    {
+      "prompt_tokens": 4096,
+      "completion_tokens": 128,
+      "chunks": 57,
+      "ttft": 3.3784,
+      "prefill_tps": 1212.4,
+      "decode_tps": 34.57,
+      "elapsed": 7.052
+    },
+    {
+      "prompt_tokens": 4096,
+      "completion_tokens": 128,
+      "chunks": 57,
+      "ttft": 3.3922,
+      "prefill_tps": 1207.49,
+      "decode_tps": 34.56,
+      "elapsed": 7.0673
+    },
+    {
+      "prompt_tokens": 4096,
+      "completion_tokens": 128,
+      "chunks": 57,
+      "ttft": 3.4025,
+      "prefill_tps": 1203.82,
+      "decode_tps": 34.56,
+      "elapsed": 7.0771
+    }
+  ],
+  "median": {
+    "prefill_tps": 1207.49,
+    "decode_tps": 34.56,
+    "ttft": 3.3922
+  }
+}

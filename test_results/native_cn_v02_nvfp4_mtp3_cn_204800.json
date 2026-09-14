@@ -1,0 +1,15 @@
+{
+  "mode": "v02_nvfp4_mtp3",
+  "model": "qwen38-27b-nvfp4-fp8kv-240K-mtp3-text-only-cu130",
+  "target_prompt_tokens": 204800,
+  "local_prompt_tokens": 204800,
+  "prompt_tokens": 204800,
+  "completion_tokens": 128,
+  "chunks": 41,
+  "ttft_s": 328.707,
+  "prefill_tps": 623.05,
+  "decode_tps": 50.01,
+  "elapsed_s": 331.247,
+  "response_sha256": "9a8ed507721987fa51683aba49ff0e273b5507c2cea7ad3143deedb492c09dd0",
+  "response_preview": "基于对提供的技术记录（尽管内容存在大量重复，但核心语义一致）的深入分析，以下是关于分布式系统与人工智能工程中可靠性构建的核心工程原则总结及明确结论：\n\n### 核心工程原则总结\n\n1.  **可验证性与数据真实性**\n    *   **原"
+}

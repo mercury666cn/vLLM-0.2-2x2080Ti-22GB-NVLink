@@ -1,0 +1,38 @@
+{
+  "model": "qwen27b-v01-cu128-fp8-mtp3-8k",
+  "local_prompt_tokens": 4096,
+  "rows": [
+    {
+      "prompt_tokens": 4096,
+      "completion_tokens": 128,
+      "chunks": 47,
+      "ttft": 2.4268,
+      "prefill_tps": 1687.82,
+      "decode_tps": 48.41,
+      "elapsed": 5.0502
+    },
+    {
+      "prompt_tokens": 4096,
+      "completion_tokens": 128,
+      "chunks": 47,
+      "ttft": 2.4373,
+      "prefill_tps": 1680.57,
+      "decode_tps": 48.28,
+      "elapsed": 5.0678
+    },
+    {
+      "prompt_tokens": 4096,
+      "completion_tokens": 128,
+      "chunks": 47,
+      "ttft": 2.4465,
+      "prefill_tps": 1674.23,
+      "decode_tps": 48.46,
+      "elapsed": 5.0672
+    }
+  ],
+  "median": {
+    "prefill_tps": 1680.57,
+    "decode_tps": 48.41,
+    "ttft": 2.4373
+  }
+}

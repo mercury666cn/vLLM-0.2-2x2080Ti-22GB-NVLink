@@ -1,0 +1,11 @@
+{
+  "model": "qwen27b-fastllm-nvfp4-mtp3-128k",
+  "target_prompt_tokens": 130900,
+  "prompt_tokens": 130900,
+  "completion_tokens": 32,
+  "chunks": 15,
+  "ttft_s": 157.263,
+  "prefill_tps": 832.36,
+  "decode_tps": 28.3,
+  "elapsed_s": 158.362
+}

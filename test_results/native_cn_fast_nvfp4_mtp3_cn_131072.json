@@ -1,0 +1,15 @@
+{
+  "mode": "fast_nvfp4_mtp3",
+  "model": "qwen38-fastllm-nvfp4-mtp3-cn-210k",
+  "target_prompt_tokens": 131072,
+  "local_prompt_tokens": 131072,
+  "prompt_tokens": 131072,
+  "completion_tokens": 128,
+  "chunks": 49,
+  "ttft_s": 159.319,
+  "prefill_tps": 822.7,
+  "decode_tps": 36.53,
+  "elapsed_s": 162.799,
+  "response_sha256": "5f4bad22b23443954c88d79d9346fe8a2516713302fbf031a104b0de3feb0a61",
+  "response_preview": "基于提供的文本内容，虽然原文存在大量重复，但其核心信息高度一致且明确。以下是从中提炼出的核心工程原则及明确结论：\n\n### 核心工程原则总结\n\n在分布式系统与人工智能（AI）工程中，可靠性并非偶然，而是建立在以下四个维度的严格管控之上：\n\n"
+}

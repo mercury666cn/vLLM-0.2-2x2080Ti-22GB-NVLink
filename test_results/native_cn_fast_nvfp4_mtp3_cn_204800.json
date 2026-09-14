@@ -1,0 +1,15 @@
+{
+  "mode": "fast_nvfp4_mtp3",
+  "model": "qwen38-fastllm-nvfp4-mtp3-cn-210k",
+  "target_prompt_tokens": 204800,
+  "local_prompt_tokens": 204800,
+  "prompt_tokens": 204800,
+  "completion_tokens": 128,
+  "chunks": 50,
+  "ttft_s": 306.697,
+  "prefill_tps": 667.76,
+  "decode_tps": 27.62,
+  "elapsed_s": 311.298,
+  "response_sha256": "563886b547d2ef906799513d2c652c373781bf72479ba44044102fed8ce3a41c",
+  "response_preview": "基于对提供的技术记录（尽管内容存在大量重复，但核心语义一致）的深入分析，以下是关于分布式系统与人工智能工程中可靠性构建的核心工程原则总结及明确结论。\n\n### 核心工程原则总结\n\n在分布式系统与人工智能（AI）工程的实践中，可靠性并非偶然，"
+}

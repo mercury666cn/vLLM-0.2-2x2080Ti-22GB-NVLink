@@ -1,0 +1,29 @@
+{
+  "seed": 20260912,
+  "sha256": "c5b6aa7f5330bf79d781fedd474de4eb4dfe56ad08a9376d91d22a79bd4790e2",
+  "total": 849,
+  "category_counts": {
+    "chinese_knowledge": 200,
+    "reasoning": 200,
+    "code": 164,
+    "instruction_following": 150,
+    "long_context": 105,
+    "multiturn_stability": 30
+  },
+  "sources": {
+    "ceval": "ceval/ceval-exam",
+    "cmmlu": "haonan-li/cmmlu",
+    "gsm8k": "openai/gsm8k",
+    "math500": "HuggingFaceH4/MATH-500",
+    "humaneval": "openai/openai_humaneval",
+    "ifeval": "google/IFEval",
+    "longbench": "THUDM/LongBench"
+  },
+  "ifeval_official_scorer_sha256": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evaluation_lib.py": "35decc06000718487f44d7deafa6d3f48a8ec0886281edf40162c0265b7d248c",
+    "instructions.py": "60e086f5342a03ce8e18b64bbcccf86308f523c08aa826707a562150a52f3edf",
+    "instructions_registry.py": "ec92d72c264f6d906978613085db262356174300370a3fffe6fefd5969ce9cfc",
+    "instructions_util.py": "a73797261eee5bf447e279d82a2b700b1bdd3cb1193412dbab1270a85832bc6b"
+  }
+}

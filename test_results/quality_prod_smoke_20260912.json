@@ -1,0 +1,23 @@
+{
+  "models": ["qwen38-fastllm-nvfp4-mtp3-cn-210k"],
+  "short": {"ok": true, "text": "pong", "seconds": 0.37},
+  "code": {"ok": true, "text": "print(1+1)", "seconds": 0.223},
+  "niah64k": {
+    "hit": true,
+    "prompt_tokens": 76195,
+    "seconds": 71.478,
+    "text": "原句：特别说明:位于杭州西湖边的一家茶馆,其二楼保险箱的开锁密码是 37291846..."
+  },
+  "niah200k": {
+    "hit": true,
+    "prompt_tokens": 199855,
+    "seconds": 294.134,
+    "note": "first attempt overshot to 237907 and returned prompt too long; retried at 200k"
+  },
+  "restart": {
+    "policy": "unless-stopped",
+    "recovered_after_seconds": 46,
+    "post_restart_chat": "pong"
+  },
+  "ok": true
+}

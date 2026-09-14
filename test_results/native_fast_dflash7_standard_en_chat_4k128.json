@@ -1,0 +1,38 @@
+{
+  "model": "qwen27b-fastllm-dflash7-128k",
+  "local_prompt_tokens": 4096,
+  "rows": [
+    {
+      "prompt_tokens": 4096,
+      "completion_tokens": 128,
+      "chunks": 49,
+      "ttft": 3.0076,
+      "prefill_tps": 1361.88,
+      "decode_tps": 62.44,
+      "elapsed": 5.045
+    },
+    {
+      "prompt_tokens": 4096,
+      "completion_tokens": 128,
+      "chunks": 48,
+      "ttft": 2.8982,
+      "prefill_tps": 1413.27,
+      "decode_tps": 63.31,
+      "elapsed": 4.9078
+    },
+    {
+      "prompt_tokens": 4096,
+      "completion_tokens": 128,
+      "chunks": 38,
+      "ttft": 2.9401,
+      "prefill_tps": 1393.14,
+      "decode_tps": 77.69,
+      "elapsed": 4.5781
+    }
+  ],
+  "median": {
+    "prefill_tps": 1393.14,
+    "decode_tps": 63.31,
+    "ttft": 2.9401
+  }
+}
