@@ -5,6 +5,15 @@
 > **先读这份。** 下面是本机在 2× RTX 2080 Ti 22GB + NVLink 上的实测结论和完整交叉对照。  
 > 官方原文在 [docs/upstream/](docs/upstream/)，我们的踩坑原文在 [docs/ours/](docs/ours/)，原始测速/评测文件在 [test_results/](test_results/)。
 
+**评测模型：Qwen3.8-27B 的多个权重版本，不是别的尺寸。** 文中 FP8 / NVFP4 / DFlash 都是这一套 27B：
+
+| 权重 | 目录名 | 用途 |
+|---|---|---|
+| FP8 | `Qwen3.8-27B-FP8` | 对照、DFlash 三档、9/12 质量 A |
+| NVFP4 | `Qwen3.8-27B-NVFP4` | 日常 FastLLM、Definitive 0.2 240K 文本档、9/14 质量 B |
+
+不要看成 Qwen3-8B、Qwen3.8-Flash-Next 或其他参数量。
+
 **叫法：** 文中 **Definitive 0.2 / Definitive 0.1** 都是 [vLLM-2080Ti-Definitive](https://github.com/weicj/vLLM-2080Ti-Definitive) 的发布线，**不是** 官方 vLLM 的版本号。本机 0.2 钉标签 `v0.2.1-pre3`（引擎是上游 vLLM 0.27.1）；0.1 钉 `0.1.17`，不要部署。脚本 `start-v02`、镜像 `native/vllm-2080ti:v0.2.1-pre3-sm75` 都指向这条 0.2 线。
 
 姊妹仓：[FastLLM for 2x RTX 2080 Ti 22GB NVLink](https://github.com/mercury666cn/FastLLM-2x2080Ti-22GB-NVLink)。上游源码：[weicj/vLLM-2080Ti-Definitive](https://github.com/weicj/vLLM-2080Ti-Definitive) 的 `v0.2.1-pre3`。
@@ -13,7 +22,7 @@
 
 ## 1. 结论（先看这个）
 
-同一台对照机、同一套 Docker，**FP8 和 NVFP4 都测过**。2026-09-14 日常已切到姊妹仓 FastLLM（NVFP4 + FP16 KV + 240K + 关思考，**带图像**）。本仓仍是 **vLLM-2080Ti-Definitive 0.2 部署说明**。
+同一台对照机、同一套 Docker，**Qwen3.8-27B 的 FP8 和 NVFP4 都测过**。2026-09-14 日常已切到姊妹仓 FastLLM（NVFP4 + FP16 KV + 240K + 关思考，**带图像**）。本仓仍是 **vLLM-2080Ti-Definitive 0.2 部署说明**。
 
 **若部署 Definitive 0.2：用 NVFP4 + FP8 KV + MTP3 + 240K 文本档（`text-only`）。** 长输出仍比 FastLLM 稳，但这档不带图像。
 
@@ -40,6 +49,7 @@ Definitive 0.2 固定英文尺子上 NVFP4 decode 会比 FP8 慢（MTP 接受率
 | CPU | 2× Xeon E5-2686 v4，72 线程 |
 | GPU | 2× RTX 2080 Ti **22GB 魔改**，SM75，NVLink，**PCIe x4** |
 | 并发 | 1（`max_batch=1` / `MAX_NUM_SEQS=1`） |
+| 评测模型 | **Qwen3.8-27B**（FP8 与 NVFP4 两套权重） |
 | 对照机例子 | 局域网 IP:8000，模型根 `$MODEL_ROOT` |
 
 22G 魔改 + x4 不是官方 11G / x16。别人机器容量和带宽会不一样。

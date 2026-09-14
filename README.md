@@ -5,6 +5,15 @@ Language: English | [Simplified Chinese](README.zh-CN.md)
 > **Read this first.** Measured results on one dual RTX 2080 Ti 22GB + NVLink box.  
 > Upstream text is in [docs/upstream/](docs/upstream/). Our notes are in [docs/ours/](docs/ours/). Raw benches are in [test_results/](test_results/).
 
+**Eval model: several weights of Qwen3.8-27B, not another size.** Every FP8 / NVFP4 / DFlash number on this page is that 27B:
+
+| Weights | Directory | Used for |
+|---|---|---|
+| FP8 | `Qwen3.8-27B-FP8` | Baseline, three DFlash rows, 9/12 quality A |
+| NVFP4 | `Qwen3.8-27B-NVFP4` | Daily FastLLM, Definitive 0.2 240K text profile, 9/14 quality B |
+
+Not Qwen3-8B, not Qwen3.8-Flash-Next, not any other parameter count.
+
 **Names:** **Definitive 0.2 / Definitive 0.1** are release lines of [vLLM-2080Ti-Definitive](https://github.com/weicj/vLLM-2080Ti-Definitive), **not** official vLLM version numbers. This machine pins 0.2 at tag `v0.2.1-pre3` (engine is upstream vLLM 0.27.1) and 0.1 at `0.1.17` (do not deploy). `start-v02` and `native/vllm-2080ti:v0.2.1-pre3-sm75` point at that 0.2 line.
 
 Sister repo: [FastLLM for 2x RTX 2080 Ti 22GB NVLink](https://github.com/mercury666cn/FastLLM-2x2080Ti-22GB-NVLink). Upstream source: [weicj/vLLM-2080Ti-Definitive](https://github.com/weicj/vLLM-2080Ti-Definitive) `v0.2.1-pre3`.
@@ -13,7 +22,7 @@ Sister repo: [FastLLM for 2x RTX 2080 Ti 22GB NVLink](https://github.com/mercury
 
 ## 1. Conclusions (read this first)
 
-Same box, same Docker, **both FP8 and NVFP4 were measured**. Daily serving moved to the FastLLM sister repo on 2026-09-14 (NVFP4 + FP16 KV + 240K + thinking off, **with vision**). This repo is still the **vLLM-2080Ti-Definitive 0.2 deploy note**.
+Same box, same Docker, **both the FP8 and NVFP4 weights of Qwen3.8-27B were measured**. Daily serving moved to the FastLLM sister repo on 2026-09-14 (NVFP4 + FP16 KV + 240K + thinking off, **with vision**). This repo is still the **vLLM-2080Ti-Definitive 0.2 deploy note**.
 
 **If you deploy Definitive 0.2: NVFP4 + FP8 KV + MTP3 + 240K text profile (`text-only`).** Long decode is still steadier than FastLLM, but this profile has no vision.
 
@@ -40,6 +49,7 @@ On the fixed English ruler, Definitive 0.2 NVFP4 decode is slower than FP8 (lowe
 | CPU | 2× Xeon E5-2686 v4, 72 threads |
 | GPU | 2× RTX 2080 Ti **22GB mod**, SM75, NVLink, **PCIe x4** |
 | Concurrency | 1 (`max_batch=1` / `MAX_NUM_SEQS=1`) |
+| Eval model | **Qwen3.8-27B** (FP8 and NVFP4 weights) |
 | Example | LAN IP:8000, model root `$MODEL_ROOT` |
 
 22G mod + x4 is not official 11G / x16. Capacity and bandwidth will differ on other boxes.
