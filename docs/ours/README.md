@@ -8,7 +8,7 @@ FP8 和 NVFP4 都测过，**建议 NVFP4**，纯文本上下文可以开到 240K
 公开部署说明（`mercury666cn`）：
 
 - [FastLLM for 2x RTX 2080 Ti 22GB NVLink](https://github.com/mercury666cn/FastLLM-2x2080Ti-22GB-NVLink)
-- [vLLM-2080Ti-Definitive 0.2 for 2x RTX 2080 Ti 22GB NVLink](https://github.com/mercury666cn/vLLM-0.2-2x2080Ti-22GB-NVLink)
+- [vLLM-2080Ti-Definitive 0.2 for 2x RTX 2080 Ti 22GB NVLink](https://github.com/mercury666cn/vLLM-2080Ti-Definitive-0.2-2x2080Ti-22GB-NVLink)
 
 本仓细目：
 
